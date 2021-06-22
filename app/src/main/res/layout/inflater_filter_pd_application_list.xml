@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="6dp"
+        android:padding="4dp">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:gravity="center"
+           android:layout_gravity="center">
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:text="Select Filter Options"
+               android:textSize="22sp"
+               android:textColor="@color/black" />
+       </LinearLayout>
+
+        <View
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:weightSum="3"
+               android:layout_marginBottom="4dp">
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:layout_width="0dp"
+                   android:layout_weight="0.4"
+                   android:layout_height="wrap_content"/>
+
+               <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                   android:layout_width="0dp"
+                   android:layout_weight="0.7"
+                   android:layout_height="wrap_content"
+                   android:text="PD Status"
+                   android:textColor="@color/black"/>
+
+               <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                   android:layout_width="0dp"
+                   android:layout_weight="1.9"
+                   android:layout_height="wrap_content"
+                   android:text="PD Document Status"
+                   android:textColor="@color/black"/>
+           </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbtn_approved_approved"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:checked="true"
+                    android:layout_height="wrap_content"/>
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    android:text="Approved"
+                    android:textColor="@color/black"/>
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.9"
+                    android:layout_height="wrap_content"
+                    android:text="Approved"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbtn_approved_pending"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"/>
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    android:text="Approved"
+                    android:textColor="@color/black"/>
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.9"
+                    android:layout_height="wrap_content"
+                    android:text="Pending"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbtn_approved_fileUploadPending"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"/>
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    android:text="Approved"
+                    android:textColor="@color/black"/>
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.9"
+                    android:layout_height="wrap_content"
+                    android:text="File Upload Pending"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbtn_pending_pending"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"/>
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    android:text="Pending"
+                    android:textColor="@color/black"/>
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.9"
+                    android:layout_height="wrap_content"
+                    android:text="Pending"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="right">-->
+
+<!--            <android.support.v7.widget.AppCompatButton-->
+<!--                android:id="@+id/btn_submit_filter"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:background="@drawable/bg_submit_filter_btn"-->
+<!--                android:text="Submit"-->
+<!--                android:textColor="@color/white"/>-->
+
+<!--        </LinearLayout>-->
+
+    </LinearLayout>
+
+
+</LinearLayout>

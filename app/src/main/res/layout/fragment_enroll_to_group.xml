@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_color"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    tools:context=".student.e_learning.fragment.EnrollToGroupFragment">
+
+    <LinearLayout
+        android:id="@+id/llEnrollToGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dropDownVerticalOffset="40dp"
+                android:minHeight="35dp"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spGroupName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dropDownVerticalOffset="40dp"
+                android:minHeight="35dp"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFromDateToDateFilterOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical">
+
+                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From Date"
+                        android:textColor="@color/profile_heading_color"
+                        android:textSize="10sp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtFromDateEnrollToGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:hint="From Date(dd/MM/yyyy)"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:textColor="@color/profile_heading_value_color"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical">
+
+                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To Date"
+                        android:textColor="@color/profile_heading_color"
+                        android:textSize="10sp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtToDateEnrollToGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:hint="To Date(dd/MM/yyyy)"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:textColor="@color/profile_heading_value_color"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgClearFromToDateFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:tint="@color/colorPrimary"
+                app:srcCompat="@drawable/ic_close" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSubjectName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <Spinner
+                    android:id="@+id/spSubjectName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dropDownVerticalOffset="40dp"
+                    android:minHeight="35dp"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgClearSubjectFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:tint="@color/colorPrimary"
+                app:srcCompat="@drawable/ic_close" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/flStudentExaminationSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/common_bg_color"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ExpandableListView
+                android:id="@+id/elvGroupWiseSubjectDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:childDivider="@color/common_bg_color"
+                android:divider="@color/common_bg_color"
+                android:dividerHeight="10dp"
+                android:groupIndicator="@null"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!--        <FrameLayout-->
+        <!--            -->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@color/common_bg_color"-->
+        <!--            android:orientation="vertical"-->
+        <!--            android:visibility="visible">-->
+
+        <!--            <ExpandableListView-->
+        <!--                android:id="@+id/elvGroupWiseSubjectDetails"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:childDivider="@color/common_bg_color"-->
+        <!--                android:divider="@color/common_bg_color"-->
+        <!--                android:dividerHeight="10dp"-->
+        <!--                android:groupIndicator="@color/common_bg_color"-->
+        <!--                android:scrollbars="none"-->
+        <!--                android:visibility="visible" />-->
+
+
+        <!--            &lt;!&ndash;            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:id="@+id/efabApplyFilterEnrollToGroup"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_height="40dp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_gravity="bottom|center_horizontal"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_marginRight="4dp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_marginBottom="22dp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:backgroundTint="@color/colorPrimary"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:drawableRight="@drawable/ic_filter"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:drawableTint="@color/white"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:fontFamily="@font/ubuntu_r"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:paddingLeft="6dp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:paddingRight="6dp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:text="Apply Filter"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:textColor="@color/white"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:visibility="gone" />&ndash;&gt;-->
+
+        <!--            &lt;!&ndash;            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:id="@+id/efabClearFilterEnrollToGroup"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_height="40dp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_gravity="bottom|center_horizontal"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_marginBottom="22dp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:backgroundTint="@android:color/holo_red_dark"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:drawableRight="@drawable/ic_close"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:drawableTint="@color/white"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:fontFamily="@font/ubuntu_r"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:paddingLeft="6dp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:paddingRight="6dp"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:text="Clear Filter"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:textColor="@color/white"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:visibility="gone" />&ndash;&gt;-->
+
+        <!--        </FrameLayout>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llEnrollToGroupProgressbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Large.Circle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/colorPrimary" />
+
+<!--        <ProgressBar-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:indeterminate="true"-->
+<!--            android:indeterminateTint="@color/colorPrimary" />-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNoDataFoundEnrollToGroup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_no_data_found" />
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="No Data Found !"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "850410460389",
+    "firebase_url": "https://rkuniversity-acf7f.firebaseio.com",
+    "project_id": "rkuniversity-acf7f",
+    "storage_bucket": "rkuniversity-acf7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850410460389:android:9c33388fcb665707fa300c",
+        "android_client_info": {
+          "package_name": "com.infinity.infoway.rkuniversity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850410460389-nt52c452ic4kk1m55jneqorqiuc49gb1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.infinity.infoway.rkuniversity",
+            "certificate_hash": "efa79fef50652adb7e5f1b1697a51def42b75180"
+          }
+        },
+        {
+          "client_id": "850410460389-foucurhthnmprvjlanm2df3c3hsougrc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvUcO6H6g4gH0rmwGMQGiMYt_1AQ2NRcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850410460389-foucurhthnmprvjlanm2df3c3hsougrc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

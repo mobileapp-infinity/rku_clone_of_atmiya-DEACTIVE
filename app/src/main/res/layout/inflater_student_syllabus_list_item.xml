@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="7dp"
+    app:contentPadding="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--&lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:background="@drawable/common_shape_yello"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:orientation="horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:paddingLeft="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:paddingTop="4dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:paddingRight="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:paddingBottom="4dp">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <rkustom_class.TextViewRegularFont&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/tvSemStudentSyllabus"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="Semester - 6"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textColor="@color/color_white"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textSize="12sp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_weight="1"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:gravity="end"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:orientation="horizontal">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <rkustom_class.TextViewRegularFont&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="Subject Code : "&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textColor="@color/color_primary_with_75_opacity"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textSize="12sp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <rkustom_class.TextViewRegularFont&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/tvSubjectCodeStudentSyllabus"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="3632653"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textColor="@color/colorPrimary"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textSize="12sp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+
+<!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subject Code"
+                    android:textColor="@color/profile_heading_color"
+                    android:textSize="10sp" />
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:id="@+id/tvSubjectCodeStudentSyllabus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:orientation="vertical">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subject Name"
+                    android:textColor="@color/profile_heading_color"
+                    android:textSize="10sp" />
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:id="@+id/tvStudentSubjectNameSyllabus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/profile_heading_value_color"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <rkustom_class.TextViewRegularFont-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Course Name : "-->
+<!--                    android:textColor="@color/color_primary_with_75_opacity"-->
+<!--                    android:textSize="12sp" />-->
+
+<!--                <rkustom_class.TextViewRegularFont-->
+<!--                    android:id="@+id/tvCourseNameStudentSyllabus"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="D.E. ( Civil )"-->
+<!--                    android:textColor="@color/colorPrimary"-->
+<!--                    android:textSize="12sp" />-->
+
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDownloadDocumentsStudentSyllabus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                android:id="@+id/btnDownloadStudentSyllabus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/common_shape_dark"
+                android:drawableRight="@drawable/ic_download"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="2dp"
+                android:text="Download"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

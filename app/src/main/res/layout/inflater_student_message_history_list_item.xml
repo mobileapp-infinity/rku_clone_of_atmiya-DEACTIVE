@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="2sp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/rku_logo" />
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvTest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_message_history_card"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="To : "
+                            android:textColor="@color/colorAccent"
+                            android:textSize="12sp" />
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                            android:id="@+id/tvMessageHistoryMobileNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date : "
+                            android:textColor="@color/color_primary_with_75_opacity"
+                            android:textSize="12sp" />
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                            android:id="@+id/tvMessageHistoryDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:textColor="@color/color_primary_with_75_opacity"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                        android:id="@+id/tvMessageHistoryNote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="-"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/llExpandedHeaderMessageHistory"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@drawable/message_history_header_shape"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:padding="8dp">-->
+
+        <!--            <rkustom_class.TextViewRegularFont-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:gravity="left|center"-->
+        <!--                android:text="Contact No.: "-->
+        <!--                android:textAllCaps="false"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="12sp"-->
+        <!--                app:textAllCaps="true" />-->
+
+        <!--            <rkustom_class.TextViewRegularFont-->
+        <!--                android:id="@+id/tvMessageHistoryMobileNo"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:gravity="left|center"-->
+        <!--                android:text="-"-->
+        <!--                android:textAllCaps="false"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="12sp" />-->
+
+        <!--            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                android:id="@+id/ivViewMoreBtnMessageHistory"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                app:srcCompat="@drawable/ic_expand_less" />-->
+
+        <!--        </LinearLayout>-->
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/llExpandableLayoutMessageHistory"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="vertical"-->
+        <!--            android:padding="12dp"-->
+        <!--            android:visibility="visible">-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="vertical">-->
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_marginBottom="4dp"-->
+        <!--                    android:gravity="center_vertical"-->
+        <!--                    android:orientation="horizontal">-->
+
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:background="@drawable/common_shape_yello"-->
+        <!--                        android:orientation="horizontal"-->
+        <!--                        android:paddingLeft="8dp"-->
+        <!--                        android:paddingTop="4dp"-->
+        <!--                        android:paddingRight="8dp"-->
+        <!--                        android:paddingBottom="4dp">-->
+
+        <!--                        <rkustom_class.TextViewRegularFont-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:text="Sem : "-->
+        <!--                            android:textColor="@color/white"-->
+        <!--                            android:textSize="12sp" />-->
+
+        <!--                        <rkustom_class.TextViewMediumFont-->
+        <!--                            android:id="@+id/tvMessageHistorySem"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:text=" -"-->
+        <!--                            android:textColor="@color/white"-->
+        <!--                            android:textSize="12sp" />-->
+
+        <!--                    </LinearLayout>-->
+
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="0dp"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:gravity="end"-->
+        <!--                        android:orientation="horizontal">-->
+
+        <!--                        <rkustom_class.TextViewRegularFont-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:text="Date : "-->
+        <!--                            android:textColor="@color/colorPrimary"-->
+        <!--                            android:textSize="12sp" />-->
+
+        <!--                        <rkustom_class.TextViewMediumFont-->
+        <!--                            android:id="@+id/tvMessageHistoryDate"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:text="-"-->
+        <!--                            android:textColor="@color/colorPrimary"-->
+        <!--                            android:textSize="12sp" />-->
+
+        <!--                    </LinearLayout>-->
+
+        <!--                </LinearLayout>-->
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_marginTop="4dp"-->
+        <!--                    android:orientation="horizontal">-->
+
+        <!--                    <rkustom_class.TextViewRegularFont-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="Note : "-->
+        <!--                        android:textColor="@color/colorPrimary"-->
+        <!--                        android:textSize="12sp" />-->
+
+        <!--                    <rkustom_class.TextViewMediumFont-->
+        <!--                        android:id="@+id/tvMessageHistoryNote"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="-"-->
+        <!--                        android:lineSpacingMultiplier="1.2"-->
+        <!--                        android:textColor="@color/colorPrimary"-->
+        <!--                        android:textSize="12sp" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--        </LinearLayout>-->
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+    <!--//MESSAGE HISTORY OLD CARD DESIGN-->
+    <!--    <?xml version="1.0" encoding="utf-8"?>-->
+    <!--<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--app:cardBackgroundColor="@color/white"-->
+    <!--app:cardCornerRadius="7dp"-->
+    <!--app:cardElevation="4dp">-->
+
+    <!--<LinearLayout-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:orientation="vertical">-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/llExpandedHeaderMessageHistory"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/message_history_header_shape"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:padding="8dp">-->
+
+    <!--        <rkustom_class.TextViewRegularFont-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:gravity="left|center"-->
+    <!--            android:text="Contact No.: "-->
+    <!--            android:textAllCaps="false"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="12sp"-->
+    <!--            app:textAllCaps="true" />-->
+
+    <!--        <rkustom_class.TextViewRegularFont-->
+    <!--            android:id="@+id/tvMessageHistoryMobileNo"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:gravity="left|center"-->
+    <!--            android:text="-"-->
+    <!--            android:textAllCaps="false"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="12sp" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatImageView-->
+    <!--            android:id="@+id/ivViewMoreBtnMessageHistory"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            app:srcCompat="@drawable/ic_expand_less" />-->
+
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/llExpandableLayoutMessageHistory"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:padding="12dp"-->
+    <!--        android:visibility="visible">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginBottom="4dp"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:orientation="horizontal">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:background="@drawable/common_shape_yello"-->
+    <!--                    android:orientation="horizontal"-->
+    <!--                    android:paddingLeft="8dp"-->
+    <!--                    android:paddingTop="4dp"-->
+    <!--                    android:paddingRight="8dp"-->
+    <!--                    android:paddingBottom="4dp">-->
+
+    <!--                    <rkustom_class.TextViewRegularFont-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:text="Sem : "-->
+    <!--                        android:textColor="@color/white"-->
+    <!--                        android:textSize="12sp" />-->
+
+    <!--                    <rkustom_class.TextViewMediumFont-->
+    <!--                        android:id="@+id/tvMessageHistorySem"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:text=" -"-->
+    <!--                        android:textColor="@color/white"-->
+    <!--                        android:textSize="12sp" />-->
+
+    <!--                </LinearLayout>-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:gravity="end"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <rkustom_class.TextViewRegularFont-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:text="Date : "-->
+    <!--                        android:textColor="@color/colorPrimary"-->
+    <!--                        android:textSize="12sp" />-->
+
+    <!--                    <rkustom_class.TextViewMediumFont-->
+    <!--                        android:id="@+id/tvMessageHistoryDate"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:text="-"-->
+    <!--                        android:textColor="@color/colorPrimary"-->
+    <!--                        android:textSize="12sp" />-->
+
+    <!--                </LinearLayout>-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="4dp"-->
+    <!--                android:orientation="horizontal">-->
+
+    <!--                <rkustom_class.TextViewRegularFont-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="Note : "-->
+    <!--                    android:textColor="@color/colorPrimary"-->
+    <!--                    android:textSize="12sp" />-->
+
+    <!--                <rkustom_class.TextViewMediumFont-->
+    <!--                    android:id="@+id/tvMessageHistoryNote"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="-"-->
+    <!--                    android:lineSpacingMultiplier="1.2"-->
+    <!--                    android:textColor="@color/colorPrimary"-->
+    <!--                    android:textSize="12sp" />-->
+
+    <!--            </LinearLayout>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--    </LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--</com.google.android.material.card.MaterialCardView>-->

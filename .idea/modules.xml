@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rku_clone_of_atmiya.iml" filepath="$PROJECT_DIR$/.idea/modules/rku_clone_of_atmiya.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rku_clone_of_atmiya.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rku_clone_of_atmiya.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/recyclerviewpager/rku_clone_of_atmiya.recyclerviewpager.iml" filepath="$PROJECT_DIR$/.idea/modules/recyclerviewpager/rku_clone_of_atmiya.recyclerviewpager.iml" />
+    </modules>
+  </component>
+</project>

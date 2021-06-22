@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.EmployeeLeaveBalanceReportDetailActivity">
+
+    <include
+        android:id="@+id/tool_main_header"
+        layout="@layout/toolbar_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <include
+        android:id="@+id/tool_main_footer"
+        layout="@layout/ll_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_below="@+id/tool_main_header"
+        android:layout_above="@+id/tool_main_footer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="26.2">
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Employee Name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_header_ac_report"/>
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2.7"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="CL"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_header_ac_report"/>
+
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2.7"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="ML"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_header_ac_report"/>
+
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="EL"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_header_ac_report"/>
+
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2.6"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="COFF"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_header_ac_report"/>
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2.4"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="RH"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_header_ac_report"/>
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2.2"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="LWP"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_header_ac_report"/>
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2.8"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="LWPS"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_header_ac_report"/>
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2.6"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="SVLS"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_header_ac_report"/>
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2.2"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="ODS"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_header_ac_report"/>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_employee_leave_balance_report_details">
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/lightgrey"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:paddingTop="5dp"-->
+<!--        android:paddingBottom="5dp"-->
+<!--        android:weightSum="4">-->
+
+<!--        <rkustom_class.TextViewMediumFont-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1.4"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="Subject"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:textSize="12sp" />-->
+
+<!--        <rkustom_class.TextViewMediumFont-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="0.9"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Total Marks"-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:textSize="12sp" />-->
+
+<!--        <rkustom_class.TextViewMediumFont-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="0.9"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Obtain Marks"-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:textSize="12sp" />-->
+
+<!--        <rkustom_class.TextViewMediumFont-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="0.8"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Weightage"-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:textSize="12sp" />-->
+
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:weightSum="4">
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+            android:id="@+id/tvSubjectName"
+            android:layout_width="0dp"
+            android:layout_weight="1.4"
+            android:layout_height="match_parent"
+            android:text="Maths(02-Nov)"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+            android:id="@+id/tvTotalMarks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:text="50"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+            android:id="@+id/tvObtainMarks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:text="Not Declaire"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+            android:id="@+id/tvSubWeightage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="-"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/common_bg_color"/>
+
+
+</LinearLayout>

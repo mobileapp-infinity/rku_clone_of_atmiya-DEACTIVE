@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/llMainStudentTimetableMerging">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semester"
+            android:textColor="@color/profile_heading_color"
+            android:textSize="10sp" />
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+            android:id="@+id/tvSemFacultyMergingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/colorPrimary"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject"
+            android:textColor="@color/profile_heading_color"
+            android:textSize="10sp" />
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+            android:id="@+id/tvFacultySubjectNameMergingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/profile_heading_value_color"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lecture Time"
+            android:textColor="@color/profile_heading_color"
+            android:textSize="10sp" />
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+            android:id="@+id/tvFacultyLectureStartAndEnTimeMergingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/profile_heading_value_color"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="horizontal">
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="Room No : "
+            android:textColor="@color/colorPrimary"
+            android:textSize="10sp" />
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+            android:id="@+id/tvFacultyRoomNoMergingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="-"
+            android:textColor="@color/colorPrimary"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/lineStudentTimetableMergingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="@color/colorAccent"/>
+
+</LinearLayout>

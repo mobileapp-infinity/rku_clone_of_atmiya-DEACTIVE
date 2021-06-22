@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/white"
+    android:elevation="0dp"
+    app:contentPadding="8dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="7dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:padding="2dp"
+            android:orientation="vertical">
+
+            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                android:layout_marginTop="4dp"
+                android:id="@+id/tvActivityDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:padding="2dp"
+            android:orientation="vertical">
+
+            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                android:layout_marginTop="4dp"
+                android:id="@+id/tvActivityDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:id="@+id/rvStudentActivityImageList"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" />
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="100dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="vertical">-->
+
+        <!--            <rkustom_class.TextViewRegularFont-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="12-Dec-2020"-->
+        <!--                android:gravity="center"-->
+        <!--                android:padding="6dp"-->
+        <!--                android:layout_marginBottom="4dp"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:background="@drawable/shape_student_activity_date"/>-->
+
+        <!--            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                android:layout_width="100dp"-->
+        <!--                android:layout_height="100dp"-->
+        <!--                app:srcCompat="@drawable/test_dummy_image"-->
+        <!--                android:adjustViewBounds="true"-->
+        <!--                android:padding="4dp"-->
+        <!--                android:scaleType="fitXY"-->
+        <!--                android:background="@drawable/shape_student_activity_image"/>-->
+
+        <!--        </LinearLayout>-->
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

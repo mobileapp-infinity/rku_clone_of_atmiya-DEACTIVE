@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.chauthai.swipereveallayout:swipe-reveal-layout:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/102c154d6e5d2d8281f7f241aa7d7887/jetified-swipe-reveal-layout-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/102c154d6e5d2d8281f7f241aa7d7887/jetified-swipe-reveal-layout-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/102c154d6e5d2d8281f7f241aa7d7887/jetified-swipe-reveal-layout-1.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.chauthai.swipereveallayout/swipe-reveal-layout/1.0.0/a84fa39c27200570557f4be1c2924f5d5e2f12cb/swipe-reveal-layout-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.chauthai.swipereveallayout/swipe-reveal-layout/1.0.0/277d55ee8140b86244813a33c7375702585e9120/swipe-reveal-layout-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

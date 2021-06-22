@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.ReqViewPgScholarGuidedListActivity">
+
+    <include
+        android:id="@+id/tool_main_toolbar"
+        layout="@layout/toolbar_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <include
+        android:id="@+id/tool_main"
+        layout="@layout/ll_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_update_delete"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="55dp"
+        android:fillViewport="true"
+        android:windowSoftInputMode="adjustPan">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            tools:context=".Activity.ConferencePubApproveReject">
+
+
+            <LinearLayout
+                android:id="@+id/ll_Branch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/add_leave_border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="Academic Year"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:id="@+id/tvAcademicYearPGScholarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Academic Year"
+                    android:paddingLeft="15dp"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTitleOfResearchPaper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/add_leave_border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="Name of PG Scholars"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:id="@+id/tvNameofPGScholarsGuidedView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Name of PG Scholars"
+                    android:paddingLeft="15dp"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llNameOfTheconference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/add_leave_border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="Title/Domain of Research"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:id="@+id/tvDomainOfResearchPGScholarGuideView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Enter Title/Domain of Research"
+                    android:paddingLeft="15dp"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llNameOfThePublisher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/add_leave_border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="Year of Awarded"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:id="@+id/tvYearOfAwardedPGScholarGuidedreq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Year of Awarded"
+                    android:paddingLeft="15dp"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTitleOfProceedings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/add_leave_border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="Name of Other Guide"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:id="@+id/tvNameOfOtherGuidPGScholarGuidedView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Name of Other Guide"
+                    android:paddingLeft="15dp"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/llLevelOfConference"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:background="@drawable/add_leave_border"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:padding="10dp">-->
+
+            <!--                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:paddingLeft="15dp"-->
+            <!--                    android:text="Level of Conference"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="@dimen/text_size" />-->
+
+            <!--                <Spinner-->
+            <!--                    android:id="@+id/spLevelOfConference"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:paddingLeft="15dp" />-->
+
+            <!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/llProceedingsISBNorISSN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/add_leave_border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="Year of Registration"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:id="@+id/tvYearofRegistrationPGScholarGuidedView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Year of Registration"
+                    android:paddingLeft="15dp"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llYearofAwardGrantReceived"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/add_leave_border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="Status"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                    android:id="@+id/tvStatusPGScholrGuidedView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Status"
+                    android:paddingLeft="15dp"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

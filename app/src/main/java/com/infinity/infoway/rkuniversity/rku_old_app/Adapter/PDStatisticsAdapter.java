@@ -1,0 +1,91 @@
+package com.infinity.infoway.rkuniversity.rku_old_app.Adapter;
+
+import android.content.Context;
+import androidx.annotation.NonNull;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
+import com.infinity.infoway.rkuniversity.R;
+import com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView;
+import com.infinity.infoway.rkuniversity.rku_old_app.Pojo.PdStatisticsPojo;
+
+public class PDStatisticsAdapter extends BaseAdapter
+{
+    Context ctx;
+
+    PdStatisticsPojo pdStatisticsPojo;
+
+    public PDStatisticsAdapter(Context ctx,  PdStatisticsPojo pdStatisticsPojo)
+    {
+        this.ctx = ctx;
+        this.pdStatisticsPojo = pdStatisticsPojo;
+
+
+    }
+
+    class ViewHolder {
+
+        LinearLayout header_leave_balance;
+        CustomTextView tv_leave_name,tv_available_leave;
+    }
+    ViewHolder viewHolder;
+
+    @Override
+    public int getCount() {
+        // return college.getTable().size();
+
+        return pdStatisticsPojo.getData().size();
+    }
+
+    @Override
+    public Object getItem(int i) {
+        return i;
+    }
+
+    @Override
+    public long getItemId(int i) {
+        return i;
+    }
+
+    @Override
+    public View getView(final int i, View view, ViewGroup viewGroup) {
+        LayoutInflater mInflater = LayoutInflater.from(ctx);
+        if (view == null) {
+            view = mInflater.inflate(R.layout.adapter_pd_statistics, viewGroup, false);
+
+            viewHolder = new ViewHolder();
+            initView(view);
+            view.setTag(viewHolder);
+        }
+        else
+        {
+            viewHolder = (ViewHolder) view.getTag();
+        }
+
+        if (i==0)
+        {
+            viewHolder.header_leave_balance.setVisibility(View.VISIBLE);
+        }
+
+        else {
+            viewHolder.header_leave_balance.setVisibility(View.GONE);
+        }
+        viewHolder.tv_leave_name.setText(pdStatisticsPojo.getData().get(i).getCategory()+"");
+        viewHolder.tv_available_leave.setText(pdStatisticsPojo.getData().get(i).getCredit()+"");
+        return view;
+    }
+
+    private void initView(@NonNull final View itemView)
+    {
+
+        viewHolder.header_leave_balance = (LinearLayout) itemView.findViewById(R.id.header_leave_balance);
+        viewHolder.tv_leave_name = (CustomTextView) itemView.findViewById(R.id.tv_name);
+        viewHolder.tv_available_leave = (CustomTextView) itemView.findViewById(R.id.tv_count);
+
+
+    }
+
+
+}

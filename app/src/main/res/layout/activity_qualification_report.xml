@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.QualificationReportActivity">
+
+    <include
+        android:id="@+id/tool_main_header"
+        layout="@layout/toolbar_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <include
+        android:id="@+id/tool_main_footer"
+        layout="@layout/ll_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:id="@+id/llBranchAndDp"
+        android:layout_below="@+id/tool_main_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/add_leave_border"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="Branch"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <Spinner
+                android:id="@+id/spBranchQualificationReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/add_leave_border"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="Department"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <Spinner
+                android:id="@+id/spDepartmentQualificationReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:id="@+id/tvLoadQualificationReport"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_fill_border_pink"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:text="Load"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:gravity="center"-->
+    <!--        android:id="@+id/ll_no_data_found">-->
+
+    <!--        <androidx.appcompat.widget.AppCompatImageView-->
+    <!--            android:layout_width="100dp"-->
+    <!--            android:layout_height="100dp"-->
+    <!--            app:srcCompat="@drawable/no_data_found"-->
+    <!--            android:tint="#757575"/>-->
+
+    <!--        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="No Data Found!"-->
+    <!--            android:textColor="#757575"/>-->
+
+    <!--    </LinearLayout>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/llBranchAndDp"
+        android:layout_above="@+id/tool_main_footer"
+        android:layout_marginBottom="4dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/ll_qualification_type">
+
+                        <!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:text="Academic ContributionType"-->
+                        <!--                        android:textColor="@color/black"-->
+                        <!--                        android:textSize="@dimen/text_size"-->
+                        <!--                        android:padding="4dp"-->
+                        <!--                        android:background="@drawable/bg_header_ac_report"/>-->
+
+                        <!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:text="Publication In Conference"-->
+                        <!--                        android:textColor="@color/black"-->
+                        <!--                        android:textSize="@dimen/text_size"-->
+                        <!--                        android:padding="4dp"-->
+                        <!--                        android:background="@drawable/bg_header_ac_report"/>-->
+
+                        <!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:text="Seed Money Received From University"-->
+                        <!--                        android:textColor="@color/black"-->
+                        <!--                        android:textSize="@dimen/text_size"-->
+                        <!--                        android:padding="4dp"-->
+                        <!--                        android:background="@drawable/bg_header_ac_report"/>-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/ll_qualification_header_and_value">
+
+                        <!--                    <LinearLayout-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:orientation="horizontal">-->
+
+                        <!--                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+                        <!--                            android:layout_width="44dp"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="SOE"-->
+                        <!--                            android:textColor="@color/black"-->
+                        <!--                            android:textSize="@dimen/text_size"-->
+                        <!--                            android:padding="4dp"-->
+                        <!--                            android:gravity="center"-->
+                        <!--                            android:background="@drawable/bg_header_ac_report"/>-->
+
+                        <!--                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+                        <!--                            android:layout_width="44dp"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="SOP"-->
+                        <!--                            android:textColor="@color/black"-->
+                        <!--                            android:textSize="@dimen/text_size"-->
+                        <!--                            android:padding="4dp"-->
+                        <!--                            android:gravity="center"-->
+                        <!--                            android:background="@drawable/bg_header_ac_report"/>-->
+
+                        <!--                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+                        <!--                            android:layout_width="44dp"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="STP"-->
+                        <!--                            android:gravity="center"-->
+                        <!--                            android:textColor="@color/black"-->
+                        <!--                            android:textSize="@dimen/text_size"-->
+                        <!--                            android:padding="4dp"-->
+                        <!--                            android:background="@drawable/bg_header_ac_report"/>-->
+
+
+
+                        <!--                    </LinearLayout>-->
+
+                        <!--                    <LinearLayout-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:orientation="horizontal">-->
+
+                        <!--                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+                        <!--                            android:layout_width="44dp"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="1"-->
+                        <!--                            android:textColor="@color/black"-->
+                        <!--                            android:textSize="@dimen/text_size"-->
+                        <!--                            android:padding="4dp"-->
+                        <!--                            android:gravity="center"-->
+                        <!--                            android:background="@drawable/bg_header_ac_report"/>-->
+
+                        <!--                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+                        <!--                            android:layout_width="44dp"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="9"-->
+                        <!--                            android:textColor="@color/black"-->
+                        <!--                            android:textSize="@dimen/text_size"-->
+                        <!--                            android:padding="4dp"-->
+                        <!--                            android:gravity="center"-->
+                        <!--                            android:background="@drawable/bg_header_ac_report"/>-->
+
+                        <!--                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+                        <!--                            android:layout_width="44dp"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="0"-->
+                        <!--                            android:gravity="center"-->
+                        <!--                            android:textColor="@color/black"-->
+                        <!--                            android:textSize="@dimen/text_size"-->
+                        <!--                            android:padding="4dp"-->
+                        <!--                            android:background="@drawable/bg_header_ac_report"/>-->
+
+
+
+                        <!--                    </LinearLayout>-->
+
+                        <!--                    <LinearLayout-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:orientation="horizontal">-->
+
+                        <!--                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+                        <!--                            android:layout_width="44dp"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="7"-->
+                        <!--                            android:textColor="@color/black"-->
+                        <!--                            android:textSize="@dimen/text_size"-->
+                        <!--                            android:padding="4dp"-->
+                        <!--                            android:gravity="center"-->
+                        <!--                            android:background="@drawable/bg_header_ac_report"/>-->
+
+                        <!--                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+                        <!--                            android:layout_width="44dp"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="4"-->
+                        <!--                            android:textColor="@color/black"-->
+                        <!--                            android:textSize="@dimen/text_size"-->
+                        <!--                            android:padding="4dp"-->
+                        <!--                            android:gravity="center"-->
+                        <!--                            android:background="@drawable/bg_header_ac_report"/>-->
+
+                        <!--                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+                        <!--                            android:layout_width="44dp"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="3"-->
+                        <!--                            android:gravity="center"-->
+                        <!--                            android:textColor="@color/black"-->
+                        <!--                            android:textSize="@dimen/text_size"-->
+                        <!--                            android:padding="4dp"-->
+                        <!--                            android:background="@drawable/bg_header_ac_report"/>-->
+
+
+
+                        <!--                    </LinearLayout>-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    tools:context=".Activity.QualificationReportActivity">-->
+
+<!--    <include-->
+<!--        android:id="@+id/tool_main_header"-->
+<!--        layout="@layout/toolbar_activity"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/tool_main_footer"-->
+<!--        layout="@layout/ll_bottom_bar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true" />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:layout_marginBottom="12dp"-->
+<!--        android:layout_marginLeft="4dp"-->
+<!--        android:layout_marginRight="4dp"-->
+<!--        android:layout_below="@+id/tool_main_header"-->
+<!--        android:layout_above="@+id/tool_main_footer">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_marginLeft="8dp"-->
+<!--            android:layout_marginRight="8dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginBottom="12dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@drawable/add_leave_border"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="10dp">-->
+
+<!--                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingLeft="15dp"-->
+<!--                    android:text="Branch"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/text_size" />-->
+
+<!--                <Spinner-->
+<!--                    android:id="@+id/spBranchQualificationReport"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingLeft="15dp" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@drawable/add_leave_border"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="10dp">-->
+
+<!--                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingLeft="15dp"-->
+<!--                    android:text="Department"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/text_size" />-->
+
+<!--                <Spinner-->
+<!--                    android:id="@+id/spDepartmentQualificationReport"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingLeft="15dp" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                    android:id="@+id/tvLoadQualificationReport"-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/border_fill_border_pink"-->
+<!--                    android:paddingTop="10dp"-->
+<!--                    android:paddingBottom="10dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="Load"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+
+<!--        <HorizontalScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:scrollbars="vertical">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="20"-->
+<!--                    android:id="@+id/ll_qualification_header"-->
+<!--                    android:visibility="gone">-->
+
+<!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="6"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="Qualification"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/text_size"-->
+<!--                        android:padding="6dp"-->
+<!--                        android:background="@drawable/bg_header_ac_report"/>-->
+
+<!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:text="SAS"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/text_size"-->
+<!--                        android:padding="6dp"-->
+<!--                        android:background="@drawable/bg_header_ac_report"/>-->
+
+
+<!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:text="SDS"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/text_size"-->
+<!--                        android:padding="6dp"-->
+<!--                        android:background="@drawable/bg_header_ac_report"/>-->
+
+
+<!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:text="SOE"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/text_size"-->
+<!--                        android:padding="6dp"-->
+<!--                        android:background="@drawable/bg_header_ac_report"/>-->
+
+
+<!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="SOM"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/text_size"-->
+<!--                        android:padding="6dp"-->
+<!--                        android:background="@drawable/bg_header_ac_report"/>-->
+
+<!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:text="SOP"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/text_size"-->
+<!--                        android:padding="6dp"-->
+<!--                        android:background="@drawable/bg_header_ac_report"/>-->
+
+<!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:text="SOS"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/text_size"-->
+<!--                        android:padding="6dp"-->
+<!--                        android:background="@drawable/bg_header_ac_report"/>-->
+
+
+<!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="2"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:text="SPT"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/text_size"-->
+<!--                        android:padding="6dp"-->
+<!--                        android:background="@drawable/bg_header_ac_report"/>-->
+
+<!--                </LinearLayout>-->
+
+<!--                <ScrollView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:scrollbars="vertical">-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:id="@+id/ll_qualification_report_value">-->
+
+<!--                    </LinearLayout>-->
+<!--                </ScrollView>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </HorizontalScrollView>-->
+
+<!--    </LinearLayout>-->
+
+<!--</RelativeLayout>-->

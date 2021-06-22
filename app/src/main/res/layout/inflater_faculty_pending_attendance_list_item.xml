@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:background="@drawable/shape_faculty_pending_attedance"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:id="@+id/tvSemesterFacultyPendingAttendance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minLines="2"
+                    android:text="-"
+                    android:textColor="@color/profile_heading_color"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_margin="4dp"
+                android:background="@color/color_primary_with_75_opacity" />
+
+            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                android:id="@+id/tvFacultyPendingAttendanceDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/colorPrimary"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.09"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="18dp"
+                android:background="@color/colorPrimary" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_circle_holo_fillled" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDynamicLineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_circle_holo"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="0.66"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_custom_tooltip"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                android:paddingTop="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="vertical">
+
+                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Course"
+                        android:textColor="@color/profile_heading_color"
+                        android:textSize="10sp" />
+
+                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                        android:id="@+id/tvCourseNameFacultyPendingAttendance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:minLines="1"
+                        android:text="-"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="vertical">
+
+                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Subject"
+                        android:textColor="@color/profile_heading_color"
+                        android:textSize="10sp" />
+
+                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                        android:id="@+id/tvSubjectNameFacultyPendingAttendance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:minLines="1"
+                        android:text="-"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Division"
+                            android:textColor="@color/profile_heading_color"
+                            android:textSize="10sp" />
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:id="@+id/tvDivisionFacultyPendingAttendance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Batch"
+                            android:textColor="@color/profile_heading_color"
+                            android:textSize="10sp" />
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:id="@+id/tvBatchFacultyPendingAttendance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Lec. No."
+                            android:textColor="@color/profile_heading_color"
+                            android:textSize="10sp" />
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:id="@+id/tvLectureNoFacultyPendingAttendance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorPrimary" />
+
+                <LinearLayout
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/llFillAttendanceFacultyPendingAttendance"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:background="?selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Fill Attendance"
+                        android:textColor="@color/colorPrimary" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:layout_margin="8dp"-->
+    <!--    app:cardBackgroundColor="@color/white"-->
+    <!--    app:cardCornerRadius="10dp"-->
+    <!--    app:cardElevation="10dp">-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/llExpandedHeaderFacultyPendingAttendance"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:gravity="center_vertical"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            <rkustom_class.TextViewRegularFont-->
+    <!--                android:id="@+id/tvSemesterFacultyPendingAttendance"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_weight="0.25"-->
+    <!--                android:background="@drawable/shape_lesson_plan_detail_sem"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:padding="4dp"-->
+    <!--                android:singleLine="true"-->
+    <!--                android:text="-"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="12sp" />-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_gravity="center_vertical"-->
+    <!--                android:layout_weight="0.75"-->
+    <!--                android:background="@drawable/shape_lesson_plan_details_course_name"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:orientation="horizontal"-->
+    <!--                android:padding="4dp">-->
+
+    <!--                <rkustom_class.TextViewRegularFont-->
+    <!--                    android:id="@+id/tvDepartmentNamePendingAttendance"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:gravity="center_vertical"-->
+    <!--                    android:singleLine="true"-->
+    <!--                    android:text="-"-->
+    <!--                    android:textColor="@color/white"-->
+    <!--                    android:textSize="12sp" />-->
+
+    <!--                <androidx.appcompat.widget.AppCompatImageView-->
+    <!--                    android:id="@+id/ivViewMoreFacultyPendingAttendance"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    app:srcCompat="@drawable/ic_expand_less" />-->
+
+    <!--            </LinearLayout>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/llExpandableLayoutFacultyPendingAttendance"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:visibility="visible">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="vertical"-->
+    <!--                android:padding="8dp">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="4dp"-->
+    <!--                    android:layout_marginBottom="4dp"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:orientation="vertical">-->
+
+    <!--                        <rkustom_class.TextViewRegularFont-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="Subject"-->
+    <!--                            android:textColor="@color/colorAccent"-->
+    <!--                            android:textSize="12sp" />-->
+
+    <!--                        <rkustom_class.TextViewRegularFont-->
+    <!--                            android:id="@+id/tvSubjectFacultyPendingAttendance"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="-"-->
+    <!--                            android:textColor="@color/colorPrimary"-->
+    <!--                            android:textSize="13sp" />-->
+
+    <!--                    </LinearLayout>-->
+
+    <!--                </LinearLayout>-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="4dp"-->
+    <!--                    android:layout_marginBottom="4dp"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:orientation="vertical">-->
+
+    <!--                        <rkustom_class.TextViewRegularFont-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="Date"-->
+    <!--                            android:textColor="@color/colorAccent"-->
+    <!--                            android:textSize="12sp" />-->
+
+    <!--                        <rkustom_class.TextViewRegularFont-->
+    <!--                            android:id="@+id/tvDateFacultyPendingAttendance"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="-"-->
+    <!--                            android:textColor="@color/colorPrimary"-->
+    <!--                            android:textSize="13sp" />-->
+
+    <!--                    </LinearLayout>-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:orientation="vertical">-->
+
+    <!--                        <rkustom_class.TextViewRegularFont-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="Resource Name"-->
+    <!--                            android:textColor="@color/colorAccent"-->
+    <!--                            android:textSize="12sp" />-->
+
+    <!--                        <rkustom_class.TextViewRegularFont-->
+    <!--                            android:id="@+id/tvResourceNameFacultyPendingAttendance"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="-"-->
+    <!--                            android:textColor="@color/colorPrimary"-->
+    <!--                            android:textSize="13sp" />-->
+
+    <!--                    </LinearLayout>-->
+
+    <!--                </LinearLayout>-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="4dp"-->
+    <!--                    android:layout_marginBottom="4dp"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:orientation="vertical">-->
+
+    <!--                        <rkustom_class.TextViewRegularFont-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="Batch"-->
+    <!--                            android:textColor="@color/colorAccent"-->
+    <!--                            android:textSize="12sp" />-->
+
+    <!--                        <rkustom_class.TextViewRegularFont-->
+    <!--                            android:id="@+id/tvBatchFacultyPendingAttendance"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="-"-->
+    <!--                            android:textColor="@color/colorPrimary"-->
+    <!--                            android:textSize="13sp" />-->
+
+    <!--                    </LinearLayout>-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:orientation="vertical">-->
+
+    <!--                        <rkustom_class.TextViewRegularFont-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="Division"-->
+    <!--                            android:textColor="@color/colorAccent"-->
+    <!--                            android:textSize="12sp" />-->
+
+    <!--                        <rkustom_class.TextViewRegularFont-->
+    <!--                            android:id="@+id/tvDivisionPendingAttendance"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="-"-->
+    <!--                            android:textColor="@color/colorPrimary"-->
+    <!--                            android:textSize="13sp" />-->
+
+    <!--                    </LinearLayout>-->
+
+    <!--                </LinearLayout>-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:background="@drawable/shape_faculty_fill_attendance"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:id="@+id/llFillAttendance"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:background="?selectableItemBackground"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:orientation="vertical"-->
+    <!--                    android:padding="12dp">-->
+
+    <!--                    <rkustom_class.TextViewMediumFont-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:text="Fill Attendance"-->
+    <!--                        android:textColor="@color/colorPrimary" />-->
+
+    <!--                </LinearLayout>-->
+
+    <!--            </LinearLayout>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--    </LinearLayout>-->
+
+    <!--</com.google.android.material.card.MaterialCardView>-->

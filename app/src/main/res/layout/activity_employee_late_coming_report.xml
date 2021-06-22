@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.EmployeeLateComingReportActivity">
+
+    <include
+        android:id="@+id/tool_main_header"
+        layout="@layout/toolbar_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <include
+        android:id="@+id/tool_main_footer"
+        layout="@layout/ll_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:layout_below="@+id/tool_main_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/add_leave_border"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="Branch"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <Spinner
+                android:id="@+id/spBranchEmpLateCommingReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/add_leave_border"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="Department"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <Spinner
+                android:id="@+id/spDepartmentEmpLateCommingReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/add_leave_border"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="Month"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <Spinner
+                android:id="@+id/spMonthEmpLateComingReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/add_leave_border"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="Year"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <Spinner
+                android:id="@+id/spYearEmpLateComingReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:id="@+id/tvLoadLateComingReport"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_fill_border_pink"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:text="Load"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:layout_marginBottom="12dp"-->
+<!--        android:layout_marginLeft="4dp"-->
+<!--        android:layout_marginRight="4dp"-->
+<!--        android:layout_below="@+id/tool_main_header"-->
+<!--        android:layout_above="@+id/tool_main_footer">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@drawable/add_leave_border"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="10dp">-->
+
+<!--                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingLeft="15dp"-->
+<!--                    android:text="Month"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/text_size" />-->
+
+<!--                <Spinner-->
+<!--                    android:id="@+id/spMonthEmpLateComingReport"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingLeft="15dp" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@drawable/add_leave_border"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="10dp">-->
+
+<!--                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingLeft="15dp"-->
+<!--                    android:text="Year"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/text_size" />-->
+
+<!--                <Spinner-->
+<!--                    android:id="@+id/spYearEmpLateComingReport"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingLeft="15dp" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                    android:id="@+id/tvLoadLateComingReport"-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/border_fill_border_pink"-->
+<!--                    android:paddingTop="10dp"-->
+<!--                    android:paddingBottom="10dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="Load"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:weightSum="2"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:visibility="gone"-->
+<!--            android:id="@+id/ll_emp_late_coming_report_header">-->
+
+<!--            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1.2"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Employee Name"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/text_size"-->
+<!--                android:padding="4dp"-->
+<!--                android:background="@drawable/bg_header_ac_report"/>-->
+
+<!--            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="0.8"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Late By"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/text_size"-->
+<!--                android:padding="4dp"-->
+<!--                android:background="@drawable/bg_header_ac_report"/>-->
+
+<!--        </LinearLayout>-->
+
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:scrollbars="vertical">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:id="@+id/ll_employee_late_coming_report">-->
+
+<!--                &lt;!&ndash;                    <LinearLayout&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:weightSum="3"&ndash;&gt;-->
+<!--                &lt;!&ndash;                        android:orientation="horizontal">&ndash;&gt;-->
+
+<!--                &lt;!&ndash;&lt;!&ndash;                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:layout_width="0dp"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:layout_weight="1.3"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:layout_height="match_parent"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:text="Employee Name Employee Name Employee Name"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:gravity="center_vertical"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:textColor="@color/black"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:textSize="@dimen/text_size"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:padding="4dp"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:background="@drawable/bg_header_ac_report"/>&ndash;&gt;&ndash;&gt;-->
+
+<!--                &lt;!&ndash;&lt;!&ndash;                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:layout_width="0dp"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:layout_weight="1"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:layout_height="match_parent"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:text="Scale"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:gravity="center_vertical"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:textColor="@color/black"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:textSize="@dimen/text_size"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:padding="4dp"&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                            android:background="@drawable/bg_header_ac_report"/>&ndash;&gt;&ndash;&gt;-->
+
+<!--                &lt;!&ndash;                    </LinearLayout>&ndash;&gt;-->
+
+
+<!--            </LinearLayout>-->
+
+
+<!--        </ScrollView>-->
+
+
+<!--    </LinearLayout>-->
+
+</RelativeLayout>

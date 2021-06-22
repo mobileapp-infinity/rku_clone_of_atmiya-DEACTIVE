@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_color">
+
+    <LinearLayout
+        android:id="@+id/llProfileActionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCloseProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_close" />
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+            android:id="@+id/tvProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Profile"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgStudentLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"
+            app:srcCompat="@drawable/ic_logout_new_icon" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llProfileDetails"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llProfileActionbar">
+
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/student_profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:backgroundTint="@color/colorPrimary"
+                android:elevation="8dp"
+                app:srcCompat="@drawable/person_img"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="3dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:id="@+id/tvStudentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:id="@+id/tvStudentEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:text="-"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvStudentInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="8dp"
+        app:contentPadding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/llProfileDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llProfileDetails">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical"
+                    android:text="Course"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="@color/profile_heading_color"
+                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                    android:id="@+id/tvStudentCourseNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical"
+                    android:singleLine="true"
+                    android:text="-"
+                    android:textAllCaps="true"
+                    android:textColor="@color/profile_heading_value_color"
+                    android:textSize="@dimen/student_profile_text_font_size" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/profile_heading_color" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical"
+                    android:text="Semester"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="@color/profile_heading_color"
+                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                    android:id="@+id/tvStudentSem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:singleLine="true"
+                    android:text="-"
+                    android:textAllCaps="true"
+                    android:textColor="@color/profile_heading_value_color"
+                    android:textSize="@dimen/student_profile_text_font_size" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/profile_heading_color" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical"
+                    android:text="Enrollment No."
+                    android:textAllCaps="true"
+                    android:singleLine="true"
+                    android:textColor="@color/profile_heading_color"
+                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                    android:id="@+id/tvStudentenrollmentNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical"
+                    android:text="-"
+                    android:textAllCaps="true"
+                    android:textColor="@color/profile_heading_value_color"
+                    android:textSize="@dimen/student_profile_text_font_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ScrollView
+        android:id="@+id/svStudentProfile"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvStudentInfo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llExpandedHeaderPersonalDetailsProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/profile_personal_details_shape"
+                        android:orientation="horizontal">
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:padding="8dp"
+                            android:text="Personal Details"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivViewMoreBtnPersonalDetailProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            app:srcCompat="@drawable/ic_expand_less" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llExpandableLayoutPersonalDetailsProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gender"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentGender"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Date of Birth"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentDOB"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Aadhaar Card No."
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentAadhaarCardNo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mobile No."
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentMobileNo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llExpandedHeaderAcademicDetailsProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/profile_personal_details_shape"
+                        android:orientation="horizontal">
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:padding="8dp"
+                            android:text="Academic Details"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivViewMoreBtnAcademicDetailsProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            app:srcCompat="@drawable/ic_expand_more" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llExpandableLayoutAcademicDetailsProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="College"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentCollegeName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Department"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentDepartment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Course"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentCourse"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Division"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentDivision"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Roll No."
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentRollNo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Admission No."
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentAdmissionNo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Admission year"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentadmissionYear"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Admission Type"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentAtmissionType"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Internet Username"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentInternetUsername"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Internet Password"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentInternetPassword"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llExpandedHeaderContactDetailsProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/profile_personal_details_shape"
+                        android:orientation="horizontal">
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:padding="8dp"
+                            android:text="Contact Details"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivViewMoreBtnContactDetailsProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            app:srcCompat="@drawable/ic_expand_more" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llExpandableLayoutContactDetailsProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Permanent Address"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentPermenentAddress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Present Address"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentPresentAddress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Father Mobile No."
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentFatherMobileNo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="City"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentCityName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="State"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentStateName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Country"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudentCountryName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

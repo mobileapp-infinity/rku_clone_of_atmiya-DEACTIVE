@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fillViewport="true"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvCoOrdinatorLeave"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="none"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                        <LinearLayout
+                            android:visibility="visible"
+                            android:id="@+id/llNoDataFound"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/ic_no_data_found" />
+
+                            <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="No Data Found !"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/filter"
+            app:backgroundTint="@color/colorAccent"
+            android:layout_margin="16dp" />
+
+
+    </FrameLayout>
+
+</LinearLayout>
+
+
+    <!--///-->
+    <!--    <?xml version="1.0" encoding="utf-8"?>-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--tools:context=".faculty.faculty_hod_leave_approval.fragments.HODPendingLeaveFragment">-->
+
+    <!--<ScrollView-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="0dp"-->
+    <!--    android:layout_weight="1"-->
+    <!--    android:fillViewport="true"-->
+    <!--    android:scrollbars="vertical">-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:padding="12dp">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginBottom="8dp"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginRight="8dp"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <Spinner-->
+    <!--                    android:id="@+id/spCollege"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="60dp"-->
+    <!--                    android:dropDownVerticalOffset="40dp"-->
+    <!--                    android:minHeight="35dp"-->
+    <!--                    android:textSize="12sp" />-->
+
+    <!--                <View-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="1dp"-->
+    <!--                    android:background="@color/colorPrimary" />-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginLeft="8dp"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <Spinner-->
+    <!--                    android:id="@+id/spDepartment"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="60dp"-->
+    <!--                    android:dropDownVerticalOffset="40dp"-->
+    <!--                    android:minHeight="35dp"-->
+    <!--                    android:textSize="12sp" />-->
+
+    <!--                <View-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="1dp"-->
+    <!--                    android:background="@color/colorPrimary" />-->
+
+    <!--            </LinearLayout>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:layout_marginBottom="8dp"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginRight="8dp"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <Spinner-->
+    <!--                    android:id="@+id/spCourse"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="60dp"-->
+    <!--                    android:dropDownVerticalOffset="40dp"-->
+    <!--                    android:minHeight="35dp"-->
+    <!--                    android:textSize="12sp" />-->
+
+    <!--                <View-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="1dp"-->
+    <!--                    android:background="@color/colorPrimary" />-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginLeft="8dp"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <Spinner-->
+    <!--                    android:id="@+id/spSemester"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="60dp"-->
+    <!--                    android:dropDownVerticalOffset="40dp"-->
+    <!--                    android:minHeight="35dp"-->
+    <!--                    android:textSize="12sp" />-->
+
+    <!--                <View-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="1dp"-->
+    <!--                    android:background="@color/colorPrimary" />-->
+
+    <!--            </LinearLayout>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="0dp"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <androidx.recyclerview.widget.RecyclerView-->
+    <!--                android:id="@+id/rvHodLeave"-->
+    <!--                android:visibility="gone"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:scrollbars="none"-->
+    <!--                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />-->
+
+    <!--            <LinearLayout-->
+    <!--                android:visibility="visible"-->
+    <!--                android:id="@+id/llNoDataFound"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <androidx.appcompat.widget.AppCompatImageView-->
+    <!--                    android:layout_width="80dp"-->
+    <!--                    android:layout_height="80dp"-->
+    <!--                    android:layout_gravity="center"-->
+    <!--                    app:srcCompat="@drawable/ic_no_data_found" />-->
+
+    <!--                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="6dp"-->
+    <!--                    android:text="No Data Found !"-->
+    <!--                    android:textColor="@color/colorPrimary"-->
+    <!--                    android:textSize="14sp" />-->
+
+    <!--            </LinearLayout>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--    </LinearLayout>-->
+
+    <!--</ScrollView>-->
+
+    <!--</LinearLayout>-->

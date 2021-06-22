@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.EmployeeMonthWiseMissPunchDetailReport">
+
+    <include
+        android:id="@+id/tool_main_header"
+        layout="@layout/toolbar_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <include
+        android:id="@+id/tool_main_footer"
+        layout="@layout/ll_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_below="@+id/tool_main_header"
+        android:layout_above="@+id/tool_main_footer">
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_mail_emp_month_wise_miss_pinch_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="50">
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="8"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Employee Name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_header_ac_report"/>
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Jan"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_header_ac_report"/>
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Feb"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_header_ac_report"/>
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="3.2"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Mar"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_header_ac_report"/>
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Apr"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_header_ac_report"/>
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="May"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_header_ac_report"/>
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Jun"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_header_ac_report"/>
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Jul"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_header_ac_report"/>
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Aug"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_header_ac_report"/>
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Sep"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_header_ac_report"/>
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Oct"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_header_ac_report"/>
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="3.3"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Nov"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_header_ac_report"/>
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Dec"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_header_ac_report"/>
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="4.5"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Total"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_header_ac_report"/>
+
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/ll_employee_month_wise_miss_punch_report">
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

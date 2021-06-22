@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".login.activity.SplashActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/splash"
+            android:scaleType="fitXY" />
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:layout_width="172dp"-->
+<!--                android:layout_height="172dp"-->
+<!--                android:adjustViewBounds="true"-->
+<!--                app:srcCompat="@drawable/logo" />-->
+
+<!--            <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_marginTop="14dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="22dp"-->
+<!--                android:lineSpacingMultiplier="1.4"-->
+<!--                android:gravity="center"-->
+<!--                app:textAllCaps="true"-->
+<!--                android:text="&quot; O Lord...\nWhether anyone else\nbecome or not,\nplease make me\natmiya ! &quot;\n"/>-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/bg_splash_footer"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="8dp">-->
+
+<!--            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Design &amp; Developed by: "-->
+<!--                android:textSize="12sp"-->
+<!--                android:textColor="@color/colorPrimary"/>-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:layout_width="154dp"-->
+<!--                android:layout_height="32dp"-->
+<!--                android:adjustViewBounds="true"-->
+<!--                app:srcCompat="@drawable/ic_new_iipl_logo"/>-->
+
+
+<!--        </LinearLayout>-->
+
+    </FrameLayout>
+
+</LinearLayout>

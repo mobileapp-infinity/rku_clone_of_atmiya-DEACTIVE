@@ -1,0 +1,129 @@
+<resources>
+    <string name="app_name">RKU</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="alert_dialog_title">Please Select</string>
+    <string name="positive_button_text">Select</string>
+    <string name="negative_button_text">Cancel</string>
+    <string name="my_text">This is an <u>underline</u>.</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_tabactivity">tabactivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="type_to_search">Type to Search</string>
+
+    <string name="employee_profile">Employee Profile</string>
+    <string name="family_details">Family Details</string>
+    <string name="details_of_theory_subject_taught">Details of theory subjects taught</string>
+    <string name="lab_or_lecture_plan">Lab / Lecture Plan</string>
+    <string name="subject_wise_devision_wise_total_theory_period_engaged">Subject Wise,Division Wise Total Theory Period Engaged</string>
+    <string name="student_forum_activity">Student Forum Activity</string>
+    //4-6-2020//
+    <string name="view_details"><u>View Details</u></string>
+    //4-6-2020//
+    <string name="faculty_adviser_remarks">Faculty Adviser Remarks</string>
+    <string name="time_table">Time Table</string>
+    <string name="e_learning">E-Learning</string>
+    <string name="exam">Exam</string>
+    <string name="leave_application">Leave Application</string>
+    <string name="assignment">Assignment</string>
+    <string name="result">Result</string>
+    <string name="current_month">Current Month</string>
+    <string name="previous_month">Previous Month</string>
+    <string name="average">Average</string>
+    <string name="syllabus">Syllabus</string>
+    <string name="lesson_plan">Lesson Plan</string>
+    <string name="home_work">Home Work</string>
+    <string name="fee_details">Fee Details</string>
+    <string name="event_calender">Event Calendar</string>
+    <string name="activity">Activity</string>
+    <string name="message_history">Message History</string>
+    <string name="news_notifications">News | Notifications</string>
+    <string name="holiday">Holiday</string>
+
+    <string name="permissions_has_not_grant">Permissions has not been granted</string>
+    <string name="permission_request">Permission Request</string>
+    <string name="download"><u>Download</u></string>
+    <string name="click_to_view_doc"><u>Click to view document</u></string>
+
+
+    <!--    RKU String-->
+
+    <string name="sign_in_text">Sign In</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="header_login_txx">Sign In With Password</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="fpassword">Forgot Password</string>
+    <string name="leave">Leave</string>
+    <string name="miss_punch">Miss Punch</string>
+    <string name="approve">Approve</string>
+    <string name="reject">Reject</string>
+    <string name="submit">Submit</string>
+    <string name="title_app_update">Update</string>
+    <string name="title_update_now">Update Now</string>
+    <string name="title_new_version_available">There is a newer version of this application available</string>
+    <string name="title_not_now">Not Now</string>
+    <string name="default_notification_channel_id">my_channel_02</string>
+    <string name="tap_back_again_to_exit">Tap back again to exit</string>
+    <string name="academic_contribution">Academic Contribution</string>
+    <string name="publication_in_conferences_approval">Publication in Conferences Approval</string>
+    <string name="publication_in_journals">Publication in Journals</string>
+    <string name="publication_in_journals_approve">Publication in Journals Approval</string>
+    <string name="book_or_chapter_publication">Book/Chapter Publication</string>
+    <string name="book_or_chapter_publication_approval">Book/Chapter Publication Approval</string>
+    <string name="patent_awarded_request">Patent Awarded Request</string>
+    <string name="patent_awarded_approval">Patent Awarded Approval</string>
+    <string name="pg_scholars_guided_request">PG Scholars Guided Request</string>
+    <string name="pg_scholars_guided_approval">PG Scholars Guided Approval</string>
+    <string name="phd_scholars_guided_request">PhD Scholars Guided Request</string>
+    <string name="phd_scholars_guided_approval">PhD Scholars Guided Approval</string>
+    <string name="cpd_application_request">CPD Application Request</string>
+    <string name="cpd_applciation_approval">CPD Application Approval</string>
+    <string name="fdp_attended_request">FDP Attended Request</string>
+    <string name="fdp_attended_approval">FDP Attended Approval</string>
+    <string name="consultancy_request">Consultancy Request</string>
+    <string name="consultancy_approval">Consultancy Approval</string>
+    <string name="grant_received_request">Grant Received Request</string>
+    <string name="grant_received_approval">Grant Received Approval</string>
+    <string name="publication_in_conferences">Publication in Conferences</string>
+    <string name="seed_money_received_from_university_request">Seed Money Received From University Request</string>
+    <string name="seed_money_received_from_university_approval">Seed Money Received From University Approval</string>
+
+    <string name="request_for_resignation">Request For Resignation</string>
+    <string name="request_pd_application">PD Application Request</string>
+    <string name="committee">Committee</string>
+    <string name="committee_member">Committee Member</string>
+    <string name="committee_details">Committee Details</string>
+    <string name="underline_investment_details">Investment Details</string>
+
+    <string name="academic_contribution_report">Academic Contribution Summary Report</string>
+    <string name="daily_attendance_report">Daily Attendance Report</string>
+    <string name="employee_detail_report">Employee Detail Report</string>
+    <string name="leave_balance_report">Leave Balance Report</string>
+    <string name="qualification_report">Qualification Summary Report</string>
+    <string name="employee_payroll_details_report">Employee Payroll Detail Report</string>
+    <string name="employee_branch_transfer_report">Employee Branch Transfer Report</string>
+    <string name="university_seed_money_summary_report">University Seed Money Summary Report</string>
+    <string name="employee_late_coming_report">Employee Late Coming Report</string>
+    <string name="employee_month_wise_miss_punch_report">Employee Month Wise Mis Punch Report</string>
+    <string name="employee_month_wise_late_report">Employee Month Wise Late Report</string>
+    <string name="all_employee_attendance_report">All Employee Attendance Report</string>
+    <string name="pd_statistics_report_for_staff">PD Statistics Report For Staff</string>
+
+    <string name="slycalendar_singledate" translatable="false">EE, dd MMMM</string>
+    <string name="slycalendar_short" translatable="false">EE, dd</string>
+    <string name="slycalendar_short_month" translatable="false">EE, dd MMM</string>
+    <string name="slycalendar_dates_period" translatable="false">%1$s – %2$s</string>
+
+    <string name="slycalendar_cancel">Cancel</string>
+    <string name="slycalendar_save">Save</string>
+    <string name="slycalendar_next">Next</string>
+    <string name="slycalendar_prev">Prev</string>
+
+</resources>

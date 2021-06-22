@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.UniversitySeedMoneySummaryReportActivity">
+
+    <include
+        android:id="@+id/tool_main_header"
+        layout="@layout/toolbar_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <include
+        android:id="@+id/tool_main_footer"
+        layout="@layout/ll_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:id="@+id/llBranchAndDp"
+        android:layout_below="@+id/tool_main_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/add_leave_border"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="Branch"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <Spinner
+                android:id="@+id/spBranchSeedMoneyReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/add_leave_border"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="Department"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <Spinner
+                android:id="@+id/spDepartmentSeedMoneyReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/add_leave_border"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="Academic Year"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <Spinner
+                android:id="@+id/spAcademicYearUniversitySeedMoney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:id="@+id/tvLoadSeedMoneyReport"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_fill_border_pink"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:text="Load"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_below="@+id/llBranchAndDp"
+        android:layout_above="@+id/tool_main_footer">
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center"-->
+<!--            android:id="@+id/ll_no_data_found">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            app:srcCompat="@drawable/no_data_found"-->
+<!--            android:tint="#757575"/>-->
+
+<!--        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="No Data Found!"-->
+<!--            android:textColor="#757575"/>-->
+
+<!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:id="@+id/llUniversitySeedMoneySummaryReportHeader">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="wrap_content"
+                android:text="School"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size"
+                android:padding="4dp"
+                android:background="@drawable/bg_header_ac_report"/>
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_height="wrap_content"
+                android:text="Amount"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size"
+                android:padding="4dp"
+                android:background="@drawable/bg_header_ac_report"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll_university_seed_money_summary_report_value">
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:weightSum="2"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_weight="1.2"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:text="SCHOOL OF ENGINEERING ENGINEERING ENGINEERING "-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="@dimen/text_size"-->
+<!--                            android:padding="4dp"-->
+<!--                            android:background="@drawable/bg_header_ac_report"/>-->
+
+<!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="0.8"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="Scale"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/text_size"-->
+<!--                        android:padding="4dp"-->
+<!--                        android:background="@drawable/bg_header_ac_report"/>-->
+
+<!--                </LinearLayout>-->
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

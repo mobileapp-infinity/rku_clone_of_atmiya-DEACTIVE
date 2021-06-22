@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/border_cat_main"
+    android:gravity="center_horizontal"
+
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:gravity="center|right">
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/close">
+
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                    android:id="@+id/tv_titile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:paddingLeft="8dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_titile"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:weightSum="2">
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:weightSum="2">-->
+
+<!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Today's In|Out  :"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/text_size"-->
+<!--                        android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>-->
+
+<!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView-->
+<!--                        android:id="@+id/tv_todays_in"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="left|center"-->
+<!--                        android:gravity="center|left"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/text"-->
+<!--                        android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:id="@+id/ll_out_time"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:padding="5dp">-->
+
+<!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:text="Today's OutTime  :-"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/text_size"-->
+<!--                        android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>-->
+
+<!--                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView-->
+<!--                        android:id="@+id/tv_todays_out"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="left|center"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center|left"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/text"-->
+<!--                        android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>-->
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:layout_marginTop="2dp"-->
+<!--                    android:background="@color/grey" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_all_approvals"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_view_leave"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp"
+                        card_view:cardUseCompatPadding="true"
+                        card_view:contentPadding="1dp"
+                        card_view:elevation="36dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@color/grey"
+                                />
+                            <LinearLayout
+                                android:id="@+id/ll_pd_statistics"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.8"
+                                        android:padding="5dp"
+                                        android:text="PD Statistics"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/text_size"
+                                        android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+
+                                    <View
+                                        android:layout_width="2dp"
+                                        android:visibility="gone"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/grey" />
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                        android:id="@+id/tv_pd_statistics"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight=".2"
+                                        android:background="@drawable/badge_circle_count"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text=""
+                                        android:visibility="gone"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:visibility="gone"
+                                android:layout_marginTop="2dp"
+                                android:background="@color/grey"
+                                />
+                            <LinearLayout
+                                android:id="@+id/ll_leave_p"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.8"
+                                        android:padding="5dp"
+                                        android:text="Leave Application"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/text_size"
+                                        android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                    <View
+                                        android:layout_width="2dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/grey" />
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                        android:id="@+id/tv_leave_p"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left|center"
+                                        android:layout_weight=".2"
+                                        android:background="@drawable/badge_circle_count"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@color/grey"
+                                />
+
+                            <LinearLayout
+                                android:id="@+id/ll_cancel_leave_p"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.8"
+                                        android:padding="5dp"
+                                        android:text="Cancel Leave Application"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/text_size"
+                                        android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+
+                                    <View
+                                        android:layout_width="2dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/grey" />
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                        android:id="@+id/tv_cancel_leaves_p"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight=".2"
+                                        android:background="@drawable/badge_circle_count"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text=""
+
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@color/grey"
+                                />
+
+                            <LinearLayout
+                                android:id="@+id/ll_miss_punch_p"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.8"
+                                        android:padding="5dp"
+                                        android:text="Mis Punch  "
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/text_size"
+                                        android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                    <View
+                                        android:layout_width="2dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/grey" />
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                        android:id="@+id/tv_misspunch_p"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left|center"
+                                        android:layout_weight=".2"
+                                        android:background="@drawable/badge_circle_count"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text=""
+
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@color/grey"
+                                />
+                            <LinearLayout
+                                android:id="@+id/ll_pd_app"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.8"
+                                        android:padding="5dp"
+                                        android:text="PD Application  "
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/text_size"
+                                        android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+
+
+                                    <View
+                                        android:layout_width="2dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/grey" />
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                        android:id="@+id/tv_pd_app_p"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left|center"
+                                        android:layout_weight=".2"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text=""
+                                        android:background="@drawable/badge_circle_count"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                </LinearLayout>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@color/grey"
+                                    />
+                                <LinearLayout
+                                    android:id="@+id/ll_pd_app_doc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.8"
+                                            android:padding="5dp"
+                                            android:text="PD Application Document "
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/text_size"
+                                            android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/grey" />
+
+                                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                            android:id="@+id/tv_pd_app_p_doc"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="left|center"
+                                            android:layout_weight=".2"
+                                            android:gravity="center"
+                                            android:padding="5dp"
+                                            android:text=""
+                                            android:background="@drawable/badge_circle_count"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@color/grey"
+                                />
+
+                            <LinearLayout
+                                android:id="@+id/ll_confarance_p"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.8"
+                                        android:padding="5dp"
+                                        android:text="Publication in Conference"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/text_size"
+                                        android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                    <View
+                                        android:layout_width="2dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/grey" />
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                        android:id="@+id/tv_confarance_pub_p"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left|center"
+                                        android:layout_weight=".2"
+                                        android:background="@drawable/badge_circle_count"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text=""
+
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@color/grey"
+                                    />
+                                <LinearLayout
+                                    android:id="@+id/ll_joural_plub_p"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.8"
+                                            android:padding="5dp"
+                                            android:text="Publication in Journal  "
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/text_size"
+
+                                            android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/grey" />
+
+                                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                            android:id="@+id/tv_journal_pub_p"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="left|center"
+                                            android:layout_weight=".2"
+                                            android:background="@drawable/badge_circle_count"
+                                            android:gravity="center"
+                                            android:padding="5dp"
+                                            android:text=""
+
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@color/grey"
+                                    />
+                                <LinearLayout
+                                    android:id="@+id/ll_books_chap_p"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.8"
+                                            android:padding="5dp"
+                                            android:text="Book/Chapter Publication "
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/text_size"
+
+                                            android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/grey" />
+
+                                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                            android:id="@+id/tv_books_p"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="left|center"
+                                            android:layout_weight=".2"
+                                            android:background="@drawable/badge_circle_count"
+                                            android:gravity="center"
+                                            android:padding="5dp"
+                                            android:text=""
+
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@color/grey"
+                                />
+
+                            <LinearLayout
+                                android:id="@+id/ll_patent_aware_p"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.8"
+                                        android:padding="5dp"
+
+                                        android:text="Patent Awarded  "
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/text_size"
+                                        android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                    <View
+                                        android:layout_width="2dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/grey" />
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                        android:id="@+id/tv_patent_awarded_p"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left|center"
+                                        android:layout_weight=".2"
+                                        android:background="@drawable/badge_circle_count"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text=""
+
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@color/grey"
+                                    />
+                                <LinearLayout
+                                    android:id="@+id/ll_pg_scholar_p"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.8"
+                                            android:padding="5dp"
+                                            android:text="PG Scholars Guided  "
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/text_size"
+
+                                            android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/grey" />
+
+                                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                            android:id="@+id/tv_pg_scholars_p"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="left|center"
+                                            android:layout_weight=".2"
+                                            android:background="@drawable/badge_circle_count"
+                                            android:gravity="center"
+                                            android:padding="5dp"
+                                            android:text=""
+
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@color/grey"
+                                    />
+                                <LinearLayout
+                                    android:id="@+id/ll_phd_shcolar_p"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.8"
+                                            android:padding="5dp"
+                                            android:text="PhD Scholars Guided "
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/text_size"
+
+                                            android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/grey" />
+
+                                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                            android:id="@+id/tv_phd_scholars_p"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="left|center"
+                                            android:layout_weight=".2"
+                                            android:background="@drawable/badge_circle_count"
+                                            android:gravity="center"
+                                            android:padding="5dp"
+                                            android:text=""
+
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@color/grey"
+                                    />
+                                <LinearLayout
+                                    android:id="@+id/ll_cpd"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.8"
+                                            android:padding="5dp"
+                                            android:text="CPD Application"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/text_size"
+
+                                            android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="2dp"
+                                            android:background="@color/grey" />
+
+                                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                            android:id="@+id/tv_cpd"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="left|center"
+                                            android:layout_weight=".2"
+                                            android:background="@drawable/badge_circle_count"
+                                            android:gravity="center"
+                                            android:padding="5dp"
+                                            android:text=""
+
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@color/grey"
+                                    />
+                                <LinearLayout
+                                    android:id="@+id/ll_fdp_att_p"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.8"
+                                            android:padding="5dp"
+                                            android:text="FDP Attended "
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/text_size"
+
+                                            android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/grey" />
+
+                                        <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                            android:id="@+id/tv_fdp_att_p"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="left|center"
+                                            android:layout_weight=".2"
+                                            android:background="@drawable/badge_circle_count"
+                                            android:gravity="center"
+                                            android:padding="5dp"
+                                            android:text=""
+
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@color/grey"
+                                />
+
+                            <LinearLayout
+                                android:id="@+id/ll_consultancy_p"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.8"
+                                        android:padding="5dp"
+                                        android:text="Consultancy  "
+                                        android:textColor="@color/black"
+
+                                        android:textSize="@dimen/text_size"
+                                        android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                    <View
+                                        android:layout_width="2dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/grey" />
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                        android:id="@+id/tv_consultuncy_p"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left|center"
+                                        android:layout_weight=".2"
+                                        android:background="@drawable/badge_circle_count"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text=""
+
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@color/grey"
+                                />
+
+                            <LinearLayout
+                                android:id="@+id/ll_grant_receive_p"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.8"
+                                        android:padding="5dp"
+                                        android:text="Grant Received  "
+
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/text_size"
+                                        android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                    <View
+                                        android:layout_width="2dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/grey" />
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                        android:id="@+id/tv_grant_receive_p"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left|center"
+                                        android:layout_weight=".2"
+                                        android:background="@drawable/badge_circle_count"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text=""
+
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+
+
+
+                            </LinearLayout>
+
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@color/grey"
+                                android:visibility="visible" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_post_doc_p"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="5dp">
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Post Document  :-"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/text_size"
+                                        android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                        android:id="@+id/tv_post_doc_p"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left|center"
+                                        android:layout_weight="1"
+                                        android:gravity="center|left"
+                                        android:text=""
+                                        android:textColor="@color/text"
+                                        android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@color/grey"
+                                android:visibility="gone" />
+
+
+
+
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_seed_money_p"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.8"
+                                        android:padding="5dp"
+                                        android:text="Seed Money Received From University  "
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/text_size"
+
+                                        android:textStyle="bold"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView>
+
+                                    <View
+                                        android:layout_width="2dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/grey" />
+
+                                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                                        android:id="@+id/tv_seed_money_p"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left|center"
+                                        android:layout_weight=".2"
+                                        android:background="@drawable/badge_circle_count"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text=""
+
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size"></com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/grey"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

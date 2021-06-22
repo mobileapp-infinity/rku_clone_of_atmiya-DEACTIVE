@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.infinity.infoway.rkuniversity">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".utils.AppController"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:installLocation="auto"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon">
+        <activity
+            android:name=".faculty.faculty_calendar.FacultyCalendarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.student_calender.StudentCalenderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_suspended_lecture_approval.FacultySuspendedLectureApprovalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_extra_lecture_approval.FacultyExtraLectureApprovalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_co_ordinator_leave_approval.FacultyCoOrdinatorLeaveApprovalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_hod_leave_approval.FacultyHODLeaveApprovalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_direct_login_to_student.FacultyDirectLoginToStudentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.fee_details.activity.PaySlipOfAxisDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.exam.activity.StudentMidMarksActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".intro_screen.activity.IntroScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".common_activity.ErrorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".common_activity.NoInternetConnectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_teaching_update.faculty_adviser_remarks.FacultyAdviserRemarksActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_fill_attendance.activity.FacultyFillAttendanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_teaching_update.faculty_lab_or_lecture_plan_teaching_update.FacultyLabOrLecturePlanTeachingUpdateDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_teaching_update.faculty_lab_or_lecture_plan_teaching_update.FacultyLabOrLecturePlanTeachingUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".forgot_password.activity.SelectUserTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_pending_attendance.FacultyPendingAttendanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_teaching_update.faculty_subject_wise_division_wise_total_theory_period_engaged.FacultySubWiseDivWiseTotTheoryPeriodEngagedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_teaching_update.FacultyTeachingUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_teaching_update.faculty_student_forum.FacultyStudentForumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_teaching_update.faculty_details_of_theory_sub.FacultyDetailsOfTheorySubjectTaughtActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_attendance.FacultyAttendanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_news.FacultyNewsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_news.FacultyNewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_lecture_plan.FacultyLecturePlanDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_lecture_plan.FacultyLecturePlanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_rem_attendance.FacultyRemAttendanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_leave.FacultyLeaveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_timetable.activity.FacultyTimeTableActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_announcement.FacultyAnnouncementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_profile.FacultyProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".faculty.faculty_dashboard.activity.FacultyDashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.fee_details.activity.PaytmPaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.fee_details.activity.AxisAndHdfcPaymentWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".forgot_password.activity.ResetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".forgot_password.activity.VerifyOTPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.activity.UpdateAppActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".forgot_password.activity.ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.exam.activity.MidResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.exam.activity.CIAExamMarksActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.news_or_notification.ViewAllNewsOrNotificationStudentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.fee_details.activity.PayFeeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.home_work.activity.StudentHomeWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.lesson_plan.StudentLessonPlanDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.lesson_plan.StudentLessonPlanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.student_syllabus.StudentSyllabusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.student_timetable.activity.StudentTimeTableActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.holiday.HolidayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.e_learning.activity.ELearningActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.leave_application.activity.LeaveApplicationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.student_activity.StudentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.message_history.MessageHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.assignment.AssignmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.exam.activity.ExaminationScheduleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.exam.activity.StudentResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.exam.activity.ExamActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.fee_details.activity.FeeReciptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="Fees Activity For Student" />
+                <action android:name="Attendance Activity For Student" />
+                <action android:name="Lesson Plan Activity For Student" />
+                <action android:name="News Activity For Student" />
+                <action android:name="Activity For Student" />
+                <action android:name="Homework Activity For Student" />
+                <action android:name="Syllabus Activity For Student" />
+                <action android:name="Result Activity For Student" />
+                <action android:name="Assignment Activity For Student" />
+                <action android:name="Exam Timetable Activity For Student" />
+                <action android:name="Fee Circular Activity For Student" />
+                <action android:name="Leave Activity For Student" />
+                <action android:name="E-Learning Management For Student" />
+                <action android:name="Holiday Activity For Student" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".student.fee_details.activity.FeeDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.attendance.activity.StudentAttendanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.profile.StudentProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.student_dashboard.activity.StudentDashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".rku_old_app.Activity.Employeereport" />
+        <activity android:name=".rku_old_app.Activity.Employeepunchingreport" />
+        <activity android:name=".rku_old_app.Activity.EmployeeAttendanceReport" />
+        <activity
+            android:name=".rku_old_app.Activity.EmployeeMonthWiseMissPunchDetailReport"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.EmployeeLateCommingDetailReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.PDStatisticsReportForStaffActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.AllEmployeeAttendaceReportDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.UserWiseMenuDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.AllEmployeeAttendanceReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.ReportListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.EmployeeLateComingReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.MonthWiseLateReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.EmployeeLeaveBalanceReportDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.EmployeeMonthWiseMissPunchReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.EmployeeBranchTransferReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.UniversitySeedMoneySummaryReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.EmployeePayrollDetailReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.UserWiseMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.EmployeeLeaveBalanceReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.QualificationReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.EmployeeDetailReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.DailyAttendanceReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.AcademicContributionReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.PDUpdateCreditActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PrintApprovedPDDocumentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.PDApprovalRemarksAndReasonActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.UploadApprovalPDApplicationDocumentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqViewPDApplicationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqPDApplicationListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqPDApplicationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.CommitteeDetailListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.RequestForResignationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.EmployeeEProfileActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.ViewPDFInWebViewCommanActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.TestingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.ViewCommetteeMemberActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.CommitteeMemberListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.CommitteeMemberActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.ViewCommitteeDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.CommitteeListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.CommitteeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqViewFDPAttendedActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqFDPAttendedListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqViewCPdApplicationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqCPDApplicationListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.InvestmentListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.InvestmentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqFDPAttendedActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqBookOrChapterListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqViewBookOrChapterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqBookOrChapterPublicationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqViewPublicationInJournalActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqPublicationInJournalsListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqPublicationInJournalsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqCPDApplicationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqViewConsultancyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqConsultancyRequestListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqConsultancyRequestActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqViewPatentAwardedActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqPatentAwardedListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqPatentAwardedActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqViewPgScholarGuidedListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqPgScholarGuidedListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqViewSeedMoneyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqPGScholarGuidedActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqPhdScholarGuidedViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqPhdScholarGuidedListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqPhdScholarGuidedActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqSeedMoneyListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqSeedReceivedFromUniversityActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqViewGrantReceivedActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqGrantReceivedRequestListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ReqGrantReceivedRequest"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".rku_old_app.Activity.PublicationInConferenceDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.PublicationInConferencesListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.AcademicContributionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.PublicationInConferencesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".rku_old_app.Activity.PublicationConferencesRequest"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.PDStatistics"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".rku_old_app.Activity.Duummyym" />
+        <activity
+            android:name=".rku_old_app.Activity.PDAppDocumentApprovalListing"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.PDAppDocumentApprovalActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.CpdApplicationDetail"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.CpdApplication"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.SeedMoneyDetail"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.PGScholarsDetail"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.PhDDScholarsDetail"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.BooksChapterDetail"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.JournalPubDetail"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.FDPAttendedDetail"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.PostDocumentdetail"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.PDApplicationDetail"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.GrantReceivedDetail"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ConsultancyDetail"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.PatentAwardedDetail"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ConferencePubApproveReject"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.SeedMoney"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.PGScholars"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.PhDDScholars"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.BooksChapter"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.JournalPub"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.FDPAttended"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.PostDocument"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.PDApplication"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.GrantReceived"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.Consultancy"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.PatentAwarded"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ConferencePubActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.StatisticsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.CoffDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.COffLeaveApprovalActitivty"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ForgotpasswordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ChangePasswordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.AttendanceReportActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.SlarySlipActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ApplyCancelLeaveActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ViewCancelLeaveDetailsOnly"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.LeaveApplicationApproveReject"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ViewCancelLeaveActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ViewApproveCancelLeaveActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ViewLeaveListingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.MissPunchApprovedActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.AddMissPunchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.MissPunchUpdateActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.CancelLeaveApproveRejectActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.MissPunchApproval"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.MyMissPunchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rku_old_app.Activity.LeaveBalanceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ViewAllLeavePunchInOut"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <!--
+    <activity
+            android:name=".rku_old_app.Activity.LeaveApprovalActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        -->
+        <activity
+            android:name=".rku_old_app.Activity.ApproveLeaveActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.AddLeaveAcivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ViewLeaveActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.ProfileActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".rku_old_app.Activity.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.infinity.infoway.rkuniversity.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.firebase.messaging.default_notification_icon" -->
+        <!-- android:resource="@drawable/login_screen_logo" /> -->
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <!-- <service -->
+        <!-- android:name=".services.MyFirebaseInstanceIdAndMessagingService" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <service
+            android:name=".services.MyFirebaseInstanceIdAndMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

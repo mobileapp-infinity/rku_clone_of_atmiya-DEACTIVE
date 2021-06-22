@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="8dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/add_leave_border">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:id="@+id/tvEmployeeNamePDApprovalRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Employee Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/add_leave_border"
+            android:orientation="vertical">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                android:id="@+id/tvReasonPDApprovalRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="12dp"
+                android:hint="Reason"
+
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/add_leave_border"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PD Framework Credit"
+                android:paddingLeft="12dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                android:id="@+id/tvPDFrameworkCreditPDApprovalRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="PD Framework Credit"
+                android:paddingLeft="12dp"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/add_leave_border"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:text="Nos. of on duty leaves"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                android:id="@+id/tvNoOfOnDutyLeavesPDApprovalRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Nos. of on duty leaves"
+                android:paddingLeft="12dp"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

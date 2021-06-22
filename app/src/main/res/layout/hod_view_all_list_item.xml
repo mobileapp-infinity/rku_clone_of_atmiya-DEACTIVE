@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llForShape"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/shape_for_approve"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                android:id="@+id/tvStatus"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="2dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name : "
+                    android:textColor="@color/color_primary_with_80_opacity"
+                    android:textSize="12sp" />
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:id="@+id/tvStudentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date : "
+                    android:textColor="@color/color_primary_with_80_opacity"
+                    android:textSize="12sp" />
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:id="@+id/tvLeaveDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:orientation="horizontal">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remarks : "
+                    android:textColor="@color/color_primary_with_80_opacity"
+                    android:textSize="12sp" />
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:id="@+id/tvLeaveRemaks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Document : "
+                    android:textColor="@color/color_primary_with_80_opacity"
+                    android:textSize="12sp" />
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:id="@+id/tvClikToView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/click_to_view_doc"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llApproveRejectBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="2dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:id="@+id/btnApprove"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_btn_approve"
+                    android:gravity="center"
+                    android:text="Approve"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/llSpace"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:id="@+id/btnReject"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_btn_reject"
+                    android:gravity="center"
+                    android:text="Reject"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:layout_marginBottom="12dp"-->
+    <!--    app:cardBackgroundColor="@color/white"-->
+    <!--    app:cardCornerRadius="7dp"-->
+    <!--    app:cardElevation="7dp">-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/llExpandedHeader"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@drawable/leave_approval_item_shape"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+    <!--                android:id="@+id/tvStudentName"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:maxLines="1"-->
+    <!--                android:padding="8dp"-->
+    <!--                android:text="-"-->
+    <!--                android:textAllCaps="false"-->
+    <!--                android:textColor="@color/white" />-->
+
+    <!--            <androidx.appcompat.widget.AppCompatImageView-->
+    <!--                android:id="@+id/ivViewMoreBtn"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                app:srcCompat="@drawable/ic_expand_more" />-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/llExpandableLayout"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:padding="8dp"-->
+    <!--            android:visibility="gone">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="2dp"-->
+    <!--                android:orientation="vertical">-->
+
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="2dp"-->
+    <!--                    android:layout_marginBottom="2dp"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+    <!--                        android:id="@+id/tvCourse"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_marginTop="2dp"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:maxLines="1"-->
+    <!--                        android:text="-"-->
+    <!--                        android:textColor="#DF2227"-->
+    <!--                        android:textSize="12sp" />-->
+
+    <!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+    <!--                        android:id="@+id/tvSem"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_marginTop="2dp"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:maxLines="1"-->
+    <!--                        android:text="-"-->
+    <!--                        android:textColor="#DF2227"-->
+    <!--                        android:textSize="12sp" />-->
+
+    <!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+    <!--                        android:id="@+id/tvDiv"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_marginTop="2dp"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:maxLines="1"-->
+    <!--                        android:text="-"-->
+    <!--                        android:textColor="#DF2227"-->
+    <!--                        android:textSize="12sp" />-->
+
+    <!--                </LinearLayout>-->
+
+    <!--                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+    <!--                    android:id="@+id/tvDate"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:maxLines="1"-->
+    <!--                    android:layout_marginBottom="2dp"-->
+    <!--                    android:text="-"-->
+    <!--                    android:textColor="#DF2227"-->
+    <!--                    android:textSize="12sp" />-->
+
+    <!--                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+    <!--                    android:id="@+id/tvLectureNo"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginBottom="2dp"-->
+    <!--                    android:maxLines="1"-->
+    <!--                    android:text="-"-->
+    <!--                    android:textColor="#DF2227"-->
+    <!--                    android:textSize="12sp" />-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:text="Status : "-->
+    <!--                        android:maxLines="1"-->
+    <!--                        android:textColor="#DF2227"-->
+    <!--                        android:textSize="12sp" />-->
+
+    <!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+    <!--                        android:id="@+id/tvStatus"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:text="-"-->
+    <!--                        android:maxLines="1"-->
+    <!--                        android:textColor="@color/colorAccent"-->
+    <!--                        android:textSize="12sp"-->
+    <!--                        android:textStyle="bold"/>-->
+
+    <!--                </LinearLayout>-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:background="@drawable/common_rectangle_shape"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:background="@color/lightgrey"-->
+    <!--                    android:gravity="center_vertical"-->
+    <!--                    android:orientation="horizontal"-->
+    <!--                    android:padding="4dp">-->
+
+    <!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_marginLeft="10dp"-->
+    <!--                        android:text="Student Leave Remarks"-->
+    <!--                        android:textColor="@color/colorPrimary"-->
+    <!--                        android:textSize="12sp" />-->
+
+    <!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_marginLeft="10dp"-->
+    <!--                        android:layout_marginRight="10dp"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:gravity="end"-->
+    <!--                        android:text="View Document"-->
+    <!--                        android:textColor="@color/colorPrimary"-->
+    <!--                        android:textSize="12sp" />-->
+
+    <!--                </LinearLayout>-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:background="@color/white"-->
+    <!--                    android:gravity="center_vertical"-->
+    <!--                    android:orientation="horizontal"-->
+    <!--                    android:padding="4dp">-->
+
+    <!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+    <!--                        android:id="@+id/tvRemarks"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_marginLeft="10dp"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:gravity="center_vertical"-->
+    <!--                        android:maxLines="3"-->
+    <!--                        android:text="-"-->
+    <!--                        android:textColor="@color/colorPrimary"-->
+    <!--                        android:textSize="12sp" />-->
+
+    <!--                    <androidx.appcompat.widget.AppCompatImageView-->
+    <!--                        android:id="@+id/imgViewDoc"-->
+    <!--                        android:layout_width="34dp"-->
+    <!--                        android:layout_height="34dp"-->
+    <!--                        android:layout_marginRight="12dp"-->
+    <!--                        android:tint="@color/colorPrimary"-->
+    <!--                        app:srcCompat="@drawable/view_doc" />-->
+
+    <!--                </LinearLayout>-->
+
+
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="8dp"-->
+    <!--                android:orientation="vertical"-->
+    <!--                android:paddingLeft="8dp"-->
+    <!--                android:paddingRight="8dp">-->
+
+    <!--                <RadioGroup-->
+    <!--                    android:id="@+id/rgroupApproveReject"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:checkedButton="@id/rbtnApprove"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <RadioButton-->
+    <!--                        android:id="@+id/rbtnApprove"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:text="Approve" />-->
+
+    <!--                    <RadioButton-->
+    <!--                        android:id="@+id/rbtnReject"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:text="Reject" />-->
+
+    <!--                </RadioGroup>-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            <com.google.android.material.checkbox.MaterialCheckBox-->
+    <!--                android:id="@+id/cbPresentOnLeave"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:checked="true"-->
+    <!--                android:text="Present On Leave"/>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:orientation="horizontal">-->
+
+    <!--                <com.google.android.material.textfield.TextInputLayout-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_weight="1">-->
+
+    <!--                    <com.google.android.material.textfield.TextInputEditText-->
+    <!--                        android:id="@+id/tiedtRemarks"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:backgroundTint="@color/transparent"-->
+    <!--                        android:hint="Enter Remarks" />-->
+
+    <!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:layout_marginLeft="12sp"-->
+    <!--                    android:clickable="true"-->
+    <!--                    android:gravity="bottom"-->
+    <!--                    android:orientation="vertical">-->
+
+    <!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+    <!--                        android:id="@+id/tvBtnSave"-->
+    <!--                        android:layout_width="100dp"-->
+    <!--                        android:layout_height="36dp"-->
+    <!--                        android:background="@drawable/btn_capsual_shape_primary"-->
+    <!--                        android:gravity="center"-->
+    <!--                        android:text="Save"-->
+    <!--                        android:textColor="@color/white" />-->
+
+    <!--                </LinearLayout>-->
+
+    <!--            </LinearLayout>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--    </LinearLayout>-->
+
+    <!--</com.google.android.material.card.MaterialCardView>-->
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginBottom="12dp"-->
+<!--    app:cardBackgroundColor="@color/white"-->
+<!--    app:cardCornerRadius="7dp"-->
+<!--    app:cardElevation="7dp">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/llExpandedHeader"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/leave_approval_item_shape"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                android:id="@+id/tvStudentName"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:maxLines="1"-->
+<!--                android:padding="8dp"-->
+<!--                android:text="-"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/white" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/ivViewMoreBtn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                app:srcCompat="@drawable/ic_expand_more" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/llExpandableLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="8dp"-->
+<!--            android:visibility="visible">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                android:orientation="vertical">-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="2dp"-->
+<!--                    android:layout_marginBottom="2dp"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                        android:id="@+id/tvCourse"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="2dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:text="-"-->
+<!--                        android:textColor="#DF2227"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                        android:id="@+id/tvSem"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="2dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:text="-"-->
+<!--                        android:textColor="#DF2227"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                        android:id="@+id/tvDiv"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="2dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:text="-"-->
+<!--                        android:textColor="#DF2227"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                    android:id="@+id/tvDate"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:maxLines="1"-->
+<!--                    android:layout_marginBottom="2dp"-->
+<!--                    android:text="-"-->
+<!--                    android:textColor="#DF2227"-->
+<!--                    android:textSize="12sp" />-->
+
+<!--                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                    android:id="@+id/tvLectureNo"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="2dp"-->
+<!--                    android:maxLines="1"-->
+<!--                    android:text="-"-->
+<!--                    android:textColor="#DF2227"-->
+<!--                    android:textSize="12sp" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Status : "-->
+<!--                        android:maxLines="1"-->
+<!--                        android:textColor="#DF2227"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                        android:id="@+id/tvStatus"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="-"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:textColor="@color/colorAccent"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold"/>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@drawable/common_rectangle_shape"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@color/lightgrey"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:padding="4dp">-->
+
+<!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:text="Student Leave Remarks"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="end"-->
+<!--                        android:text="View Document"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@color/white"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:padding="4dp">-->
+
+<!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                        android:id="@+id/tvRemarks"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:maxLines="3"-->
+<!--                        android:text="-"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:id="@+id/imgViewDoc"-->
+<!--                        android:layout_width="34dp"-->
+<!--                        android:layout_height="34dp"-->
+<!--                        android:layout_marginRight="12dp"-->
+<!--                        android:tint="@color/colorPrimary"-->
+<!--                        app:srcCompat="@drawable/view_doc" />-->
+
+<!--                </LinearLayout>-->
+
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/llViewAllLayout"-->
+<!--                android:orientation="vertical">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingLeft="8dp"-->
+<!--                android:paddingRight="8dp">-->
+
+<!--                <RadioGroup-->
+<!--                    android:id="@+id/rgroupApproveReject"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:checkedButton="@id/rbtnApprove"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rbtnApprove"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:text="Approve" />-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rbtnReject"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:text="Reject" />-->
+
+<!--                </RadioGroup>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <com.google.android.material.checkbox.MaterialCheckBox-->
+<!--                android:id="@+id/cbPresentOnLeave"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:checked="true"-->
+<!--                android:text="Present On Leave"/>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/tiedtRemarks"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:backgroundTint="@color/transparent"-->
+<!--                        android:hint="Enter Remarks" />-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginLeft="12sp"-->
+<!--                    android:clickable="true"-->
+<!--                    android:gravity="bottom"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                        android:id="@+id/tvBtnSave"-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="36dp"-->
+<!--                        android:background="@drawable/btn_capsual_shape_primary"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="Save"-->
+<!--                        android:textColor="@color/white" />-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+
+<!--</com.google.android.material.card.MaterialCardView>-->

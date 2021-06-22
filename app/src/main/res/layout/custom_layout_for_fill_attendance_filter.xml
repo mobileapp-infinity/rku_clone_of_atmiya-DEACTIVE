@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select column to display"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbSelectEnrollmentNo"
+                style="@style/CustomCheckboxStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:text="   Enrollment No."
+                android:textColor="@color/colorPrimary" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbSelectStudentName"
+                style="@style/CustomCheckboxStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_marginTop="16dp"
+                android:text="   Name of Student."
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0.4dp"-->
+<!--           -->
+<!--            android:background="@color/colorPrimary" />-->
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:background="@null"
+                android:backgroundTint="@null"
+                android:layout_marginRight="6dp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/ubuntu_r"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginRight="12sp"
+                android:id="@+id/btnOk"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="Ok"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/btn_capsual_shape_accent"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ubuntu_r"/>
+
+<!--            <rkustom_class.TextViewRegularFont-->
+<!--                android:id="@+id/btnCancel"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginRight="22dp"-->
+<!--                android:background="?selectableItemBackground"-->
+<!--                android:padding="2dp"-->
+<!--                android:text="CANCEL"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                app:textAllCaps="true" />-->
+
+<!--            <rkustom_class.TextViewRegularFont-->
+<!--                android:id="@+id/btnOk"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="?selectableItemBackground"-->
+<!--                android:padding="2dp"-->
+<!--                android:text="OK"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                app:textAllCaps="true" />-->
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

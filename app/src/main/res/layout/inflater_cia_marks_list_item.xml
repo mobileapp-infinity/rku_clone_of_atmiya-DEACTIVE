@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="7dp"
+    app:contentPadding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Program : "
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                    android:id="@+id/tvCiaProgramName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semester : "
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                    android:id="@+id/tvCIASemName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Examination : "
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                    android:id="@+id/tvCIAExamination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                android:id="@+id/tvCIAResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/common_shape_dark"
+                android:drawableRight="@drawable/ic_download"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingTop="2dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="2dp"
+                android:text="Download"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+    <!--//THIS IS OLD CODE TO DISPLAY DATA IN TABULAR FORM-->
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    android:id="@+id/llCIAMarksListMain"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:background="@color/exam_module_row_color"-->
+    <!--    android:orientation="vertical">-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:weightSum="5">-->
+
+    <!--        <rkustom_class.TextViewRegularFont-->
+    <!--            android:id="@+id/tvCiaProgramName"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="2"-->
+    <!--            android:gravity="center|left"-->
+    <!--            android:paddingTop="10dp"-->
+    <!--            android:paddingBottom="10dp"-->
+    <!--            android:paddingLeft="2dp"-->
+    <!--            android:paddingRight="2dp"-->
+    <!--            android:text="-"-->
+    <!--            android:textColor="@color/colorPrimary"-->
+    <!--            android:textSize="12sp" />-->
+
+    <!--        <View-->
+    <!--            android:layout_width="1dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:background="@color/white" />-->
+
+    <!--        <rkustom_class.TextViewRegularFont-->
+    <!--            android:id="@+id/tvCIASemName"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:gravity="center"-->
+    <!--            android:paddingTop="10dp"-->
+    <!--            android:paddingBottom="10dp"-->
+    <!--            android:paddingLeft="2dp"-->
+    <!--            android:paddingRight="2dp"-->
+    <!--            android:text="-"-->
+    <!--            android:textColor="@color/colorPrimary"-->
+    <!--            android:textSize="12sp" />-->
+
+    <!--        <View-->
+    <!--            android:layout_width="1dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:background="@color/white" />-->
+
+    <!--        <rkustom_class.TextViewRegularFont-->
+    <!--            android:id="@+id/tvCIAExamination"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1.2"-->
+    <!--            android:gravity="center"-->
+    <!--            android:paddingTop="10dp"-->
+    <!--            android:paddingBottom="10dp"-->
+    <!--            android:paddingLeft="2dp"-->
+    <!--            android:paddingRight="2dp"-->
+    <!--            android:text="-"-->
+    <!--            android:textColor="@color/colorPrimary"-->
+    <!--            android:textSize="12sp" />-->
+
+    <!--        <View-->
+    <!--            android:layout_width="1dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:background="@color/white" />-->
+
+    <!--        <rkustom_class.TextViewRegularFont-->
+    <!--            android:id="@+id/tvCIAResult"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="0.8"-->
+    <!--            android:gravity="center"-->
+    <!--            android:paddingTop="10dp"-->
+    <!--            android:paddingBottom="10dp"-->
+    <!--            android:paddingLeft="2dp"-->
+    <!--            android:paddingRight="2dp"-->
+    <!--            android:text="@string/download"-->
+    <!--            android:textColor="@color/green"-->
+    <!--            android:textSize="12sp" />-->
+
+    <!--    </LinearLayout>-->
+
+    <!--</LinearLayout>-->

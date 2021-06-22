@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#DF2227</color>
+    <!--    <color name="colorPrimaryDark">#FFFFFF</color>-->
+    <color name="colorPrimaryDark">#DF2227</color>
+    <color name="colorAccent">#DF2227</color>
+
+    <color name="font_color">#000000</color>
+
+    <color name="color_white">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+    <color name="color_transparent">#ffffff</color>
+    <color name="common_bg_color">#F3F4F6</color>
+
+    <color name="white_color_with_85_opacity">#26FFFFFF</color>
+    <color name="white_color_with_75_opacity">#BFFFFFFF</color>
+<!--    <color name="color_primary_with_75_opacity">#BFDF2227</color>-->
+<!--    <color name="color_primary_with_80_opacity">#CCDF2227</color>-->
+<!--    <color name="color_primary_with_90_opacity">#E6DF2227</color>-->
+<!--    <color name="color_primary_with_60_opacity">#4DDF2227</color>-->
+<!--    <color name="color_primary_with_30_opacity">#33DF2227</color>-->
+<!--    <color name="color_primary_with_70_opacity">#B3DF2227</color>-->
+
+    <color name="color_primary_with_75_opacity">#BF000000</color>
+    <color name="color_primary_with_80_opacity">#CC000000</color>
+    <color name="color_primary_with_90_opacity">#E6000000</color>
+    <color name="color_primary_with_60_opacity">#4D000000</color>
+    <color name="color_primary_with_30_opacity">#33000000</color>
+    <color name="selected_event_cell_color">#80cbc4</color>
+    <color name="color_primary_with_70_opacity">#B3000000</color>
+
+<!--    <color name="color_accent_with_90_opacity">#E6DF2227</color>-->
+<!--    <color name="color_accent_with_75_opacity">#66DF2227</color>-->
+<!--    <color name="color_accent_with_80_opacity">#CCDF2227</color>-->
+
+    <color name="color_accent_with_90_opacity">#E6000000</color>
+    <color name="color_accent_with_75_opacity">#66000000</color>
+    <color name="color_accent_with_80_opacity">#CC000000</color>
+
+    <color name="profile_heading_color">#CC6A6A6A</color>
+    <color name="profile_heading_value_color">#000000</color>
+
+    <color name="attendance_selected_tab_color">#979797</color>
+    <color name="attendance_unselected_tab_color">@color/colorPrimary</color>
+
+    <color name="status_present_color">#31BDA2</color>
+    <color name="status_absent_color">#F5506D</color>
+    <color name="status_remaining_color">#1E1E1E</color>
+    <color name="status_holiday_color">#FF0000</color>
+    <color name="status_period_suspend_color">#FF6F00</color>
+
+    <color name="lightgrey">#E0E0E0</color>
+    <color name="green">#197319</color>
+    <color name="exam_module_row_color">#EEEEEE</color>
+
+    <color name="red">#E21E23</color>
+    <color name="test">#FCF6F6</color>
+    <color name="black">#030303</color>
+    <color name="grey">#D3D3D3</color>
+    <color name="bg_drawer_select">#DFDFDF</color>
+    <color name="dark_black">#2B2A29</color>
+    <color name="drawer_bg">#6A6A6A</color>
+    <color name="text">#979797</color>
+    <color name="OFFWHITE">#F3F3F3</color>
+    <color name="calc">#BABEC1</color>
+    <color name="levave_balance">#97989C</color>
+    <color name="switch_color">#23BF76</color>
+    <color name="drawer_new_bg">#F1F1F3</color>
+    <color name="row_color_yellow">#FFFF67</color>
+    <color name="row_color_green">#029A4E</color>
+
+    <color name="slycalendar_defBackgroundColor">@color/colorPrimary</color>
+    <color name="slycalendar_defHeaderColor">@color/colorPrimary</color>
+    <color name="slycalendar_defHeaderTextColor">#ffffff</color>
+    <color name="slycalendar_defTextColor">#FFFFFF</color>
+    <color name="slycalendar_defSelectedColor">@color/colorPrimary</color>
+    <color name="slycalendar_defSelectedTextColor">#FFFFFF</color>
+    <color name="color_header">@color/colorPrimary</color>
+
+    <color name="slycalendar_defSelectedColor_transparent">@color/colorPrimary</color>
+
+    <color name="white_gray_with60_opacity">#4Dffffff</color>
+
+    <color name="color_black_with_80_opacity">#CC000000</color>
+    <color name="color_black_with_60_opacity">#A6000000</color>
+
+</resources>

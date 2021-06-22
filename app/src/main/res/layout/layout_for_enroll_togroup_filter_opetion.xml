@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tilFromDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="From Date(dd/MM/yyyy)"
+                android:drawableRight="@drawable/ic_calender_new"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/color_primary_with_80_opacity"
+                android:fontFamily="@font/ubuntu_r"
+                android:textSize="12sp"
+                android:clickable="false"
+                android:focusable="false"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tilToDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="To Date(dd/MM/yyyy)"
+                android:drawableRight="@drawable/ic_calender_new"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/color_primary_with_80_opacity"
+                android:fontFamily="@font/ubuntu_r"
+                android:textSize="12sp"
+                android:clickable="false"
+                android:focusable="false"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/llSpSubjectList"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <Spinner-->
+<!--            android:id="@+id/spSubjectFilter"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:dropDownVerticalOffset="40dp"-->
+<!--            android:minHeight="35dp"-->
+<!--            android:textSize="12sp" />-->
+
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:background="@color/colorPrimary" />-->
+
+<!--    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Cancel"
+            android:padding="8dp"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:layout_marginRight="28dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnApplyFilter"
+            android:elevation="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:text="Apply"
+            android:fontFamily="@font/ubuntu_m"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@drawable/common_shape_dark"/>
+
+    </LinearLayout>
+
+</LinearLayout>
