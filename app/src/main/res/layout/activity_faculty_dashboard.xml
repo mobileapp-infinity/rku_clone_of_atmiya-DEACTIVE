@@ -551,6 +551,98 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llStudentMessages"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="visible"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:adjustViewBounds="true"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_message_history"
+                            android:tint="#ff0000"/>
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Student Messages"
+                            android:textColor="@color/font_color"
+                            android:textSize="@dimen/faculty_dashboard_menu_font_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:adjustViewBounds="true"
+                            app:srcCompat="@drawable/ic_faculty_announcement" />
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Extra Lecture\nApproval"
+                            android:textColor="@color/font_color"
+                            android:textSize="@dimen/faculty_dashboard_menu_font_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:adjustViewBounds="true"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_calendar_events"
+                            android:tint="#ff0000"/>
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Event Calendar"
+                            android:textColor="@color/font_color"
+                            android:textSize="@dimen/faculty_dashboard_menu_font_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout

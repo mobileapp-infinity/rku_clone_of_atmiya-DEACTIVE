@@ -46,6 +46,7 @@ import com.infinity.infoway.rkuniversity.faculty.faculty_profile.FacultyProfileA
 import com.infinity.infoway.rkuniversity.faculty.faculty_profile.FacultyProfilePojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_teaching_update.FacultyTeachingUpdateActivity;
 import com.infinity.infoway.rkuniversity.faculty.faculty_timetable.activity.FacultyTimeTableActivity;
+import com.infinity.infoway.rkuniversity.faculty.student_messages.StudentMessagesActivity;
 import com.infinity.infoway.rkuniversity.login.activity.LoginActivity;
 import com.infinity.infoway.rkuniversity.login.pojo.CommonNewImageSliderPojo;
 import com.infinity.infoway.rkuniversity.rku_old_app.Activity.MainActivity;
@@ -98,6 +99,7 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
     LinearLayout llLeaveApprovalForHOD;
     LinearLayout llLeaveApprovalForCoOrdinator;
     LinearLayout llExtraLectureApproval;
+    LinearLayout llStudentMessages;
 
 
     AppCompatButton btnViewAllAnnouncementFacultySide;
@@ -183,6 +185,8 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
         llFacultyTeachingUpdate.setOnClickListener(this);
         llExtraLectureApproval = findViewById(R.id.llExtraLectureApproval);
         llExtraLectureApproval.setOnClickListener(this);
+        llStudentMessages = findViewById(R.id.llStudentMessages);
+        llStudentMessages.setOnClickListener(this);
 
         if (!CommonUtil.checkIsEmptyOrNullCommon(mySharedPreferences.getEmpIsAdminOrNot())) {
             if (mySharedPreferences.getEmpIsAdminOrNot().equalsIgnoreCase("1")) {
@@ -252,6 +256,9 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
             startActivity(intent);
         }else if (v.getId() == R.id.llFacultyEventCalender){
             Intent intent = new Intent(FacultyDashboardActivity.this, FacultyCalendarActivity.class);
+            startActivity(intent);
+        }else if (v.getId() == R.id.llStudentMessages){
+            Intent intent = new Intent(FacultyDashboardActivity.this, StudentMessagesActivity.class);
             startActivity(intent);
         }
     }

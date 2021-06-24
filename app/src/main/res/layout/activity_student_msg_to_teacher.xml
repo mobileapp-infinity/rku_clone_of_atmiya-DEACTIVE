@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_color"
+    android:orientation="vertical"
+    tools:context=".student.student_msg_to_teacher.StudentMsgToTeacherActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCloseStudentMessagesToTeacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_back" />
+
+            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:text="Student Messages To Teacher"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:paddingLeft="14dp"
+        android:paddingTop="18dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="14dp"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spSelectPerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dropDownVerticalOffset="40dp"
+                    android:minHeight="35dp"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_bg_color"
+                    app:boxBackgroundColor="@color/common_bg_color"
+                    app:hintTextColor="@color/colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tilTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:hint="Title"
+                        android:text=""
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_bg_color"
+                    app:boxBackgroundColor="@color/common_bg_color"
+                    app:hintTextColor="@color/colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tilMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:hint="Message"
+                        android:minLines="2"
+                        android:text="   "
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                    android:id="@+id/tvSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_capsual_shape_primary"
+                    android:paddingLeft="44dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="44dp"
+                    android:paddingBottom="10dp"
+                    android:text="Send"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:textAllCaps="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

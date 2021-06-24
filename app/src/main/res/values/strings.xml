@@ -42,6 +42,7 @@
     <string name="fee_details">Fee Details</string>
     <string name="event_calender">Event Calendar</string>
     <string name="activity">Activity</string>
+    <string name="student_msg_to_teacher">Send Message</string>
     <string name="message_history">Message History</string>
     <string name="news_notifications">News | Notifications</string>
     <string name="holiday">Holiday</string>

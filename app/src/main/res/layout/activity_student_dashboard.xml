@@ -480,24 +480,24 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/llSendStudentMsgToTeacher"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="?android:attr/selectableItemBackground"
                         android:gravity="center"
-                        android:visibility="invisible"
                         android:orientation="vertical">
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            app:srcCompat="@drawable/ic_activity" />
+                            app:srcCompat="@drawable/send_msg" />
 
                         <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="@string/activity"
+                            android:text="@string/student_msg_to_teacher"
                             android:textColor="@color/font_color"
                             android:textSize="@dimen/student_dashboard_menu_font_size" />
 

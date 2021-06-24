@@ -46,6 +46,7 @@ import com.infinity.infoway.rkuniversity.student.student_activity.StudentActivit
 import com.infinity.infoway.rkuniversity.student.student_calender.StudentCalenderActivity;
 import com.infinity.infoway.rkuniversity.student.student_dashboard.adapter.NewsOrNotificationListAdapter;
 import com.infinity.infoway.rkuniversity.student.student_dashboard.pojo.UpdateStudentFCMTokenPojo;
+import com.infinity.infoway.rkuniversity.student.student_msg_to_teacher.StudentMsgToTeacherActivity;
 import com.infinity.infoway.rkuniversity.student.student_syllabus.StudentSyllabusActivity;
 import com.infinity.infoway.rkuniversity.student.student_timetable.activity.StudentTimeTableActivity;
 import com.infinity.infoway.rkuniversity.utils.CommonUtil;
@@ -87,6 +88,7 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
     LinearLayout llFeeDetailsStudentSide;
     LinearLayout llActivityStudentSide;
     LinearLayout llMessageHistoryStudentSide;
+    LinearLayout llSendStudentMsgToTeacher;
 
     LinearLayout llAttendanceStudentSide;
     ProgressBar cpCurrentMonthStudentSide;
@@ -169,6 +171,8 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
         tvPercentagePreviousMonthStudentSide = findViewById(R.id.tvPercentagePreviousMonthStudentSide);
         cpAvgStudentSide = findViewById(R.id.cpAvgStudentSide);
         tvPercentageAvgStudentSide = findViewById(R.id.tvPercentageAvgStudentSide);
+        llSendStudentMsgToTeacher = findViewById(R.id.llSendStudentMsgToTeacher);
+        llSendStudentMsgToTeacher.setOnClickListener(this);
 //        imgNotificationBell = findViewById(R.id.imgNotificationBell);
 //        imgNotificationBell.setOnClickListener(this);
 
@@ -266,6 +270,9 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
             startActivityForResult(intent, IntentConstants.REQUEST_CODE_FOR_VIEW_ALL_NEWS_OR_NOTIFICATION);
         } else if (v.getId() == R.id.llStudentDynamicEventsCalendar) {
             Intent intent = new Intent(StudentDashboardActivity.this, StudentCalenderActivity.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.llSendStudentMsgToTeacher) {
+            Intent intent = new Intent(StudentDashboardActivity.this, StudentMsgToTeacherActivity.class);
             startActivity(intent);
         }
     }
