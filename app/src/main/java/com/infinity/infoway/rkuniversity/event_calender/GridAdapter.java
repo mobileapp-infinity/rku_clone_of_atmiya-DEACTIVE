@@ -13,9 +13,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.gms.common.internal.service.Common;
 import com.infinity.infoway.rkuniversity.R;
 import com.infinity.infoway.rkuniversity.event_calender.listeners.DateSelectListener;
 import com.infinity.infoway.rkuniversity.event_calender.listeners.GridChangeListener;
+import com.infinity.infoway.rkuniversity.utils.CommonUtil;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -36,6 +38,8 @@ public class GridAdapter extends ArrayAdapter {
     private Context ctx;
     private IGridAdapterData iGridAdapterData;
     private int SELECTED_CELL = -1;
+    private String currentDate = "";
+    private Calendar calendar;
 
     public GridAdapter(Context ctx, ArrayList<EventModel> eventModelArrayList, @NonNull Context context, @NonNull SlyCalendarData calendarData, int shiftMonth, @Nullable DateSelectListener listener, GridChangeListener gridListener) {
         super(context, R.layout.slycalendar_single_cell);
@@ -47,6 +51,9 @@ public class GridAdapter extends ArrayAdapter {
         this.shiftMonth = shiftMonth;
         this.gridListener = gridListener;
         this.eventModelArrayList = eventModelArrayList;
+        calendar = Calendar.getInstance();
+        DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        currentDate = dateFormat.format(calendar.getTime());
         init();
     }
 
@@ -77,6 +84,16 @@ public class GridAdapter extends ArrayAdapter {
         DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
         String cellDate = dateFormat.format(dateCal.getTime());
 
+        if (CommonUtil.IS_EVENT_CAL_LOADED_FIRST_TIME && cellDate.equalsIgnoreCase(currentDate)){
+            FrameLayout frameLayout = (FrameLayout) cellView;
+            if (frameLayout.getTag() != null) {
+                ArrayList<EventModel.Array> arrayList = (ArrayList<EventModel.Array>) frameLayout.getTag();
+                iGridAdapterData.gridAdapterData(arrayList);
+            }
+            SELECTED_CELL = position;
+            notifyDataSetChanged();
+        }
+
         ArrayList<EventModel.Array> eventDetailsArrayList;
         for (int l = 0; l < eventModelArrayList.size(); l++) {
             eventDetailsArrayList = new ArrayList<>();
@@ -95,6 +112,7 @@ public class GridAdapter extends ArrayAdapter {
         cellView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CommonUtil.IS_EVENT_CAL_LOADED_FIRST_TIME = false;
                 FrameLayout frameLayout = (FrameLayout) v;
                 if (frameLayout.getTag() != null) {
                     ArrayList<EventModel.Array> arrayList = (ArrayList<EventModel.Array>) frameLayout.getTag();

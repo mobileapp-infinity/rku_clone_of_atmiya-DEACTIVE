@@ -35,6 +35,7 @@ import com.infinity.infoway.rkuniversity.faculty.faculty_news.FacultyNewsPojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_pending_attendance.FacultyPendingAttendancePojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_profile.FacultyProfilePojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_rem_attendance.FacultyRemAttendancePojo;
+import com.infinity.infoway.rkuniversity.faculty.faculty_student_messages.pojo.StudentMsgListPojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_suspended_lecture_approval.pojo.GetSuspensionListPojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_teaching_update.faculty_adviser_remarks.FacultyAdviserRemarksListPojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_teaching_update.faculty_details_of_theory_sub.FacultyDetailsOfTheorySubjectTaughtPojo;
@@ -42,25 +43,27 @@ import com.infinity.infoway.rkuniversity.faculty.faculty_teaching_update.faculty
 import com.infinity.infoway.rkuniversity.faculty.faculty_teaching_update.faculty_student_forum.FacultyStudentForumPojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_teaching_update.faculty_subject_wise_division_wise_total_theory_period_engaged.FacultySubAndDivWiseTotTheoryPeriodEngagedPojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_timetable.pojo.FacultyTimeTablePojo;
-import com.infinity.infoway.rkuniversity.login.pojo.CommonNewImageSliderPojo;
-import com.infinity.infoway.rkuniversity.login.pojo.EmployeeLoginPojo;
-import com.infinity.infoway.rkuniversity.student.exam.pojo.DownloadHallTicketExaminationSchedulePojo;
-import com.infinity.infoway.rkuniversity.student.exam.pojo.StudentMidMarksPojo;
-import com.infinity.infoway.rkuniversity.student.fee_details.pojo.PaySlipOfAxisFeeTypePojo;
-import com.infinity.infoway.rkuniversity.student.fee_details.pojo.PayWithPaytmPojo;
+import com.infinity.infoway.rkuniversity.forgot_password.pojo.CheckLoginByOTPAndUsernamePojo;
 import com.infinity.infoway.rkuniversity.forgot_password.pojo.CheckOTPVerificationForEmployeePojo;
 import com.infinity.infoway.rkuniversity.forgot_password.pojo.CheckOTPVerificationForStudentPojo;
+import com.infinity.infoway.rkuniversity.forgot_password.pojo.GetForgetPasswordDetailByUserIDPojo;
+import com.infinity.infoway.rkuniversity.forgot_password.pojo.GetInstituteFromDomainPojo;
+import com.infinity.infoway.rkuniversity.forgot_password.pojo.GetSMSApiForApplicationPojo;
+import com.infinity.infoway.rkuniversity.forgot_password.pojo.GetStudentForgotPasswordDetailsPojo;
+import com.infinity.infoway.rkuniversity.forgot_password.pojo.GetUserWiseDetailForgetPasswordPojo;
+import com.infinity.infoway.rkuniversity.forgot_password.pojo.InsertForgetPasswordSendSMSRecordPojo;
 import com.infinity.infoway.rkuniversity.forgot_password.pojo.InsertForgotPasswordOTPSmsRecordPojo;
 import com.infinity.infoway.rkuniversity.forgot_password.pojo.InsertStudentPasswordAndSMSAbsentApiCall;
 import com.infinity.infoway.rkuniversity.forgot_password.pojo.OtpBaseLoginDetailsForEmployeePojo;
 import com.infinity.infoway.rkuniversity.forgot_password.pojo.OtpBaseLoginDetailsForStudentPojo;
 import com.infinity.infoway.rkuniversity.forgot_password.pojo.ResetEmployeePasswordPojo;
 import com.infinity.infoway.rkuniversity.forgot_password.pojo.ResetStudentPasswordPojo;
+import com.infinity.infoway.rkuniversity.forgot_password.pojo.ResetUserPasswordPojo;
 import com.infinity.infoway.rkuniversity.forgot_password.pojo.UpdateStudentForgotPasswordOtpPojo;
-import com.infinity.infoway.rkuniversity.student.home_work.pojo.StudentHomeWorkPojo;
-import com.infinity.infoway.rkuniversity.student.news_or_notification.UpdateNotificationStatusPojo;
-import com.infinity.infoway.rkuniversity.student.student_dashboard.pojo.UpdateStudentFCMTokenPojo;
+import com.infinity.infoway.rkuniversity.forgot_password.pojo.UpdateUserOTPAtForgetPasswordPojo;
 import com.infinity.infoway.rkuniversity.login.pojo.CheckVersionApiPojo;
+import com.infinity.infoway.rkuniversity.login.pojo.CommonNewImageSliderPojo;
+import com.infinity.infoway.rkuniversity.login.pojo.EmployeeLoginPojo;
 import com.infinity.infoway.rkuniversity.login.pojo.LogOutPojo;
 import com.infinity.infoway.rkuniversity.login.pojo.StudentLoginPojo;
 import com.infinity.infoway.rkuniversity.student.assignment.StudentAssignmentListPojo;
@@ -77,25 +80,27 @@ import com.infinity.infoway.rkuniversity.student.e_learning.pojo.LearningManagem
 import com.infinity.infoway.rkuniversity.student.e_learning.pojo.StudentWiseLearningGroupPojo;
 import com.infinity.infoway.rkuniversity.student.exam.pojo.CIAExamResultPojo;
 import com.infinity.infoway.rkuniversity.student.exam.pojo.CIAExamSemesterPojo;
-import com.infinity.infoway.rkuniversity.student.exam.pojo.StudentReulstPojo;
 import com.infinity.infoway.rkuniversity.student.exam.pojo.DownloadExaminationSchedulePojo;
+import com.infinity.infoway.rkuniversity.student.exam.pojo.DownloadHallTicketExaminationSchedulePojo;
 import com.infinity.infoway.rkuniversity.student.exam.pojo.DownloadStudentMidResultPojo;
 import com.infinity.infoway.rkuniversity.student.exam.pojo.ExaminationScheduleDetailsPojo;
 import com.infinity.infoway.rkuniversity.student.exam.pojo.ExaminationScheduleProgramWiseTimetablePojo;
 import com.infinity.infoway.rkuniversity.student.exam.pojo.MidResultPojo;
 import com.infinity.infoway.rkuniversity.student.exam.pojo.StudentCIAMarksPojo;
+import com.infinity.infoway.rkuniversity.student.exam.pojo.StudentMidMarksPojo;
+import com.infinity.infoway.rkuniversity.student.exam.pojo.StudentReulstPojo;
 import com.infinity.infoway.rkuniversity.student.fee_details.pojo.FeeReceiptPojo;
 import com.infinity.infoway.rkuniversity.student.fee_details.pojo.FeeUrlPojo;
 import com.infinity.infoway.rkuniversity.student.fee_details.pojo.GetAllPendingFeeStudentPojo;
 import com.infinity.infoway.rkuniversity.student.fee_details.pojo.GetPaymentButtonHideShowPojo;
 import com.infinity.infoway.rkuniversity.student.fee_details.pojo.GetPaymentSingleButtonHideShowPojo;
 import com.infinity.infoway.rkuniversity.student.fee_details.pojo.PayFeeTypePojoList;
+import com.infinity.infoway.rkuniversity.student.fee_details.pojo.PaySlipOfAxisFeeTypePojo;
 import com.infinity.infoway.rkuniversity.student.fee_details.pojo.PaySlipOfAxisPojo;
+import com.infinity.infoway.rkuniversity.student.fee_details.pojo.PayWithPaytmPojo;
 import com.infinity.infoway.rkuniversity.student.fee_details.pojo.PrintFeeReceiptPojo;
-import com.infinity.infoway.rkuniversity.forgot_password.pojo.GetInstituteFromDomainPojo;
-import com.infinity.infoway.rkuniversity.forgot_password.pojo.GetSMSApiForApplicationPojo;
-import com.infinity.infoway.rkuniversity.forgot_password.pojo.GetStudentForgotPasswordDetailsPojo;
 import com.infinity.infoway.rkuniversity.student.holiday.HolidayListPojo;
+import com.infinity.infoway.rkuniversity.student.home_work.pojo.StudentHomeWorkPojo;
 import com.infinity.infoway.rkuniversity.student.leave_application.pojo.CheckStudentLeaveExistPojo;
 import com.infinity.infoway.rkuniversity.student.leave_application.pojo.InsertStudentLeavePojo;
 import com.infinity.infoway.rkuniversity.student.leave_application.pojo.KindOfLeaveListPojo;
@@ -106,11 +111,14 @@ import com.infinity.infoway.rkuniversity.student.leave_application.pojo.UploadSt
 import com.infinity.infoway.rkuniversity.student.lesson_plan.StudentLessonPlanListPojo;
 import com.infinity.infoway.rkuniversity.student.message_history.MessageHistoryListPojo;
 import com.infinity.infoway.rkuniversity.student.news_or_notification.FacultyOrStudentNewsOrNotificationsPojo;
+import com.infinity.infoway.rkuniversity.student.news_or_notification.UpdateNotificationStatusPojo;
 import com.infinity.infoway.rkuniversity.student.profile.StudentProfilePojo;
 import com.infinity.infoway.rkuniversity.student.student_activity.StudentActivityPojo;
+import com.infinity.infoway.rkuniversity.student.student_dashboard.pojo.UpdateStudentFCMTokenPojo;
+import com.infinity.infoway.rkuniversity.student.student_msg_to_teacher.pojo.GetPersonPojo;
+import com.infinity.infoway.rkuniversity.student.student_msg_to_teacher.pojo.InsertMsgPojo;
 import com.infinity.infoway.rkuniversity.student.student_syllabus.SyllabusListPojo;
 import com.infinity.infoway.rkuniversity.student.student_timetable.pojo.StudentTimeTablePojo;
-import com.infinity.infoway.rkuniversity.forgot_password.pojo.*;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -259,12 +267,12 @@ public interface IApiInterface {
 
     @GET("Get_Learning_Management_Group_Details_Group_Wise_New_API")
     Call<ArrayList<LearningManagementGroupDetailsPojo>> groupWiseLearningManagementDocumentList(@Query("grp_id") String grp_id,
-                                                                                               @Query("stud_id") String stud_id,
-                                                                                               @Query("sem_id") String sem_id,
-                                                                                               @Query("year_id") String year_id,
-                                                                                               @Query("from_date") String from_date,
-                                                                                               @Query("to_date") String to_date,
-                                                                                               @Query("sub_id") String sub_id);
+                                                                                                @Query("stud_id") String stud_id,
+                                                                                                @Query("sem_id") String sem_id,
+                                                                                                @Query("year_id") String year_id,
+                                                                                                @Query("from_date") String from_date,
+                                                                                                @Query("to_date") String to_date,
+                                                                                                @Query("sub_id") String sub_id);
 
     @GET("Check_Exist_Learning_Mangement_Group_Wise_Student_Master_API")
     Call<CheckIsLearningManagementGroupIsExistOrNotPojo> checkIsLearningManagementGroupIsExistOrNot(@Query("grp_id") String grp_id,
@@ -511,7 +519,6 @@ public interface IApiInterface {
             @Query("year_id") String year_id);
 
     //Common For Both Student And Employee(Faculty)
-
 
 
     @GET("Get_User_Wise_Announcement_Notification_API_with_Count")
@@ -938,5 +945,23 @@ public interface IApiInterface {
 
     @GET("get_event_data_for_api")
     Call<ArrayList<EventModel>> getCalendarEvents(
+            @Query("institute_id") String institute_id);
+
+    @GET("Get_Peson_data_by_stud_id_API")
+    Call<ArrayList<GetPersonPojo>> getPerson(
+            @Query("stud_id") String stud_id,
+            @Query("institute_id") String institute_id);
+
+    @GET("Insert_New_Message_API")
+    Call<InsertMsgPojo> insertMsg(
+            @Query("stud_id") String stud_id,
+            @Query("institute_id") String institute_id,
+            @Query("person_id") String person_id,
+            @Query("title") String title,
+            @Query("message") String message);
+
+    @GET("Get_Message_Data_By_emp_ID")
+    Call<ArrayList<StudentMsgListPojo>> getStudentMsgList(
+            @Query("emp_id") String emp_id,
             @Query("institute_id") String institute_id);
 }

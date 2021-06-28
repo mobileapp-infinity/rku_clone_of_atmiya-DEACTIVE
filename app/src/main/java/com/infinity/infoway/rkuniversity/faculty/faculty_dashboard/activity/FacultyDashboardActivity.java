@@ -46,7 +46,7 @@ import com.infinity.infoway.rkuniversity.faculty.faculty_profile.FacultyProfileA
 import com.infinity.infoway.rkuniversity.faculty.faculty_profile.FacultyProfilePojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_teaching_update.FacultyTeachingUpdateActivity;
 import com.infinity.infoway.rkuniversity.faculty.faculty_timetable.activity.FacultyTimeTableActivity;
-import com.infinity.infoway.rkuniversity.faculty.student_messages.StudentMessagesActivity;
+import com.infinity.infoway.rkuniversity.faculty.faculty_student_messages.StudentMessagesActivity;
 import com.infinity.infoway.rkuniversity.login.activity.LoginActivity;
 import com.infinity.infoway.rkuniversity.login.pojo.CommonNewImageSliderPojo;
 import com.infinity.infoway.rkuniversity.rku_old_app.Activity.MainActivity;
@@ -442,21 +442,16 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
     private void LoginAPICall() {
         DialogUtils.showProgressDialog(FacultyDashboardActivity.this, "");
 //        String url = URLS.LoginCheck + "&userName=" + "gaurang.vyas@rku.ac.in" + "&passWord=" + "Rku@12345" + "";
-        String url = URLS.LoginCheck + "&userName=" + mySharedPreferences.getEmpUserName() + "&passWord=" + mySharedPreferences.getEmpPassword() + "";
+//        String url = URLS.LoginCheck + "&userName=" + mySharedPreferences.getEmpUserName() + "&passWord=" + mySharedPreferences.getEmpPassword() + "";
+        String url = URLS.LoginCheck + "&userName=" + "komal.doshi@rku.ac.in" + "&passWord=" + "CfgwTsSPUma9tCx";
         url.replace(" ", "%20");
-
-        System.out.println("LoginCheck URL " + url + "");
         StringRequest request = new StringRequest(Request.Method.GET, url, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 DialogUtils.hideProgressDialog();
-
-                System.out.println("response of LoginCheck !!!!!!!!!!! " + response);
                 response = response + "";
                 if (response.length() > 5) {
                     response = "{\"Data\":" + response + "}";
-
-                    System.out.println("success response LoginCheck !!!!!!!!!!!!!!!!!!!" + response + "");
                     Gson gson = new Gson();
                     LoginPojo loginPojo = gson.fromJson(response, LoginPojo.class);
                     if (loginPojo != null) {

@@ -36,32 +36,11 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:icon">
         <activity
-            android:name=".faculty.student_messages.StudentMessagesActivity"
+            android:name=".faculty.faculty_student_messages.StudentMessagesActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".student.student_msg_to_teacher.StudentMsgToTeacherActivity"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="Fees Activity For Student" />
-                <action android:name="Attendance Activity For Student" />
-                <action android:name="Lesson Plan Activity For Student" />
-                <action android:name="News Activity For Student" />
-                <action android:name="Activity For Student" />
-                <action android:name="Homework Activity For Student" />
-                <action android:name="Syllabus Activity For Student" />
-                <action android:name="Result Activity For Student" />
-                <action android:name="Assignment Activity For Student" />
-                <action android:name="Exam Timetable Activity For Student" />
-                <action android:name="Fee Circular Activity For Student" />
-                <action android:name="Leave Activity For Student" />
-                <action android:name="E-Learning Management For Student" />
-                <action android:name="Holiday Activity For Student" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".faculty.faculty_calendar.FacultyCalendarActivity"
             android:screenOrientation="portrait" />
@@ -239,28 +218,26 @@
         <activity
             android:name=".login.activity.SplashActivity"
             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="Fees Activity For Student" />
+                <action android:name="Attendance Activity For Student" />
+                <action android:name="Lesson Plan Activity For Student" />
+                <action android:name="News Activity For Student" />
+                <action android:name="Activity For Student" />
+                <action android:name="Homework Activity For Student" />
+                <action android:name="Syllabus Activity For Student" />
+                <action android:name="Result Activity For Student" />
+                <action android:name="Assignment Activity For Student" />
+                <action android:name="Exam Timetable Activity For Student" />
+                <action android:name="Fee Circular Activity For Student" />
+                <action android:name="Leave Activity For Student" />
+                <action android:name="E-Learning Management For Student" />
+                <action android:name="Holiday Activity For Student" />
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-            <!-- <action android:name="Fees Activity For Student" /> -->
-            <!-- <action android:name="Attendance Activity For Student" /> -->
-            <!-- <action android:name="Lesson Plan Activity For Student" /> -->
-            <!-- <action android:name="News Activity For Student" /> -->
-            <!-- <action android:name="Activity For Student" /> -->
-            <!-- <action android:name="Homework Activity For Student" /> -->
-            <!-- <action android:name="Syllabus Activity For Student" /> -->
-            <!-- <action android:name="Result Activity For Student" /> -->
-            <!-- <action android:name="Assignment Activity For Student" /> -->
-            <!-- <action android:name="Exam Timetable Activity For Student" /> -->
-            <!-- <action android:name="Fee Circular Activity For Student" /> -->
-            <!-- <action android:name="Leave Activity For Student" /> -->
-            <!-- <action android:name="E-Learning Management For Student" /> -->
-            <!-- <action android:name="Holiday Activity For Student" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
-            <!-- </intent-filter> -->
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".student.fee_details.activity.FeeDetailsActivity"

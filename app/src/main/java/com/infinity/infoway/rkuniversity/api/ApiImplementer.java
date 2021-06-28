@@ -33,6 +33,7 @@ import com.infinity.infoway.rkuniversity.faculty.faculty_news.FacultyNewsPojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_pending_attendance.FacultyPendingAttendancePojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_profile.FacultyProfilePojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_rem_attendance.FacultyRemAttendancePojo;
+import com.infinity.infoway.rkuniversity.faculty.faculty_student_messages.pojo.StudentMsgListPojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_suspended_lecture_approval.pojo.GetSuspensionListPojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_teaching_update.faculty_adviser_remarks.FacultyAdviserRemarksListPojo;
 import com.infinity.infoway.rkuniversity.faculty.faculty_teaching_update.faculty_details_of_theory_sub.FacultyDetailsOfTheorySubjectTaughtPojo;
@@ -104,6 +105,8 @@ import com.infinity.infoway.rkuniversity.student.news_or_notification.UpdateNoti
 import com.infinity.infoway.rkuniversity.student.profile.StudentProfilePojo;
 import com.infinity.infoway.rkuniversity.student.student_activity.StudentActivityPojo;
 import com.infinity.infoway.rkuniversity.student.student_dashboard.pojo.UpdateStudentFCMTokenPojo;
+import com.infinity.infoway.rkuniversity.student.student_msg_to_teacher.pojo.GetPersonPojo;
+import com.infinity.infoway.rkuniversity.student.student_msg_to_teacher.pojo.InsertMsgPojo;
 import com.infinity.infoway.rkuniversity.student.student_syllabus.SyllabusListPojo;
 import com.infinity.infoway.rkuniversity.student.student_timetable.pojo.StudentTimeTablePojo;
 
@@ -1172,6 +1175,24 @@ public class ApiImplementer {
     public static void getCalendarEventsApiImplementer(String institute_id, Callback<ArrayList<EventModel>> cb) {
         final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
         Call<ArrayList<EventModel>> call = apiInterface.getCalendarEvents(institute_id);
+        call.enqueue(cb);
+    }
+
+    public static void getPersonApiImplementer(String stud_id,String institute_id, Callback<ArrayList<GetPersonPojo>> cb) {
+        final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
+        Call<ArrayList<GetPersonPojo>> call = apiInterface.getPerson(stud_id,institute_id);
+        call.enqueue(cb);
+    }
+
+    public static void insertMsgApiImplementer(String stud_id,String institute_id,String person_id,String title,String message, Callback<InsertMsgPojo> cb) {
+        final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
+        Call<InsertMsgPojo> call = apiInterface.insertMsg(stud_id, institute_id, person_id, title, message);
+        call.enqueue(cb);
+    }
+
+    public static void getStudentMessagesApiImplementer(String emp_id,String institute_id, Callback<ArrayList<StudentMsgListPojo>> cb) {
+        final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
+        Call<ArrayList<StudentMsgListPojo>> call = apiInterface.getStudentMsgList(emp_id,institute_id);
         call.enqueue(cb);
     }
 
