@@ -203,9 +203,9 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.llFacultyProfile) {
-            Intent profileActivityStudentSide = new Intent(this, FacultyProfileActivity.class);
-            startActivityForResult(profileActivityStudentSide, IntentConstants.REQUEST_CODE_FOR_FACULTY_LOGOUT);
-            overridePendingTransition(R.anim.slide_in_left, 0);
+//            Intent profileActivityStudentSide = new Intent(this, FacultyProfileActivity.class);
+//            startActivityForResult(profileActivityStudentSide, IntentConstants.REQUEST_CODE_FOR_FACULTY_LOGOUT);
+//            overridePendingTransition(R.anim.slide_in_left, 0);
         } else if (v.getId() == R.id.llFacultyAnnouncement) {
             Intent intent = new Intent(FacultyDashboardActivity.this, FacultyAnnouncementActivity.class);
             startActivity(intent);
@@ -213,9 +213,9 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
             Intent intent = new Intent(FacultyDashboardActivity.this, FacultyTeachingUpdateActivity.class);
             startActivity(intent);
         } else if (v.getId() == R.id.cImgProfileFacultySide) {
-            Intent profileActivityStudentSide = new Intent(this, FacultyProfileActivity.class);
-            startActivityForResult(profileActivityStudentSide, IntentConstants.REQUEST_CODE_FOR_FACULTY_LOGOUT);
-            overridePendingTransition(R.anim.slide_in_left, 0);
+//            Intent profileActivityStudentSide = new Intent(this, FacultyProfileActivity.class);
+//            startActivityForResult(profileActivityStudentSide, IntentConstants.REQUEST_CODE_FOR_FACULTY_LOGOUT);
+//            overridePendingTransition(R.anim.slide_in_left, 0);
         } else if (v.getId() == R.id.llAttendanceFacultySide) {
             Intent intent = new Intent(FacultyDashboardActivity.this, FacultyAttendanceActivity.class);
             startActivity(intent);
@@ -442,8 +442,8 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
     private void LoginAPICall() {
         DialogUtils.showProgressDialog(FacultyDashboardActivity.this, "");
 //        String url = URLS.LoginCheck + "&userName=" + "gaurang.vyas@rku.ac.in" + "&passWord=" + "Rku@12345" + "";
-//        String url = URLS.LoginCheck + "&userName=" + mySharedPreferences.getEmpUserName() + "&passWord=" + mySharedPreferences.getEmpPassword() + "";
-        String url = URLS.LoginCheck + "&userName=" + "komal.doshi@rku.ac.in" + "&passWord=" + "CfgwTsSPUma9tCx";
+        String url = URLS.LoginCheck + "&userName=" + mySharedPreferences.getEmpUserName() + "&passWord=" + mySharedPreferences.getEmpPassword() + "";
+//        String url = URLS.LoginCheck + "&userName=" + "komal.doshi@rku.ac.in" + "&passWord=" + "CfgwTsSPUma9tCx";
         url.replace(" ", "%20");
         StringRequest request = new StringRequest(Request.Method.GET, url, new com.android.volley.Response.Listener<String>() {
             @Override
@@ -462,12 +462,8 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
                                         DialogUtils.Show_Toast(FacultyDashboardActivity.this, "Login Successfully");
                                         //********* store login data of user ****************
                                         mySharedPreferecesRKUOLD.storeLoginData(loginPojo.getData().get(0).getStatus() + "", loginPojo.getData().get(0).getUsrm_id() + "", loginPojo.getData().get(0).getEmp_code() + "", loginPojo.getData().get(0).getUsrm_name() + "", loginPojo.getData().get(0).getUsrm_dis_name() + "", loginPojo.getData().get(0).getComp_id() + "", loginPojo.getData().get(0).getUsrm_brm_id() + "", loginPojo.getData().get(0).getCom_name() + "", loginPojo.getData().get(0).getFin_year() + "", loginPojo.getData().get(0).getFin_id() + "", loginPojo.getData().get(0).getFin_start_date() + "", loginPojo.getData().get(0).getFin_end_date() + "", loginPojo.getData().get(0).getEmp_id() + "", loginPojo.getData().get(0).getDepartment() + "", loginPojo.getData().get(0).getReportingto() + "", loginPojo.getData().get(0).getUserphoto() + "", loginPojo.getData().get(0).getDesignation() + "", loginPojo.getData().get(0).getBranch() + "", loginPojo.getData().get(0).getFullName() + "", loginPojo.getData().get(0).getPersonal_email() + "", loginPojo.getData().get(0).getOffice_email() + "", loginPojo.getData().get(0).getMobileno() + "", loginPojo.getData().get(0).getJoining_date() + "");
-
-
                                         Intent intent = new Intent(FacultyDashboardActivity.this, MainActivity.class);
                                         startActivity(intent);
-                                        finish();
-
                                     } else {
                                         DialogUtils.Show_Toast(FacultyDashboardActivity.this, "Invalid UserName/Password");
                                     }

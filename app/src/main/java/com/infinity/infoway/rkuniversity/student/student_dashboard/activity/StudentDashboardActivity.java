@@ -248,12 +248,12 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
             Intent intent = new Intent(StudentDashboardActivity.this, MessageHistoryActivity.class);
             startActivity(intent);
         } else if (v.getId() == R.id.llAttendanceStudentSide) {
-            if (connectionDetector.isConnectingToInternet()) {
-                Intent studentAttendanceIntent = new Intent(StudentDashboardActivity.this, StudentAttendanceActivity.class);
-                startActivity(studentAttendanceIntent);
-            } else {
-                Toast.makeText(this, "No internet connection,Please try again later.", Toast.LENGTH_SHORT).show();
-            }
+//            if (connectionDetector.isConnectingToInternet()) {
+//                Intent studentAttendanceIntent = new Intent(StudentDashboardActivity.this, StudentAttendanceActivity.class);
+//                startActivity(studentAttendanceIntent);
+//            } else {
+//                Toast.makeText(this, "No internet connection,Please try again later.", Toast.LENGTH_SHORT).show();
+//            }
         } else if (v.getId() == R.id.btnViewAllStudentSide) {
 //            final Animation animation = AnimationUtils.loadAnimation(this, R.anim.bounce);
 //            btnViewAllStudentSide.startAnimation(animation);
