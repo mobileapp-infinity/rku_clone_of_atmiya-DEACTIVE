@@ -264,7 +264,7 @@ public class StudentProfileActivity extends AppCompatActivity implements View.On
 //        }
 
 
-//For Cnotact Details
+//For Contact Details
         if (studentProfilePojo.getAcFullName() != null && !studentProfilePojo.getAcFullName().isEmpty()) {
             mTvStudentCollegeName.setText(studentProfilePojo.getAcFullName() + "");
         }
@@ -275,7 +275,7 @@ public class StudentProfileActivity extends AppCompatActivity implements View.On
 
         if (studentProfilePojo.getCourseFullname() != null && !studentProfilePojo.getCourseFullname().isEmpty()) {
             mTvStudentCourse.setText(studentProfilePojo.getCourseFullname() + "");
-            mTvStudentCourseNew.setText(studentProfilePojo.getCourseFullname() + "");
+            mTvStudentCourseNew.setText(studentProfilePojo.getCourseShortName() + "");
         }
 
         if (studentProfilePojo.getDvmName() != null && !studentProfilePojo.getDvmName().toString().isEmpty()) {

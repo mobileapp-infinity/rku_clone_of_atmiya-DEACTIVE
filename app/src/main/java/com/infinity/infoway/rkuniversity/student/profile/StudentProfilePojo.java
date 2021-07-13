@@ -23,6 +23,18 @@ public class StudentProfilePojo {
     @SerializedName("course_fullname")
     @Expose
     private String courseFullname;
+    @SerializedName("course_short_name")
+    @Expose
+    private String courseShortName;
+
+    public String getCourseShortName() {
+        return courseShortName;
+    }
+
+    public void setCourseShortName(String courseShortName) {
+        this.courseShortName = courseShortName;
+    }
+
     @SerializedName("sm_name")
     @Expose
     private String smName;
