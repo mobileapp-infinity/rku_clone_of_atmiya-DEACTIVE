@@ -39,6 +39,9 @@ public class FacultyDetailsOfTheorySubjectTaughtPojo {
     @SerializedName("resource_name")
     @Expose
     private String resourceName;
+    @SerializedName("sub_code")
+    @Expose
+    private String subCode;
 
     public Integer getSrNo() {
         return srNo;
@@ -102,5 +105,13 @@ public class FacultyDetailsOfTheorySubjectTaughtPojo {
 
     public void setResourceName(String resourceName) {
         this.resourceName = resourceName;
+    }
+
+    public String getSubCode() {
+        return subCode;
+    }
+
+    public void setSubCode(String subCode) {
+        this.subCode = subCode;
     }
 }

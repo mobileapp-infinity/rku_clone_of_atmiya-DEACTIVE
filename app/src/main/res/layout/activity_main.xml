@@ -179,6 +179,45 @@
                     android:padding="15dp" />
 
                 <LinearLayout
+                    android:id="@+id/ll_go_to_academics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/iv_goto_academics"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_weight=".3"
+                        app:srcCompat="@drawable/view_leave_dra_black" />
+
+                    <com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.CustomTextView
+                        android:id="@+id/tv_go_to_academics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="1.7"
+                        android:drawablePadding="10dp"
+                        android:gravity="center|left"
+                        android:padding="15dp"
+                        android:text="Go To Academics"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_large" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/grey"
+                    android:padding="15dp" />
+
+                <LinearLayout
                     android:id="@+id/ll_add_leave"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

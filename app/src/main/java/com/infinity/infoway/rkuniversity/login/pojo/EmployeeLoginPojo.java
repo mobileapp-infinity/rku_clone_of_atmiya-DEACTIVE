@@ -25,16 +25,19 @@ public class EmployeeLoginPojo {
     private String empUsername;
     @SerializedName("emp_password")
     @Expose
-    private Object empPassword;
+    private String empPassword;
     @SerializedName("ac_full_name")
     @Expose
     private String acFullName;
     @SerializedName("ac_logo")
     @Expose
     private String acLogo;
+    @SerializedName("stud_photo")
+    @Expose
+    private Object studPhoto;
     @SerializedName("emp_photo")
     @Expose
-    private String empPhoto;
+    private Object empPhoto;
     @SerializedName("status")
     @Expose
     private Integer status;
@@ -68,13 +71,19 @@ public class EmployeeLoginPojo {
     @SerializedName("ac_id")
     @Expose
     private Integer acId;
+    @SerializedName("is_HOD_for_leave_menu")
+    @Expose
+    private Integer isHODForLeaveMenu;
+    @SerializedName("is_coordinator_for_leave_menu")
+    @Expose
+    private Integer isCoordinatorForLeaveMenu;
 
-    public Integer getAcId() {
-        return acId;
+    public Integer getEmpId() {
+        return empId;
     }
 
-    public void setAcId(Integer acId) {
-        this.acId = acId;
+    public void setEmpId(Integer empId) {
+        this.empId = empId;
     }
 
     public Integer getIsAdmin() {
@@ -83,14 +92,6 @@ public class EmployeeLoginPojo {
 
     public void setIsAdmin(Integer isAdmin) {
         this.isAdmin = isAdmin;
-    }
-
-    public Integer getEmpId() {
-        return empId;
-    }
-
-    public void setEmpId(Integer empId) {
-        this.empId = empId;
     }
 
     public String getEmpNumber() {
@@ -125,11 +126,11 @@ public class EmployeeLoginPojo {
         this.empUsername = empUsername;
     }
 
-    public Object getEmpPassword() {
+    public String getEmpPassword() {
         return empPassword;
     }
 
-    public void setEmpPassword(Object empPassword) {
+    public void setEmpPassword(String empPassword) {
         this.empPassword = empPassword;
     }
 
@@ -149,11 +150,19 @@ public class EmployeeLoginPojo {
         this.acLogo = acLogo;
     }
 
-    public String getEmpPhoto() {
+    public Object getStudPhoto() {
+        return studPhoto;
+    }
+
+    public void setStudPhoto(Object studPhoto) {
+        this.studPhoto = studPhoto;
+    }
+
+    public Object getEmpPhoto() {
         return empPhoto;
     }
 
-    public void setEmpPhoto(String empPhoto) {
+    public void setEmpPhoto(Object empPhoto) {
         this.empPhoto = empPhoto;
     }
 
@@ -236,5 +245,30 @@ public class EmployeeLoginPojo {
     public void setLoginUserType(Integer loginUserType) {
         this.loginUserType = loginUserType;
     }
+
+    public Integer getAcId() {
+        return acId;
+    }
+
+    public void setAcId(Integer acId) {
+        this.acId = acId;
+    }
+
+    public Integer getIsHODForLeaveMenu() {
+        return isHODForLeaveMenu;
+    }
+
+    public void setIsHODForLeaveMenu(Integer isHODForLeaveMenu) {
+        this.isHODForLeaveMenu = isHODForLeaveMenu;
+    }
+
+    public Integer getIsCoordinatorForLeaveMenu() {
+        return isCoordinatorForLeaveMenu;
+    }
+
+    public void setIsCoordinatorForLeaveMenu(Integer isCoordinatorForLeaveMenu) {
+        this.isCoordinatorForLeaveMenu = isCoordinatorForLeaveMenu;
+    }
+
 
 }

@@ -82,50 +82,7 @@
                         android:maxLines="2"
                         android:minLines="2"
                         android:padding="8dp"
-                        android:text="Lab/Lecture\nPlan"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
-                        android:textSize="10sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llFacultyTeachingUpdateStudentForumActivity"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/border_for_fee_details_menu"
-                    android:orientation="vertical">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp"
-                        app:srcCompat="@drawable/ic_activity" />
-
-                    <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/shape_fee_details_screen"
-                        android:gravity="center"
-                        android:maxLines="2"
-                        android:minLines="2"
-                        android:padding="8dp"
-                        android:text="Student Forum\nActivity"
+                        android:text="Lab/Lesson\nPlan"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="10sp" />
@@ -175,18 +132,63 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llFacultyTeachingUpdateTotalTheoryPeriod"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_for_fee_details_menu"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            app:srcCompat="@drawable/ic_faculty_teching_update_subject_wise_total_theory_period" />
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_fee_details_screen"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:minLines="2"
+                            android:padding="8dp"
+                            android:text="Total Lecture\nEngaged"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="3">
 
             <LinearLayout
-                android:id="@+id/llFacultyTeachingUpdateTotalTheoryPeriod"
+                android:id="@+id/llFacultyTeachingUpdateStudentForumActivity"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
@@ -209,7 +211,7 @@
                         android:layout_gravity="center"
                         android:paddingTop="8dp"
                         android:paddingBottom="8dp"
-                        app:srcCompat="@drawable/ic_faculty_teching_update_subject_wise_total_theory_period" />
+                        app:srcCompat="@drawable/ic_activity" />
 
                     <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
                         android:layout_width="match_parent"
@@ -219,7 +221,7 @@
                         android:maxLines="2"
                         android:minLines="2"
                         android:padding="8dp"
-                        android:text="Total Lecture\nEngaged"
+                        android:text="Student Forum\nActivity"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="10sp" />

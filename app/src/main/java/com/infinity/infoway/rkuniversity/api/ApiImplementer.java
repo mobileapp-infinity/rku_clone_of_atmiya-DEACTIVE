@@ -182,7 +182,7 @@ public class ApiImplementer {
     }
 
     public static void getFeeReceiptApiImplementer(String stud_id, Callback<ArrayList<FeeReceiptPojo>> cb) {
-        final IApiInterface apiService = ApiClient.getClient().create(IApiInterface.class);
+        final IApiInterface apiService = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
         Call<ArrayList<FeeReceiptPojo>> call = apiService.getFeeReceipt(stud_id);
         call.enqueue(cb);
     }

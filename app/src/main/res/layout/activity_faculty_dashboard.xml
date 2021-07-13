@@ -118,6 +118,33 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:visibility="visible"
+                        android:id="@+id/llFacultyProfile"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:adjustViewBounds="true"
+                            app:srcCompat="@drawable/ic_faculty_profile" />
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Profile"
+                            android:textColor="@color/font_color"
+                            android:textSize="@dimen/faculty_dashboard_menu_font_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:id="@+id/llGoToHR"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -169,6 +196,15 @@
 
                     </LinearLayout>
 
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal">
+
                     <LinearLayout
                         android:id="@+id/llLecturePlanFacultySide"
                         android:layout_width="0dp"
@@ -188,40 +224,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="4dp"
                             android:gravity="center"
-                            android:text="Lecture Plan"
-                            android:textColor="@color/font_color"
-                            android:textSize="@dimen/faculty_dashboard_menu_font_size" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:id="@+id/llAttendanceFacultySide"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            app:srcCompat="@drawable/ic_faculty_attendence" />
-
-                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="4dp"
-                            android:gravity="center"
-                            android:text="Attendance"
+                            android:text="Lesson Plan"
                             android:textColor="@color/font_color"
                             android:textSize="@dimen/faculty_dashboard_menu_font_size" />
 
@@ -253,8 +256,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:visibility="invisible"
-                        android:id="@+id/llFacultyProfile"
+                        android:id="@+id/llFacultyTeachingUpdate"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -266,14 +268,14 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:adjustViewBounds="true"
-                            app:srcCompat="@drawable/ic_faculty_profile" />
+                            app:srcCompat="@drawable/ic_teaching_update" />
 
                         <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="4dp"
                             android:gravity="center"
-                            android:text="Profile"
+                            android:text="Teaching\nUpdate"
                             android:textColor="@color/font_color"
                             android:textSize="@dimen/faculty_dashboard_menu_font_size" />
 
@@ -341,7 +343,8 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/llFacultyTeachingUpdate"
+                        android:visibility="gone"
+                        android:id="@+id/llAttendanceFacultySide"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -352,15 +355,14 @@
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:adjustViewBounds="true"
-                            app:srcCompat="@drawable/ic_teaching_update" />
+                            app:srcCompat="@drawable/ic_faculty_attendence" />
 
                         <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="4dp"
                             android:gravity="center"
-                            android:text="Teaching\nUpdate"
+                            android:text="Attendance"
                             android:textColor="@color/font_color"
                             android:textSize="@dimen/faculty_dashboard_menu_font_size" />
 
@@ -369,56 +371,31 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/llLeaveApproval"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
                     android:weightSum="3"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:id="@+id/llLeaveFacultySide"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:adjustViewBounds="true"
-                            app:srcCompat="@drawable/ic_leave_application" />
-
-                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="4dp"
-                            android:gravity="center"
-                            android:text="Leave"
-                            android:textColor="@color/font_color"
-                            android:textSize="@dimen/faculty_dashboard_menu_font_size" />
-
-                    </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/llLeaveApprovalForHOD"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:visibility="visible"
                         android:background="?android:attr/selectableItemBackground"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:visibility="gone">
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:adjustViewBounds="true"
                             android:layout_gravity="center"
-                            app:srcCompat="@drawable/leave_approval_dra_white"
-                            android:tint="#ff0000"/>
+                            android:adjustViewBounds="true"
+                            android:tint="#ff0000"
+                            app:srcCompat="@drawable/leave_approval_dra_white" />
 
                         <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
                             android:layout_width="wrap_content"
@@ -439,7 +416,7 @@
                         android:background="?android:attr/selectableItemBackground"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:visibility="visible">
+                        android:visibility="gone">
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="48dp"
@@ -453,6 +430,33 @@
                             android:layout_marginTop="4dp"
                             android:gravity="center"
                             android:text="Leave Approval\nFor Co-Ordinator"
+                            android:textColor="@color/font_color"
+                            android:textSize="@dimen/faculty_dashboard_menu_font_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/llLeaveFacultySide"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:adjustViewBounds="true"
+                            app:srcCompat="@drawable/ic_leave_application" />
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Leave"
                             android:textColor="@color/font_color"
                             android:textSize="@dimen/faculty_dashboard_menu_font_size" />
 

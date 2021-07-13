@@ -18,23 +18,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.Settings;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
-import com.android.volley.AuthFailureError;
-import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
-
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.appcompat.widget.Toolbar;
-
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
@@ -49,6 +32,18 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -56,6 +51,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
 import com.infinity.infoway.rkuniversity.R;
@@ -206,6 +203,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     CustomBoldTextView tvLastInOutAndDate;
     CustomBoldTextView tvTodayInOutAndDate;
     LinearLayout llViewAllLastInOutAndTodayInOut;
+
+    LinearLayout ll_go_to_academics;
 
 
     @Override
@@ -980,6 +979,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         card_view_miss_punch = (CardView) findViewById(R.id.card_view_miss_punch);
         card_leaveleave_balance = (CardView) findViewById(R.id.card_leaveleave_balance);
         card_view_miss_punch_approval = (CardView) findViewById(R.id.card_view_miss_punch_approval);
+        ll_go_to_academics = findViewById(R.id.ll_go_to_academics);
+        ll_go_to_academics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
 //        ll_logout = (LinearLayout) findViewById(R.id.ll_logout);
@@ -2918,86 +2924,86 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void changeBackgoundColor() {
-        iv_miss_punch_approval.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.miss_punch_app_dra_black));
-        iv_leave_statastics.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.leave_balance_dra_black));
-        iv_pd_statastics.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.leave_balance_dra_black));
-        iv_coff_approval.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.check_black));
-        iv_change_psw.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.change_psw_dra_black));
-        iv_att.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.attendance_report_dra_black));
-        iv_salary_slip.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.salary_slip_dra_black));
-        ivAcademicContribution.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.salary_slip_dra_black));
-        ivCommitteeMember.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.member_png));
-        ivCommitteeDetails.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.committee_member_details));
-        ivRequestForResignation.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.request_for_resignation));
-        ivAcademicContributionReport.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.academic_contribution_report));
+        iv_miss_punch_approval.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.miss_punch_app_dra_black));
+        iv_leave_statastics.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.leave_balance_dra_black));
+        iv_pd_statastics.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.leave_balance_dra_black));
+        iv_coff_approval.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.check_black));
+        iv_change_psw.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.change_psw_dra_black));
+        iv_att.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.attendance_report_dra_black));
+        iv_salary_slip.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.salary_slip_dra_black));
+        ivAcademicContribution.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.salary_slip_dra_black));
+        ivCommitteeMember.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.member_png));
+        ivCommitteeDetails.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.committee_member_details));
+        ivRequestForResignation.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.request_for_resignation));
+        ivAcademicContributionReport.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.academic_contribution_report));
 //        ivUserWiseMenuDisplay.setImageDrawable(getResources().getDrawable(R.drawable.salary_slip_dra_black));
         //        iv_employee_e_profile.setImageDrawable(getResources().getDrawable(R.drawable.salary_slip_dra_black));
 //        ivCommittee.setImageDrawable(getResources().getDrawable(R.drawable.committee));
         //        iv_add_miss_punch.setImageDrawable(getResources().getDrawable(R.drawable.add_leave_white));
         //        iv_add_leave.setImageDrawable(getResources().getDrawable(R.drawable.add_leave_white));
         //        iv_view_miss_punch.setImageDrawable(getResources().getDrawable(R.drawable.view_leave_black));
-        ivReqPDApplication.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.salary_slip_dra_black));
-        iv_apply_leave.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.add_leave_black));
-        iv_add_cancel_leave_apr.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.cancel_leave_approval_dra_black));
-        iv_add_cancel_leave.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.view_cancel_leave_dra_black));
+        ivReqPDApplication.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.salary_slip_dra_black));
+        iv_apply_leave.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.add_leave_black));
+        iv_add_cancel_leave_apr.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.cancel_leave_approval_dra_black));
+        iv_add_cancel_leave.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.view_cancel_leave_dra_black));
 //        iv_logout.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.logout_dra_black));
-        iv_add_miss_punch.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.add_miss_punch_dra_black));
-        iv_view_leave.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.view_leave_dra_black));
-        iv_leave_balance.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.leave_balance_dra_black));
-        iv_add_leave.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.add_leave_dra_black));
-        iv_view_miss_punch.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.view_miss_punch_dra_black));
-        iv_leave_approval.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.leave_apprval_dra_black));
-        iv_profile.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,R.drawable.my_profile_dra_black));
+        iv_add_miss_punch.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.add_miss_punch_dra_black));
+        iv_view_leave.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.view_leave_dra_black));
+        iv_leave_balance.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.leave_balance_dra_black));
+        iv_add_leave.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.add_leave_dra_black));
+        iv_view_miss_punch.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.view_miss_punch_dra_black));
+        iv_leave_approval.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.leave_apprval_dra_black));
+        iv_profile.setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.my_profile_dra_black));
         llviewleave.setBackgroundColor(getResources().getColor(R.color.drawer_new_bg));
 
-        ll_coff_approval.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        ll_apply_leave.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        ll_change_psw.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        ll_view_cancel_leave_apr.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        ll_salary_slip.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        llAcademicContribution.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        llCommitteeMember.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        llCommitteeDetails.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        llRequestForResignation.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        llAcademicContributionReport.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        llReqPDApplication.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        lladdmp.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        llviewmp.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        llmisspunchapp.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        ll_view_cancel_leave.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        llleaveapproval.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        llviewmp.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        llleavebalance.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        ll_pd_statastics.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        tvviewleave.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tvviewmp.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tvaddmp.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tvmisspunchapp.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tvleaveapproval.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tvviewmp.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tv_coff_approval.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tv_change_psw.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tv_leave_statastics.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tv_pd_statastics.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tvleavebalance.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        llmyprofile.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        ll_leave_statastics.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        ll_att.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        tvmyprofile.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tv_att.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        lladdleave.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.drawer_new_bg));
-        tvaddleave.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
+        ll_coff_approval.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        ll_apply_leave.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        ll_change_psw.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        ll_view_cancel_leave_apr.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        ll_salary_slip.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        llAcademicContribution.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        llCommitteeMember.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        llCommitteeDetails.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        llRequestForResignation.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        llAcademicContributionReport.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        llReqPDApplication.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        lladdmp.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        llviewmp.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        llmisspunchapp.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        ll_view_cancel_leave.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        llleaveapproval.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        llviewmp.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        llleavebalance.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        ll_pd_statastics.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        tvviewleave.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tvviewmp.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tvaddmp.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tvmisspunchapp.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tvleaveapproval.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tvviewmp.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tv_coff_approval.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tv_change_psw.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tv_leave_statastics.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tv_pd_statastics.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tvleavebalance.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        llmyprofile.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        ll_leave_statastics.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        ll_att.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        tvmyprofile.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tv_att.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        lladdleave.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.drawer_new_bg));
+        tvaddleave.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
 //        tv_logout.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tv_salary_slip.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tvAcademicContribution.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tvCommitteeMember.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tvCommitteeDetails.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tvRequestForResignation.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tvAcademicContributionReport.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tvReqPDApplication.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tv_view_cl_leave_apr.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tv_apply_leave.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
-        tv_view_cl_leave.setTextColor(ContextCompat.getColor(MainActivity.this,R.color.black));
+        tv_salary_slip.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tvAcademicContribution.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tvCommitteeMember.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tvCommitteeDetails.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tvRequestForResignation.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tvAcademicContributionReport.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tvReqPDApplication.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tv_view_cl_leave_apr.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tv_apply_leave.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
+        tv_view_cl_leave.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black));
 //        tvUserWiseMenuDisplay.setTextColor(getResources().getColor(R.color.black));
         //        tv_employee_e_profile.setTextColor(getResources().getColor(R.color.black));
 //        tvCommittee.setTextColor(getResources().getColor(R.color.black));

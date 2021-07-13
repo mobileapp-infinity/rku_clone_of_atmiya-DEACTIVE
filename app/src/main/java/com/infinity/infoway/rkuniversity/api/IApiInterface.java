@@ -150,7 +150,11 @@ public interface IApiInterface {
     Call<ArrayList<StudentSubjectWiseAttendancePojo>> getStudentSubjectWiseAttendance(@QueryMap Map<String, String> params);
 
 
-    @GET("Fee_Receipt_List")
+//    @GET("Fee_Receipt_List")
+//    Call<ArrayList<FeeReceiptPojo>> getFeeReceipt(@Query("stud_id") String stud_id);
+
+    //new api for fee receipt for only rk as per discussion with nikunj sir and krishna madam
+    @GET("get_student_fee_installment_detail_API")
     Call<ArrayList<FeeReceiptPojo>> getFeeReceipt(@Query("stud_id") String stud_id);
 
     @GET("Print_Fee_Receipt")

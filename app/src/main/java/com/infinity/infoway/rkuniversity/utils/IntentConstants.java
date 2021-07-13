@@ -29,6 +29,7 @@ public class IntentConstants {
 
     public static final String STUDENT_HOME_WORK_DAY_WISE_LIST = "StudentHomeWorkDayWiseList";
     public static final String STUDENT_TIME_TABLE_DAY_WISE_LIST = "StudentDayWiseTimeTable";
+    public static final String IS_DISPLAY_TIME = "IsDisplayTime";
     public static final String STUDENT_LECTURE_DETAILS_LIST = "StudentLectureDetailsList";
     public static final String IS_FORCE_UPDATE = "IsForceUpdate";
     public static final String APP_UPDATE_TYPE = "AppUpdateType";

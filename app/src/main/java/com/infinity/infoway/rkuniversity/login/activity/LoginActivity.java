@@ -357,6 +357,19 @@ public class LoginActivity extends AppCompatActivity implements
         mySharedPreferences.setEmpUserName(empUserName);
         mySharedPreferences.setEmpPassword(empPassword);
 
+
+        if (!CommonUtil.checkIsEmptyOrNullCommon(employeeLoginPojo.getIsHODForLeaveMenu())) {
+            mySharedPreferences.setEmpIsHOD(employeeLoginPojo.getIsHODForLeaveMenu()+"");
+        }
+
+        if (!CommonUtil.checkIsEmptyOrNullCommon(employeeLoginPojo.getIsCoordinatorForLeaveMenu())) {
+            mySharedPreferences.setEmpIsCoOrdinator(employeeLoginPojo.getIsCoordinatorForLeaveMenu()+"");
+        }
+
+        if (!CommonUtil.checkIsEmptyOrNullCommon(employeeLoginPojo.getLoginUserType())) {
+            mySharedPreferences.setLoginUserType(employeeLoginPojo.getLoginUserType());
+        }
+
         if (!CommonUtil.checkIsEmptyOrNullCommon(employeeLoginPojo.getLoginUserType())) {
             mySharedPreferences.setLoginUserType(employeeLoginPojo.getLoginUserType());
         }

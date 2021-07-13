@@ -61,10 +61,14 @@ public class FeeDetailsActivity extends AppCompatActivity implements View.OnClic
         if (v.getId() == R.id.ivCloseFeeDetails) {
             onBackPressed();
         }
-//        else if (v.getId() == R.id.llStudentFeeReceipt) {
-//            Intent intent = new Intent(FeeDetailsActivity.this, FeeReciptActivity.class);
+        else if (v.getId() == R.id.llStudentFeeReceipt) {
+            Intent intent = new Intent(FeeDetailsActivity.this, FeeReciptActivity.class);
+            startActivity(intent);
+        }else if (v.getId() == R.id.llPayFee) {
+//            Intent intent = new Intent(FeeDetailsActivity.this, PayFeeActivity.class);
 //            startActivity(intent);
-//        } else if (v.getId() == R.id.llPaySlipOfAxisFeeDetails) {
+        }
+//        else if (v.getId() == R.id.llPaySlipOfAxisFeeDetails) {
 //            Intent intent = new Intent(FeeDetailsActivity.this, PaySlipOfAxisDetailActivity.class);
 //            startActivity(intent);
 //
@@ -77,9 +81,6 @@ public class FeeDetailsActivity extends AppCompatActivity implements View.OnClic
 //            } else {
 //                Toast.makeText(this, "Circular Not Found!", Toast.LENGTH_SHORT).show();
 //            }
-//        } else if (v.getId() == R.id.llPayFee) {
-//            Intent intent = new Intent(FeeDetailsActivity.this, PayFeeActivity.class);
-//            startActivity(intent);
 //        }
     }
 

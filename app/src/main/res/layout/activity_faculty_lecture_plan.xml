@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="8dp"
-            android:text="Lecture Plan"
+            android:text="Lesson Plan"
             android:textAllCaps="true"
             android:textColor="@color/white" />
 

@@ -127,6 +127,55 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/llStudentLecTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical">
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time"
+                            android:textColor="@color/profile_heading_color"
+                            android:textSize="10sp" />
+
+                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                            android:id="@+id/tvStudentLecTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:textColor="@color/profile_heading_value_color"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+<!--                    <LinearLayout-->
+<!--                        android:visibility="gone"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:layout_marginBottom="8dp"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Time"-->
+<!--                            android:textColor="@color/profile_heading_color"-->
+<!--                            android:textSize="10sp" />-->
+
+<!--                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                            android:id="@+id/tvStudentTime"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="-"-->
+<!--                            android:textColor="@color/profile_heading_value_color"-->
+<!--                            android:textSize="11sp" />-->
+
+<!--                    </LinearLayout>-->
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"

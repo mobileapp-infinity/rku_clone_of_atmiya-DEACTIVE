@@ -22,5 +22,7 @@ public class EmployeeSidePreferencesConstants {
     public static final String EMP_DEPARTMENT_ID = "emp_department_id";
     public static final String EMP_IS_ADMIN = " emp_is_admin";
     public static final String EMP_AC_ID = "emp_ac_id";
+    public static final String EMP_IS_HOD = "emp_is_hod";
+    public static final String EMP_IS_COORDINATOR = "emp_is_coordinator";
 
 }

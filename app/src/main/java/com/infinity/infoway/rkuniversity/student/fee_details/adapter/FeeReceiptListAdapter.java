@@ -24,6 +24,7 @@ import com.infinity.infoway.rkuniversity.utils.GeneratePDFFileFromBase64String;
 import com.infinity.infoway.rkuniversity.utils.MySharedPreferences;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -61,33 +62,30 @@ public class FeeReceiptListAdapter extends RecyclerView.Adapter<FeeReceiptListAd
 
         FeeReceiptPojo feeReceiptPojo = feeReceiptPojoArrayList.get(position);
 
-        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getFeeClassName())) {
-            holder.tvClassName.setText(feeReceiptPojo.getFeeClassName());
-            holder.tvClasName_.setText(feeReceiptPojo.getFeeClassName());
-
+        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getStudName())) {
+            holder.tvClassName.setText(feeReceiptPojo.getStudName());
         }
 
-        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getFeeAmt())) {
-            holder.tvFeeAmount.setText("Rs. " + feeReceiptPojo.getFeeAmt() + "/-");
-            holder.tvFeeAmount_.setText("Rs. " + feeReceiptPojo.getFeeAmt() + "/-");
-        }
-        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getFeeReceiptNo())) {
-            holder.tvFeeReceiptNo.setText(feeReceiptPojo.getFeeReceiptNo() + "");
-        }
-        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getFeeReceiptDate())) {
-            holder.tvFeeReceiptDate.setText(feeReceiptPojo.getFeeReceiptDate() + "");
+        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getSemName())){
+            holder.tvClasName_.setText(feeReceiptPojo.getSemName());
         }
 
-        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getFeeBankDocumentType())) {
-            holder.tvPaymentMode.setText(feeReceiptPojo.getFeeBankDocumentType() + "");
+        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getTwfPaymentAmount())) {
+            holder.tvFeeAmount_.setText("Rs. " + feeReceiptPojo.getTwfPaymentAmount() + "/-");
+        }
+        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getSwfReceiptNo())) {
+            holder.tvFeeReceiptNo.setText(feeReceiptPojo.getSwfReceiptNo() + "");
+        }
+        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getFinalPaymentDate())) {
+            holder.tvPaymentDate.setText(feeReceiptPojo.getFinalPaymentDate() + "");
         }
 
-        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getFeeRefNo())) {
-            holder.tvReferenceNo.setText(feeReceiptPojo.getFeeRefNo() + "");
+        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getFeePayType())) {
+            holder.tvPaymentMode.setText(feeReceiptPojo.getFeePayType() + "");
         }
 
-        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getFeeBankName())) {
-            holder.tvBankName.setText(feeReceiptPojo.getFeeBankName() + "");
+        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getBankTrans())) {
+            holder.tvBankName.setText(feeReceiptPojo.getBankTrans() + "");
         }
 
 
@@ -102,43 +100,42 @@ public class FeeReceiptListAdapter extends RecyclerView.Adapter<FeeReceiptListAd
         holder.tvPreintFeeReceipt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                downloadFeeReceiptApiCall(feeReceiptPojoArrayList.get(position).getFeeReceiptNo());
-            }
-        });
-
-    }
-
-
-    private void downloadFeeReceiptApiCall(String feeReceiptNo) {
-        DialogUtil.showProgressDialogNotCancelable(context, "downloading... ");
-//        progressDialog.show();
-        ApiImplementer.downloadFeeReceiptApiImplementer(mySharedPreferences.getStudentId(), feeReceiptNo, new Callback<PrintFeeReceiptPojo>() {
-            @Override
-            public void onResponse(Call<PrintFeeReceiptPojo> call, Response<PrintFeeReceiptPojo> response) {
-                try {
-                    DialogUtil.hideProgressDialog();
-                    if (response.isSuccessful() && response.body() != null && response.body().getStatus() == 1 &&
-                            response.body().getBase64string() != null && !response.body().getBase64string().isEmpty()) {
-                        new GeneratePDFFileFromBase64String(context, "Fee Receipt", response.body().getFilename(),
-                                response.body().getBase64string());
-                    } else {
+                if (feeReceiptPojo.getReceiptBase64string() != null && !feeReceiptPojo.getReceiptBase64string().isEmpty()) {
+                    new GeneratePDFFileFromBase64String(context, "Fee Receipt", feeReceiptPojo.getReceiptName()+ System.currentTimeMillis(),
+                            feeReceiptPojo.getReceiptBase64string());
+                } else {
 //                        progressDialog.hide();
-                        Toast.makeText(context, "Some thing went wrong please try again later.", Toast.LENGTH_SHORT).show();
-                    }
-                } catch (Exception ex) {
-//                    progressDialog.hide();
-                    ex.printStackTrace();
+                    Toast.makeText(context, "Some thing went wrong please try again later.", Toast.LENGTH_SHORT).show();
                 }
             }
-
-            @Override
-            public void onFailure(Call<PrintFeeReceiptPojo> call, Throwable t) {
-                DialogUtil.hideProgressDialog();
-//                progressDialog.hide();
-                Toast.makeText(context, "Request Failed:- " + t.getMessage(), Toast.LENGTH_SHORT).show();
-            }
         });
+
     }
+
+
+//    private void downloadFeeReceiptApiCall(String feeReceiptNo) {
+//        DialogUtil.showProgressDialogNotCancelable(context, "downloading... ");
+////        progressDialog.show();
+//        ApiImplementer.downloadFeeReceiptApiImplementer(mySharedPreferences.getStudentId(), feeReceiptNo, new Callback<PrintFeeReceiptPojo>() {
+//            @Override
+//            public void onResponse(Call<PrintFeeReceiptPojo> call, Response<PrintFeeReceiptPojo> response) {
+//                try {
+//                    DialogUtil.hideProgressDialog();
+//
+//                } catch (Exception ex) {
+////                    progressDialog.hide();
+//                    ex.printStackTrace();
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<PrintFeeReceiptPojo> call, Throwable t) {
+//                DialogUtil.hideProgressDialog();
+////                progressDialog.hide();
+//                Toast.makeText(context, "Request Failed:- " + t.getMessage(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    }
 
 
     @Override
@@ -151,7 +148,10 @@ public class FeeReceiptListAdapter extends RecyclerView.Adapter<FeeReceiptListAd
         AppCompatImageView ivViewMoreBtn;
         LinearLayout llExpandableLayout;
         LinearLayout llExpandedHeader;
-        TextViewRegularFont tvClassName, tvFeeAmount, tvClasName_, tvFeeAmount_;
+        TextViewRegularFont tvClassName, tvClasName_, tvFeeAmount_;
+        TextViewMediumFont tvPaymentDate;
+//        TextViewRegularFont tvFeeAmount;
+
         TextViewMediumFont tvFeeReceiptNo, tvFeeReceiptDate, tvPaymentMode, tvReferenceNo, tvBankName;
         TextViewRegularFont tvPreintFeeReceipt;
 
@@ -161,14 +161,13 @@ public class FeeReceiptListAdapter extends RecyclerView.Adapter<FeeReceiptListAd
             llExpandableLayout = itemView.findViewById(R.id.llExpandableLayout);
             llExpandedHeader = itemView.findViewById(R.id.llExpandedHeader);
             tvClassName = itemView.findViewById(R.id.tvClassName);
-            tvFeeAmount = itemView.findViewById(R.id.tvFeeAmount);
+//            tvFeeAmount = itemView.findViewById(R.id.tvFeeAmount);
+            tvPaymentMode = itemView.findViewById(R.id.tvPaymentMode);
             tvClasName_ = itemView.findViewById(R.id.tvClasName_);
             tvFeeAmount_ = itemView.findViewById(R.id.tvFeeAmount_);
             tvFeeReceiptNo = itemView.findViewById(R.id.tvFeeReceiptNo);
             tvPreintFeeReceipt = itemView.findViewById(R.id.tvPreintFeeReceipt);
-            tvFeeReceiptDate = itemView.findViewById(R.id.tvFeeReceiptDate);
-            tvPaymentMode = itemView.findViewById(R.id.tvPaymentMode);
-            tvReferenceNo = itemView.findViewById(R.id.tvReferenceNo);
+            tvPaymentDate = itemView.findViewById(R.id.tvPaymentDate);
             tvBankName = itemView.findViewById(R.id.tvBankName);
         }
     }

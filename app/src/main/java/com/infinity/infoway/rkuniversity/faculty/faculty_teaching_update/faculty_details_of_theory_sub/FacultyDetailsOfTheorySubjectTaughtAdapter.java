@@ -54,7 +54,12 @@ public class FacultyDetailsOfTheorySubjectTaughtAdapter extends RecyclerView.Ada
         }
 
         if (!CommonUtil.checkIsEmptyOrNullCommon(facultyDetailsOfTheorySubjectTaughtPojo.getSubName())) {
-            holder.tvSubjectFaculty.setText(facultyDetailsOfTheorySubjectTaughtPojo.getSubName()+ "");
+            String subNameAndcode = facultyDetailsOfTheorySubjectTaughtPojo.getSubName()+ "";
+            if(!CommonUtil.checkIsEmptyOrNullCommon(facultyDetailsOfTheorySubjectTaughtPojo.getSubCode())){
+                subNameAndcode = subNameAndcode + "(" + facultyDetailsOfTheorySubjectTaughtPojo.getSubCode() + ")";
+            }
+            holder.tvSubjectFaculty.setText(subNameAndcode);
+
         }
 
         if (!CommonUtil.checkIsEmptyOrNullCommon(facultyDetailsOfTheorySubjectTaughtPojo.getDivName())) {

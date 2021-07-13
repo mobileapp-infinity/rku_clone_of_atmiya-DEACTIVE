@@ -226,6 +226,27 @@ public class MySharedPreferences {
         return sharedPreferencesForStudentOrFaculty.getInt(CommonPreferencesConstants.LOGIN_USER_TYPE, 0);
     }
 
+
+    /////
+    public void setEmpIsHOD(String isHod) {
+        editorForStudentOrFaculty.putString(EmployeeSidePreferencesConstants.EMP_IS_HOD, isHod);
+        editorForStudentOrFaculty.apply();
+    }
+
+    public String getEmpIsHod() {
+        return sharedPreferencesForStudentOrFaculty.getString(EmployeeSidePreferencesConstants.EMP_IS_HOD, "");
+    }
+
+    public void setEmpIsCoOrdinator(String isCoOrdinator) {
+        editorForStudentOrFaculty.putString(EmployeeSidePreferencesConstants.EMP_IS_COORDINATOR, isCoOrdinator);
+        editorForStudentOrFaculty.apply();
+    }
+
+    public String getEmpIsCoOrdinator() {
+        return sharedPreferencesForStudentOrFaculty.getString(EmployeeSidePreferencesConstants.EMP_IS_COORDINATOR, "");
+    }
+
+
     public void setFCMToken(String fcmToken) {
         editorForFirebaseFcmToken.putString(CommonPreferencesConstants.FCM_TOKEN, fcmToken);
         editorForFirebaseFcmToken.apply();

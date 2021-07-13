@@ -25,10 +25,12 @@ public class StudentTimeTableAdapter extends RecyclerView.Adapter<StudentTimeTab
     Context context;
     ArrayList<StudentTimeTablePojo.InoutArray1> studentTimeTablePojoArrayList;
     LayoutInflater layoutInflater;
+    boolean isDisplayTime = false;
 
-    public StudentTimeTableAdapter(Context context, ArrayList<StudentTimeTablePojo.InoutArray1> studentTimeTablePojoArrayList) {
+    public StudentTimeTableAdapter(Context context, ArrayList<StudentTimeTablePojo.InoutArray1> studentTimeTablePojoArrayList, boolean isDisplayTime) {
         this.context = context;
         this.studentTimeTablePojoArrayList = studentTimeTablePojoArrayList;
+        this.isDisplayTime = isDisplayTime;
         layoutInflater = LayoutInflater.from(context);
     }
 
@@ -44,6 +46,10 @@ public class StudentTimeTableAdapter extends RecyclerView.Adapter<StudentTimeTab
 
         try {
             StudentTimeTablePojo.InoutArray1 inoutArray1 = studentTimeTablePojoArrayList.get(position);
+
+            if (!isDisplayTime) {
+                holder.llStudentLecTime.setVisibility(View.GONE);
+            }
 
             if (position == 0) {
                 holder.tvStart.setVisibility(View.VISIBLE);
@@ -73,7 +79,6 @@ public class StudentTimeTableAdapter extends RecyclerView.Adapter<StudentTimeTab
                 if (!CommonUtil.checkIsEmptyOrNullCommon(inoutArray1.getLectName()) &&
                         (inoutArray1.getLabArray() == null || inoutArray1.getLabArray().size() == 0)) {
                     holder.llMergingDynamicLayout.setVisibility(View.GONE);
-
 
                     if (position > 0 && studentTimeTablePojoArrayList.get(position - 1).getLabArray() != null &&
                             studentTimeTablePojoArrayList.get(position - 1).getLabArray().size() > 0
@@ -108,6 +113,15 @@ public class StudentTimeTableAdapter extends RecyclerView.Adapter<StudentTimeTab
                         } else {
                             holder.tvStudentClassRoom.setText("-");
                         }
+
+                        if (isDisplayTime && !CommonUtil.checkIsEmptyOrNullCommon(inoutArray1.getLectStTime()) &&
+                                !CommonUtil.checkIsEmptyOrNullCommon(inoutArray1.getLectEndTime())) {
+                            holder.tvStudentLecTime.setText(inoutArray1.getLectStTime() + " to " + inoutArray1.getLectEndTime());
+                        } else {
+                            holder.tvStudentLecTime.setText("-");
+                        }
+
+
                     }
                 } else {
                     holder.llStaticLayoutStudentTimetable.setVisibility(View.GONE);
@@ -120,7 +134,7 @@ public class StudentTimeTableAdapter extends RecyclerView.Adapter<StudentTimeTab
                     holder.tvStudentLectureNoIndex.setText(lectNo);
 
                     holder.rvStudentMergingDynamicLayout.setAdapter(new StudentTimeTableChildMergingAdapter(context,
-                            (ArrayList<StudentTimeTablePojo.LabArray>) studentTimeTablePojoArrayList.get(position).getLabArray()));
+                            (ArrayList<StudentTimeTablePojo.LabArray>) studentTimeTablePojoArrayList.get(position).getLabArray(),isDisplayTime));
 
                     holder.llMergingDynamicLayout.setVisibility(View.VISIBLE);
 //                    mergingLogic(inoutArray1, position, holder);
@@ -210,6 +224,7 @@ public class StudentTimeTableAdapter extends RecyclerView.Adapter<StudentTimeTab
         TextViewRegularFont tvStudentFacultyName;
         TextViewRegularFont tvStudentSubjectName;
         TextViewRegularFont tvStudentClassRoom;
+        TextViewRegularFont tvStudentLecTime;
 
         //For Right Break Side layout
         LinearLayout llBreakTime;
@@ -223,6 +238,8 @@ public class StudentTimeTableAdapter extends RecyclerView.Adapter<StudentTimeTab
         LinearLayout llStaticLayoutStudentTimetable;
         RecyclerView rvStudentMergingDynamicLayout;
 
+        LinearLayout llStudentLecTime;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tvStudentLectureNoIndex = itemView.findViewById(R.id.tvStudentLectureNoIndex);
@@ -230,10 +247,12 @@ public class StudentTimeTableAdapter extends RecyclerView.Adapter<StudentTimeTab
             cvData = itemView.findViewById(R.id.cvData);
             horizontalLine = itemView.findViewById(R.id.horizontalLine);
 
+            llStudentLecTime = itemView.findViewById(R.id.llStudentLecTime);
             llContent = itemView.findViewById(R.id.llContent);
             tvStudentFacultyName = itemView.findViewById(R.id.tvStudentFacultyName);
             tvStudentSubjectName = itemView.findViewById(R.id.tvStudentSubjectName);
             tvStudentClassRoom = itemView.findViewById(R.id.tvStudentClassRoom);
+            tvStudentLecTime = itemView.findViewById(R.id.tvStudentLecTime);
 
             llBreakTime = itemView.findViewById(R.id.llBreakTime);
             tvStudentBreakTime = itemView.findViewById(R.id.tvStudentBreakTime);

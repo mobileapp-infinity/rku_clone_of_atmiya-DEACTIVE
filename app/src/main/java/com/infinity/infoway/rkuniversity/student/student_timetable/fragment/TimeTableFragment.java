@@ -27,6 +27,7 @@ public class TimeTableFragment extends Fragment {
     LinearLayout llStudentTimeTableList, llNoDataFoundStudentTimeTable;
     RecyclerView rvStudentTimeTable;
     StudentTimeTableActivity studentTimeTableActivity;
+    boolean isDisplayTime = false;
 
     public TimeTableFragment() {
 
@@ -45,6 +46,7 @@ public class TimeTableFragment extends Fragment {
         Bundle bundle = getArguments();
         if (bundle != null) {
             inoutArray1ArrayList = (ArrayList<StudentTimeTablePojo.InoutArray1>) bundle.getSerializable(IntentConstants.STUDENT_TIME_TABLE_DAY_WISE_LIST);
+            isDisplayTime = bundle.getBoolean(IntentConstants.IS_DISPLAY_TIME);
         } else {
             inoutArray1ArrayList = new ArrayList<>();
         }
@@ -69,7 +71,7 @@ public class TimeTableFragment extends Fragment {
         if (inoutArray1ArrayList != null && inoutArray1ArrayList.size() > 0) {
             llNoDataFoundStudentTimeTable.setVisibility(View.GONE);
             llStudentTimeTableList.setVisibility(View.VISIBLE);
-            rvStudentTimeTable.setAdapter(new StudentTimeTableAdapter(studentTimeTableActivity, inoutArray1ArrayList));
+            rvStudentTimeTable.setAdapter(new StudentTimeTableAdapter(studentTimeTableActivity, inoutArray1ArrayList,isDisplayTime));
         } else {
             llNoDataFoundStudentTimeTable.setVisibility(View.VISIBLE);
             llStudentTimeTableList.setVisibility(View.GONE);

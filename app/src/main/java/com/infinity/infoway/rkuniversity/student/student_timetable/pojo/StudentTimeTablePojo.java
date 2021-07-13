@@ -14,6 +14,18 @@ public class StudentTimeTablePojo implements Serializable {
     @SerializedName("day_name")
     @Expose
     private String dayName;
+    @SerializedName("isDisplayTime")
+    @Expose
+    private Integer isDisplayTime;
+
+    public Integer getIsDisplayTime() {
+        return isDisplayTime;
+    }
+
+    public void setIsDisplayTime(Integer isDisplayTime) {
+        this.isDisplayTime = isDisplayTime;
+    }
+
     @SerializedName("inout_array1")
     @Expose
     private List<InoutArray1> inoutArray1 = null;

@@ -30,16 +30,21 @@
                 android:textAllCaps="true"
                 android:textColor="@color/white" />
 
-            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
-                android:id="@+id/tvFeeAmount"
+<!--            <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                android:id="@+id/tvFeeAmount"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:gravity="end"-->
+<!--                android:padding="8dp"-->
+<!--                android:text="Rs. -/-"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/white" />-->
+
+            <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="end"
-                android:padding="8dp"
-                android:text="Rs. -/-"
-                android:textAllCaps="false"
-                android:textColor="@color/white" />
+                android:layout_height="match_parent"/>
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivViewMoreBtn"
@@ -55,7 +60,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="8dp"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -136,7 +141,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
-                        android:text="Fee Head"
+                        android:text="Semester"
                         android:textColor="@color/colorPrimary"
                         android:textSize="12sp" />
 
@@ -223,6 +228,43 @@
 
                     </LinearLayout>
 
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Ref.No. : "-->
+<!--                            android:textColor="@color/colorPrimary"-->
+<!--                            android:textSize="12sp" />-->
+
+<!--                        <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont-->
+<!--                            android:id="@+id/tvReferenceNo"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="  -        "-->
+<!--                            android:textColor="@color/colorPrimary"-->
+<!--                            android:textSize="12sp" />-->
+
+<!--&lt;!&ndash;                        <rkustom_class.TextViewRegularFont&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:text="Ref.Date. : "&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:textColor="@color/colorPrimary"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:textSize="12sp" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <rkustom_class.TextViewMediumFont&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:id="@+id/tvFeeReceiptDate"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:text="-"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:textColor="@color/colorPrimary"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:textSize="12sp" />&ndash;&gt;-->
+
+<!--                    </LinearLayout>-->
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -231,49 +273,12 @@
                         <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Ref.No. : "
+                            android:text="Payment Date. : "
                             android:textColor="@color/colorPrimary"
                             android:textSize="12sp" />
 
                         <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
-                            android:id="@+id/tvReferenceNo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="  -        "
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="12sp" />
-
-<!--                        <rkustom_class.TextViewRegularFont-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="Ref.Date. : "-->
-<!--                            android:textColor="@color/colorPrimary"-->
-<!--                            android:textSize="12sp" />-->
-
-<!--                        <rkustom_class.TextViewMediumFont-->
-<!--                            android:id="@+id/tvFeeReceiptDate"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="-"-->
-<!--                            android:textColor="@color/colorPrimary"-->
-<!--                            android:textSize="12sp" />-->
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ref.Date. : "
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="12sp" />
-
-                        <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
-                            android:id="@+id/tvFeeReceiptDate"
+                            android:id="@+id/tvPaymentDate"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="  -"

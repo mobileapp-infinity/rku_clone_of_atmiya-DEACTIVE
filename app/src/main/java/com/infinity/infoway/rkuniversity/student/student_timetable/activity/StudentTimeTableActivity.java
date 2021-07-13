@@ -1,13 +1,13 @@
 package com.infinity.infoway.rkuniversity.student.student_timetable.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.viewpager.widget.ViewPager;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 import com.infinity.infoway.rkuniversity.R;
@@ -104,7 +104,9 @@ public class StudentTimeTableActivity extends AppCompatActivity implements View.
                                             }
                                             Bundle bundle = new Bundle();
                                             bundle.putSerializable(IntentConstants.STUDENT_TIME_TABLE_DAY_WISE_LIST, (Serializable) studentTimeTablePojo.getInoutArray1());
-
+                                            if (studentTimeTablePojo.getIsDisplayTime() != null) {
+                                                bundle.putBoolean(IntentConstants.IS_DISPLAY_TIME, studentTimeTablePojo.getIsDisplayTime() == 1);
+                                            }
                                             TimeTableFragment timeTableFragment = new TimeTableFragment();
                                             timeTableFragment.setArguments(bundle);
                                             adapter.addFragment(timeTableFragment, dayName);

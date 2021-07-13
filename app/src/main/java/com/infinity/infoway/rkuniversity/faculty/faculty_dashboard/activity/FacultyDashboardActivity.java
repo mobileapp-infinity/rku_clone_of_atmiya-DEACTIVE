@@ -100,6 +100,7 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
     LinearLayout llLeaveApprovalForCoOrdinator;
     LinearLayout llExtraLectureApproval;
     LinearLayout llStudentMessages;
+    LinearLayout llLeaveApproval;
 
 
     AppCompatButton btnViewAllAnnouncementFacultySide;
@@ -143,6 +144,8 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
         llAnnouncementFacultyDashboard = findViewById(R.id.llAnnouncementFacultyDashboard);
         llFacultyEventCalender = findViewById(R.id.llFacultyEventCalender);
         llFacultyEventCalender.setOnClickListener(this);
+        llLeaveApproval = findViewById(R.id.llLeaveApproval);
+        llLeaveApproval.setOnClickListener(this);
 
 //        imgNotificationBellFacultySide = findViewById(R.id.imgNotificationBellFacultySide);
 //        imgNotificationBellFacultySide.setOnClickListener(this);
@@ -188,6 +191,24 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
         llStudentMessages = findViewById(R.id.llStudentMessages);
         llStudentMessages.setOnClickListener(this);
 
+        if(mySharedPreferences.getEmpIsHod().trim().equalsIgnoreCase("1")){
+            llLeaveApprovalForHOD.setVisibility(View.VISIBLE);
+        }else{
+            llLeaveApprovalForHOD.setVisibility(View.GONE);
+        }
+
+        if(mySharedPreferences.getEmpIsCoOrdinator().trim().equalsIgnoreCase("1")){
+            llLeaveApprovalForCoOrdinator.setVisibility(View.VISIBLE);
+        }else{
+            llLeaveApprovalForCoOrdinator.setVisibility(View.GONE);
+        }
+
+        if (mySharedPreferences.getEmpIsHod().trim().equalsIgnoreCase("0") &&
+                mySharedPreferences.getEmpIsCoOrdinator().trim().equalsIgnoreCase("0")){
+            llLeaveApproval.setVisibility(View.GONE);
+        }
+
+
         if (!CommonUtil.checkIsEmptyOrNullCommon(mySharedPreferences.getEmpIsAdminOrNot())) {
             if (mySharedPreferences.getEmpIsAdminOrNot().equalsIgnoreCase("1")) {
                 llDirectLoginToStudentFacultySide.setVisibility(View.VISIBLE);
@@ -197,15 +218,14 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
         } else {
             llDirectLoginToStudentFacultySide.setVisibility(View.GONE);
         }
-
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.llFacultyProfile) {
-//            Intent profileActivityStudentSide = new Intent(this, FacultyProfileActivity.class);
-//            startActivityForResult(profileActivityStudentSide, IntentConstants.REQUEST_CODE_FOR_FACULTY_LOGOUT);
-//            overridePendingTransition(R.anim.slide_in_left, 0);
+            Intent profileActivityStudentSide = new Intent(this, FacultyProfileActivity.class);
+            startActivityForResult(profileActivityStudentSide, IntentConstants.REQUEST_CODE_FOR_FACULTY_LOGOUT);
+            overridePendingTransition(R.anim.slide_in_left, 0);
         } else if (v.getId() == R.id.llFacultyAnnouncement) {
             Intent intent = new Intent(FacultyDashboardActivity.this, FacultyAnnouncementActivity.class);
             startActivity(intent);
@@ -213,9 +233,9 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
             Intent intent = new Intent(FacultyDashboardActivity.this, FacultyTeachingUpdateActivity.class);
             startActivity(intent);
         } else if (v.getId() == R.id.cImgProfileFacultySide) {
-//            Intent profileActivityStudentSide = new Intent(this, FacultyProfileActivity.class);
-//            startActivityForResult(profileActivityStudentSide, IntentConstants.REQUEST_CODE_FOR_FACULTY_LOGOUT);
-//            overridePendingTransition(R.anim.slide_in_left, 0);
+            Intent profileActivityStudentSide = new Intent(this, FacultyProfileActivity.class);
+            startActivityForResult(profileActivityStudentSide, IntentConstants.REQUEST_CODE_FOR_FACULTY_LOGOUT);
+            overridePendingTransition(R.anim.slide_in_left, 0);
         } else if (v.getId() == R.id.llAttendanceFacultySide) {
             Intent intent = new Intent(FacultyDashboardActivity.this, FacultyAttendanceActivity.class);
             startActivity(intent);
@@ -442,8 +462,8 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
     private void LoginAPICall() {
         DialogUtils.showProgressDialog(FacultyDashboardActivity.this, "");
 //        String url = URLS.LoginCheck + "&userName=" + "gaurang.vyas@rku.ac.in" + "&passWord=" + "Rku@12345" + "";
-        String url = URLS.LoginCheck + "&userName=" + mySharedPreferences.getEmpUserName() + "&passWord=" + mySharedPreferences.getEmpPassword() + "";
-//        String url = URLS.LoginCheck + "&userName=" + "komal.doshi@rku.ac.in" + "&passWord=" + "CfgwTsSPUma9tCx";
+//        String url = URLS.LoginCheck + "&userName=" + mySharedPreferences.getEmpUserName() + "&passWord=" + mySharedPreferences.getEmpPassword() + "";
+        String url = URLS.LoginCheck + "&userName=" + "komal.doshi@rku.ac.in" + "&passWord=" + "CfgwTsSPUma9tCx";
         url.replace(" ", "%20");
         StringRequest request = new StringRequest(Request.Method.GET, url, new com.android.volley.Response.Listener<String>() {
             @Override
