@@ -462,8 +462,8 @@ public class FacultyDashboardActivity extends AppCompatActivity implements View.
     private void LoginAPICall() {
         DialogUtils.showProgressDialog(FacultyDashboardActivity.this, "");
 //        String url = URLS.LoginCheck + "&userName=" + "gaurang.vyas@rku.ac.in" + "&passWord=" + "Rku@12345" + "";
-//        String url = URLS.LoginCheck + "&userName=" + mySharedPreferences.getEmpUserName() + "&passWord=" + mySharedPreferences.getEmpPassword() + "";
-        String url = URLS.LoginCheck + "&userName=" + "komal.doshi@rku.ac.in" + "&passWord=" + "CfgwTsSPUma9tCx";
+        String url = URLS.LoginCheck + "&userName=" + mySharedPreferences.getEmpUserName() + "&passWord=" + mySharedPreferences.getEmpPassword() + "";
+//        String url = URLS.LoginCheck + "&userName=" + "komal.doshi@rku.ac.in" + "&passWord=" + "CfgwTsSPUma9tCx";
         url.replace(" ", "%20");
         StringRequest request = new StringRequest(Request.Method.GET, url, new com.android.volley.Response.Listener<String>() {
             @Override
