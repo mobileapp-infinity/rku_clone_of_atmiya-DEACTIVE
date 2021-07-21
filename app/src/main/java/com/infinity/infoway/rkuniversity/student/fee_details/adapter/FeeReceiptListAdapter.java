@@ -88,6 +88,10 @@ public class FeeReceiptListAdapter extends RecyclerView.Adapter<FeeReceiptListAd
             holder.tvBankName.setText(feeReceiptPojo.getBankTrans() + "");
         }
 
+        if (!CommonUtil.checkIsEmptyOrNullCommon(feeReceiptPojo.getfActHeadName())) {
+            holder.tvAccountHead.setText(feeReceiptPojo.getfActHeadName() + "");
+        }
+
 
         holder.llExpandedHeader.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -150,6 +154,7 @@ public class FeeReceiptListAdapter extends RecyclerView.Adapter<FeeReceiptListAd
         LinearLayout llExpandedHeader;
         TextViewRegularFont tvClassName, tvClasName_, tvFeeAmount_;
         TextViewMediumFont tvPaymentDate;
+        TextViewMediumFont tvAccountHead;
 //        TextViewRegularFont tvFeeAmount;
 
         TextViewMediumFont tvFeeReceiptNo, tvFeeReceiptDate, tvPaymentMode, tvReferenceNo, tvBankName;
@@ -169,6 +174,7 @@ public class FeeReceiptListAdapter extends RecyclerView.Adapter<FeeReceiptListAd
             tvPreintFeeReceipt = itemView.findViewById(R.id.tvPreintFeeReceipt);
             tvPaymentDate = itemView.findViewById(R.id.tvPaymentDate);
             tvBankName = itemView.findViewById(R.id.tvBankName);
+            tvAccountHead = itemView.findViewById(R.id.tvAccountHead);
         }
     }
 

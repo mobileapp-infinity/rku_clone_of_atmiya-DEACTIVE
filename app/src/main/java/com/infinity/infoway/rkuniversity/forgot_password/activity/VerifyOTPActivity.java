@@ -173,6 +173,10 @@ public class VerifyOTPActivity extends AppCompatActivity implements View.OnClick
 
     private void setStudentLoginData(CheckLoginByOTPAndUsernamePojo.Table checkLoginByOTPAndUsernamePojoTable) {
 
+        if (checkLoginByOTPAndUsernamePojoTable.getStudMainSchoolId() != null) {
+            mySharedPreferences.setStudMainSchoolId(checkLoginByOTPAndUsernamePojoTable.getStudMainSchoolId()+"");
+        }
+
         if (checkLoginByOTPAndUsernamePojoTable.getStudUserName() != null) {
             mySharedPreferences.setStudentUsername(checkLoginByOTPAndUsernamePojoTable.getStudUserName() + "");
         }

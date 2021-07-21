@@ -30,5 +30,6 @@ public class StudentSidePreferencesConstants {
     public static final String INSTITUTE_ID = "intitute_id";
     public static final String FC_FILE = "fc_file";
     public static final String IM_EXAM_DB_NAME = "im_exam_db_name";
+    public static final String STUD_MAIN_SCHOOL_ID = "stud_main_school_id";
 
 }

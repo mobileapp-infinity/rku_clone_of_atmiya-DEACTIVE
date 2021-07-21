@@ -47,7 +47,7 @@ public class FeeReceiptPojo {
     private String semName;
     @SerializedName("twf_payment_amount")
     @Expose
-    private Double twfPaymentAmount;
+    private Integer twfPaymentAmount;
     @SerializedName("fee_pay_type")
     @Expose
     private String feePayType;
@@ -59,16 +59,16 @@ public class FeeReceiptPojo {
     private String actPayChkno;
     @SerializedName("bank_trans")
     @Expose
-    private String bankTrans;
+    private Object bankTrans;
     @SerializedName("swf_cheque_no1")
     @Expose
     private String swfChequeNo1;
     @SerializedName("cheque_collect_date")
     @Expose
-    private String chequeCollectDate;
+    private Object chequeCollectDate;
     @SerializedName("cheque_due_date")
     @Expose
-    private String chequeDueDate;
+    private Object chequeDueDate;
     @SerializedName("final_payment_date")
     @Expose
     private String finalPaymentDate;
@@ -108,6 +108,9 @@ public class FeeReceiptPojo {
     @SerializedName("file_status")
     @Expose
     private String fileStatus;
+    @SerializedName("f_act_head_name")
+    @Expose
+    private String fActHeadName;
 
     public Integer getSrNo() {
         return srNo;
@@ -189,11 +192,11 @@ public class FeeReceiptPojo {
         this.semName = semName;
     }
 
-    public Double getTwfPaymentAmount() {
+    public Integer getTwfPaymentAmount() {
         return twfPaymentAmount;
     }
 
-    public void setTwfPaymentAmount(Double twfPaymentAmount) {
+    public void setTwfPaymentAmount(Integer twfPaymentAmount) {
         this.twfPaymentAmount = twfPaymentAmount;
     }
 
@@ -221,11 +224,11 @@ public class FeeReceiptPojo {
         this.actPayChkno = actPayChkno;
     }
 
-    public String getBankTrans() {
+    public Object getBankTrans() {
         return bankTrans;
     }
 
-    public void setBankTrans(String bankTrans) {
+    public void setBankTrans(Object bankTrans) {
         this.bankTrans = bankTrans;
     }
 
@@ -237,19 +240,19 @@ public class FeeReceiptPojo {
         this.swfChequeNo1 = swfChequeNo1;
     }
 
-    public String getChequeCollectDate() {
+    public Object getChequeCollectDate() {
         return chequeCollectDate;
     }
 
-    public void setChequeCollectDate(String chequeCollectDate) {
+    public void setChequeCollectDate(Object chequeCollectDate) {
         this.chequeCollectDate = chequeCollectDate;
     }
 
-    public String getChequeDueDate() {
+    public Object getChequeDueDate() {
         return chequeDueDate;
     }
 
-    public void setChequeDueDate(String chequeDueDate) {
+    public void setChequeDueDate(Object chequeDueDate) {
         this.chequeDueDate = chequeDueDate;
     }
 
@@ -355,5 +358,13 @@ public class FeeReceiptPojo {
 
     public void setFileStatus(String fileStatus) {
         this.fileStatus = fileStatus;
+    }
+
+    public String getfActHeadName() {
+        return fActHeadName;
+    }
+
+    public void setfActHeadName(String fActHeadName) {
+        this.fActHeadName = fActHeadName;
     }
 }

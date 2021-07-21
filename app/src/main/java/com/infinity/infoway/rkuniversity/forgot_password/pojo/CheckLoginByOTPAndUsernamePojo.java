@@ -79,6 +79,17 @@ public class CheckLoginByOTPAndUsernamePojo {
         @SerializedName("im_exam_db_name")
         @Expose
         private String imExamDbName;
+        @SerializedName("stud_main_school_id")
+        @Expose
+        private Integer studMainSchoolId;
+
+        public Integer getStudMainSchoolId() {
+            return studMainSchoolId;
+        }
+
+        public void setStudMainSchoolId(Integer studMainSchoolId) {
+            this.studMainSchoolId = studMainSchoolId;
+        }
 
         public String getImExamDbName() {
             return imExamDbName;

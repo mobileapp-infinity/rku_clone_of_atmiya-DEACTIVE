@@ -69,6 +69,7 @@ import com.infinity.infoway.rkuniversity.login.pojo.StudentLoginPojo;
 import com.infinity.infoway.rkuniversity.student.assignment.StudentAssignmentListPojo;
 import com.infinity.infoway.rkuniversity.student.attendance.pojo.StudentLectureWiseAttendancePojo;
 import com.infinity.infoway.rkuniversity.student.attendance.pojo.StudentSubjectWiseAttendancePojo;
+import com.infinity.infoway.rkuniversity.student.contact_us.ContactUsPojo;
 import com.infinity.infoway.rkuniversity.student.e_learning.pojo.CheckIsELearningManagementGroupIsCompulsoryOrNot;
 import com.infinity.infoway.rkuniversity.student.e_learning.pojo.CheckIsLearningManagementGroupIsExistOrNotPojo;
 import com.infinity.infoway.rkuniversity.student.e_learning.pojo.ELearningYearListPojo;
@@ -968,4 +969,11 @@ public interface IApiInterface {
     Call<ArrayList<StudentMsgListPojo>> getStudentMsgList(
             @Query("emp_id") String emp_id,
             @Query("institute_id") String institute_id);
+
+    @GET("Get_Countac_Us_Details_API")
+    Call<ArrayList<ContactUsPojo>> getContactUsDetails(
+            @Query("stud_id") String stud_id,
+            @Query("stud_year_id") String stud_year_id,
+            @Query("stud_school_id") String stud_school_id);
+
 }

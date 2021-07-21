@@ -207,6 +207,10 @@ public class LoginActivity extends AppCompatActivity implements
         mySharedPreferences.setStudentUsername(userName);
         mySharedPreferences.setStudentPassword(password);
 
+        if (studentLoginPojo.getStudMainSchoolId() != null) {
+            mySharedPreferences.setStudMainSchoolId(studentLoginPojo.getStudMainSchoolId()+"");
+        }
+
         if (studentLoginPojo.getLoginUserType() != null) {
             mySharedPreferences.setLoginUserType(studentLoginPojo.getLoginUserType());
         }

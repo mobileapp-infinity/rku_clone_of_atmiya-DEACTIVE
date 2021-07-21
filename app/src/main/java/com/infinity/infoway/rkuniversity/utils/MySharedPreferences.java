@@ -508,6 +508,16 @@ public class MySharedPreferences {
     }
 
 
+    public void setStudMainSchoolId(String studMainSchoolId) {
+        editorForStudentOrFaculty.putString(StudentSidePreferencesConstants.STUD_MAIN_SCHOOL_ID, studMainSchoolId);
+        editorForStudentOrFaculty.apply();
+    }
+
+    public String getStudMainSchoolId() {
+        return sharedPreferencesForStudentOrFaculty.getString(StudentSidePreferencesConstants.STUD_MAIN_SCHOOL_ID, "");
+    }
+
+
     //=========  //CODE FOR STORING ONLY LOGGED IN STUDENT LIST //==================================================//
 
     private static final String LOGGED_IN_STUDENT_LIST_PREFERENCES = "logged_in_student_list"; //Please do not use this preference name in other places

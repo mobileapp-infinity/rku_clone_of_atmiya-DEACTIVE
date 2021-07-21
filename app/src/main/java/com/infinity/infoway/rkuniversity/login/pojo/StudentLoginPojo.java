@@ -86,6 +86,17 @@ public class StudentLoginPojo {
     @SerializedName("login_user_type")
     @Expose
     private Integer loginUserType;
+    @SerializedName("stud_main_school_id")
+    @Expose
+    private Integer studMainSchoolId;
+
+    public Integer getStudMainSchoolId() {
+        return studMainSchoolId;
+    }
+
+    public void setStudMainSchoolId(Integer studMainSchoolId) {
+        this.studMainSchoolId = studMainSchoolId;
+    }
 
     public Integer getLoginUserType() {
         return loginUserType;

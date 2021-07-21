@@ -61,6 +61,7 @@ import com.infinity.infoway.rkuniversity.login.pojo.StudentLoginPojo;
 import com.infinity.infoway.rkuniversity.student.assignment.StudentAssignmentListPojo;
 import com.infinity.infoway.rkuniversity.student.attendance.pojo.StudentLectureWiseAttendancePojo;
 import com.infinity.infoway.rkuniversity.student.attendance.pojo.StudentSubjectWiseAttendancePojo;
+import com.infinity.infoway.rkuniversity.student.contact_us.ContactUsPojo;
 import com.infinity.infoway.rkuniversity.student.e_learning.pojo.CheckIsELearningManagementGroupIsCompulsoryOrNot;
 import com.infinity.infoway.rkuniversity.student.e_learning.pojo.CheckIsLearningManagementGroupIsExistOrNotPojo;
 import com.infinity.infoway.rkuniversity.student.e_learning.pojo.ELearningYearListPojo;
@@ -1193,6 +1194,12 @@ public class ApiImplementer {
     public static void getStudentMessagesApiImplementer(String emp_id,String institute_id, Callback<ArrayList<StudentMsgListPojo>> cb) {
         final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
         Call<ArrayList<StudentMsgListPojo>> call = apiInterface.getStudentMsgList(emp_id,institute_id);
+        call.enqueue(cb);
+    }
+
+    public static void getContactUsDetailsApiImplementer(String stud_id,String stud_year_id,String stud_school_id, Callback<ArrayList<ContactUsPojo>> cb) {
+        final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
+        Call<ArrayList<ContactUsPojo>> call = apiInterface.getContactUsDetails(stud_id,stud_year_id,stud_school_id);
         call.enqueue(cb);
     }
 

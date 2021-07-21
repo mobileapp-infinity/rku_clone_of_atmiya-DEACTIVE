@@ -30,6 +30,7 @@ import com.infinity.infoway.rkuniversity.login.pojo.CommonNewImageSliderPojo;
 import com.infinity.infoway.rkuniversity.login.pojo.LogOutPojo;
 import com.infinity.infoway.rkuniversity.student.assignment.AssignmentActivity;
 import com.infinity.infoway.rkuniversity.student.attendance.activity.StudentAttendanceActivity;
+import com.infinity.infoway.rkuniversity.student.contact_us.ContactUsActivity;
 import com.infinity.infoway.rkuniversity.student.e_learning.activity.ELearningActivity;
 import com.infinity.infoway.rkuniversity.student.exam.activity.ExamActivity;
 import com.infinity.infoway.rkuniversity.student.fee_details.activity.FeeDetailsActivity;
@@ -77,7 +78,7 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
     RecyclerViewPager recyclerViewPagerStudentSideBanner;
 
     LinearLayout llTimeTableStudentSide;
-    LinearLayout llLeaveApplicationStudentSide;
+//    LinearLayout llLeaveApplicationStudentSide;
     LinearLayout llELearningStudentSide;
     LinearLayout llAssignmentStudentSide;
     LinearLayout llExamStudentSide;
@@ -112,6 +113,8 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
 
     FrameLayout flNotification;
     TextViewRegularFont tvNotificationCount;
+    LinearLayout llContactUs;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,7 +154,7 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
         tvStudentSemAndDesignation = findViewById(R.id.tvStudentSemAndDesignation);
         recyclerViewPagerStudentSideBanner = findViewById(R.id.recyclerViewPagerStudentSideBanner);
         llTimeTableStudentSide = findViewById(R.id.llTimeTableStudentSide);
-        llLeaveApplicationStudentSide = findViewById(R.id.llLeaveApplicationStudentSide);
+//        llLeaveApplicationStudentSide = findViewById(R.id.llLeaveApplicationStudentSide);
         llELearningStudentSide = findViewById(R.id.llELearningStudentSide);
         llAssignmentStudentSide = findViewById(R.id.llAssignmentStudentSide);
         llExamStudentSide = findViewById(R.id.llExamStudentSide);
@@ -175,11 +178,13 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
         llSendStudentMsgToTeacher.setOnClickListener(this);
 //        imgNotificationBell = findViewById(R.id.imgNotificationBell);
 //        imgNotificationBell.setOnClickListener(this);
+        llContactUs = findViewById(R.id.llContactUs);
+        llContactUs.setOnClickListener(this);
 
         cImgProfileStudentSide.setOnClickListener(this);
 
         llTimeTableStudentSide.setOnClickListener(this);
-        llLeaveApplicationStudentSide.setOnClickListener(this);
+//        llLeaveApplicationStudentSide.setOnClickListener(this);
         llELearningStudentSide.setOnClickListener(this);
         llAssignmentStudentSide.setOnClickListener(this);
         llExamStudentSide.setOnClickListener(this);
@@ -213,9 +218,6 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
             overridePendingTransition(R.anim.slide_in_left, 0);
         } else if (v.getId() == R.id.llTimeTableStudentSide) {
             Intent intent = new Intent(StudentDashboardActivity.this, StudentTimeTableActivity.class);
-            startActivity(intent);
-        } else if (v.getId() == R.id.llLeaveApplicationStudentSide) {
-            Intent intent = new Intent(StudentDashboardActivity.this, LeaveApplicationActivity.class);
             startActivity(intent);
         } else if (v.getId() == R.id.llELearningStudentSide) {
             Intent intent = new Intent(StudentDashboardActivity.this, ELearningActivity.class);
@@ -274,7 +276,15 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
         } else if (v.getId() == R.id.llSendStudentMsgToTeacher) {
             Intent intent = new Intent(StudentDashboardActivity.this, StudentMsgToTeacherActivity.class);
             startActivity(intent);
+        }else if(v.getId() == R.id.llContactUs){
+            Intent intent = new Intent(StudentDashboardActivity.this, ContactUsActivity.class);
+            startActivity(intent);
         }
+
+//        else if (v.getId() == R.id.llLeaveApplicationStudentSide) {
+//            Intent intent = new Intent(StudentDashboardActivity.this, LeaveApplicationActivity.class);
+//            startActivity(intent);
+//        }
     }
 
 

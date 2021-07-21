@@ -252,13 +252,12 @@
 
                     </LinearLayout>
 
-
                     <LinearLayout
-                        android:id="@+id/llLeaveApplicationStudentSide"
+                        android:id="@+id/llContactUs"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="18dp"
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         android:background="?android:attr/selectableItemBackground"
                         android:gravity="center"
                         android:orientation="vertical">
@@ -266,17 +265,42 @@
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            app:srcCompat="@drawable/ic_leave_application" />
+                            app:srcCompat="@drawable/ic_faculty_profile" />
 
                         <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="@string/leave_application"
+                            android:text="Contact US"
                             android:textColor="@color/font_color"
                             android:textSize="@dimen/student_dashboard_menu_font_size" />
 
                     </LinearLayout>
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/llLeaveApplicationStudentSide"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="18dp"-->
+<!--                        android:visibility="visible"-->
+<!--                        android:background="?android:attr/selectableItemBackground"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <androidx.appcompat.widget.AppCompatImageView-->
+<!--                            android:layout_width="48dp"-->
+<!--                            android:layout_height="48dp"-->
+<!--                            app:srcCompat="@drawable/ic_faculty_profile" />-->
+
+<!--                        <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:text="Contact US"-->
+<!--                            android:textColor="@color/font_color"-->
+<!--                            android:textSize="@dimen/student_dashboard_menu_font_size" />-->
+
+<!--                    </LinearLayout>-->
 
                 </LinearLayout>
 
