@@ -346,6 +346,30 @@
                                 <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:text="Email ID"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudEmailId"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:text="Gender"
                                     android:textColor="@color/profile_heading_color"
                                     android:textSize="@dimen/student_profile_label_font_size" />
@@ -800,6 +824,29 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="vertical">
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pin Code"
+                                    android:textColor="@color/profile_heading_color"
+                                    android:textSize="@dimen/student_profile_label_font_size" />
+
+                                <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
+                                    android:id="@+id/tvStudPinCode"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="-"
+                                    android:textColor="@color/profile_heading_value_color"
+                                    android:textSize="@dimen/student_profile_text_font_size" />
+
+                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="match_parent"

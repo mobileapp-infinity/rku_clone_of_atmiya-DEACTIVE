@@ -26,15 +26,6 @@ public class StudentProfilePojo {
     @SerializedName("course_short_name")
     @Expose
     private String courseShortName;
-
-    public String getCourseShortName() {
-        return courseShortName;
-    }
-
-    public void setCourseShortName(String courseShortName) {
-        this.courseShortName = courseShortName;
-    }
-
     @SerializedName("sm_name")
     @Expose
     private String smName;
@@ -197,6 +188,14 @@ public class StudentProfilePojo {
     @SerializedName("unread_notif_count")
     @Expose
     private String unread_notif_count;
+
+    public String getCourseShortName() {
+        return courseShortName;
+    }
+
+    public void setCourseShortName(String courseShortName) {
+        this.courseShortName = courseShortName;
+    }
 
     public Integer getStudIsLoginDeActive() {
         return studIsLoginDeActive;

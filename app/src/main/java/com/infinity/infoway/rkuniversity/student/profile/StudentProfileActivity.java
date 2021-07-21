@@ -83,6 +83,8 @@ public class StudentProfileActivity extends AppCompatActivity implements View.On
     private TextViewMediumFont mTvStudentCityName;
     private TextViewMediumFont mTvStudentStateName;
     private TextViewMediumFont mTvStudentCountryName;
+    private TextViewMediumFont tvStudEmailId;
+    private TextViewMediumFont tvStudPinCode;
 
     ConnectionDetector connectionDetector;
 
@@ -119,7 +121,8 @@ public class StudentProfileActivity extends AppCompatActivity implements View.On
         llExpandedHeaderContactDetailsProfile.setOnClickListener(this);
         ivViewMoreBtnContactDetailsProfile = findViewById(R.id.ivViewMoreBtnContactDetailsProfile);
         llExpandableLayoutContactDetailsProfile = findViewById(R.id.llExpandableLayoutContactDetailsProfile);
-
+        tvStudPinCode = findViewById(R.id.tvStudPinCode);
+        tvStudEmailId = findViewById(R.id.tvStudEmailId);
         student_profile_image = findViewById(R.id.student_profile_image);
         mTvStudentName = findViewById(R.id.tvStudentName);
         mTvStudentEmail = findViewById(R.id.tvStudentEmail);
@@ -234,6 +237,14 @@ public class StudentProfileActivity extends AppCompatActivity implements View.On
 
         if (studentProfilePojo.getStudEmail() != null && !studentProfilePojo.getStudEmail().isEmpty()) {
             mTvStudentEmail.setText(studentProfilePojo.getStudEmail());
+        }
+
+        if (studentProfilePojo.getStudPinNo() != null && !studentProfilePojo.getStudPinNo().isEmpty()) {
+            tvStudPinCode.setText(studentProfilePojo.getStudPinNo());
+        }
+
+        if (studentProfilePojo.getStudEmail() != null && !studentProfilePojo.getStudEmail().isEmpty()) {
+            tvStudEmailId.setText(studentProfilePojo.getStudEmail());
         }
 
         //for academic Details
