@@ -4,14 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.infinity.infoway.rkuniversity.R;
-import com.infinity.infoway.rkuniversity.utils.CommonUtil;
+import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.activity.StudentPayFeeNewActivity;
 import com.infinity.infoway.rkuniversity.utils.ConnectionDetector;
 import com.infinity.infoway.rkuniversity.utils.MySharedPreferences;
 
@@ -65,8 +63,8 @@ public class FeeDetailsActivity extends AppCompatActivity implements View.OnClic
             Intent intent = new Intent(FeeDetailsActivity.this, FeeReciptActivity.class);
             startActivity(intent);
         }else if (v.getId() == R.id.llPayFee) {
-//            Intent intent = new Intent(FeeDetailsActivity.this, PayFeeActivity.class);
-//            startActivity(intent);
+            Intent intent = new Intent(FeeDetailsActivity.this, StudentPayFeeNewActivity.class);
+            startActivity(intent);
         }
 //        else if (v.getId() == R.id.llPaySlipOfAxisFeeDetails) {
 //            Intent intent = new Intent(FeeDetailsActivity.this, PaySlipOfAxisDetailActivity.class);

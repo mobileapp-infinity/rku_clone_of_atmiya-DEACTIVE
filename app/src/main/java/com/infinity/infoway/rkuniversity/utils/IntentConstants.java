@@ -48,6 +48,7 @@ public class IntentConstants {
     public static final String IM_OTP_BASE_FORGET_PASSWORD = "imOtpBasedForgotPassword";
     public static final String USER_ID_VERIFY_OTP = "UserIdForVerifyOtp";
     public static final String FORGOT_PASSWORD_USER_NAME = "ForgotPasswordUserName";
+    public static final String STUDENT_PENDING_FEE_URL = "StudentPendingFeeURL";
 
 
     //For Employee

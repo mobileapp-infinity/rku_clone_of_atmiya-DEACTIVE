@@ -13,6 +13,8 @@ public class Urls {
 //    public static String BASE_URL_FOR_STUDENT_AND_EMPLOYEE_SIDE_FCM_API = "http://rku.icampus.biz/API_Firebase_Notification.asmx/";//For Testing
     public static String BASE_URL_FOR_STUDENT_AND_EMPLOYEE_SIDE_FCM_API = "http://rkulive.icampus.biz/API_Firebase_Notification.asmx/";//For Live
 
+    public static String S_KEY_FOR_STUDENT_PAY_FEE = "Sjue55#576sn";
+
     //below api is pending to replace with new urls
 //    public static String BASE_URL_FOR_EMPLOYEE_LEAVE = "http://119.160.199.67:81/ERP/Leave/";//NEW
 //    public static String KEY_FOR_EMPLOYEE_LEAVE = "v8llRrQaDng=";

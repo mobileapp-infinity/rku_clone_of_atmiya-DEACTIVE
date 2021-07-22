@@ -118,6 +118,8 @@ import com.infinity.infoway.rkuniversity.student.student_activity.StudentActivit
 import com.infinity.infoway.rkuniversity.student.student_dashboard.pojo.UpdateStudentFCMTokenPojo;
 import com.infinity.infoway.rkuniversity.student.student_msg_to_teacher.pojo.GetPersonPojo;
 import com.infinity.infoway.rkuniversity.student.student_msg_to_teacher.pojo.InsertMsgPojo;
+import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.pojo.GetFeeTypePojo;
+import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.pojo.GetPendingFeeListFromFeeTypePojo;
 import com.infinity.infoway.rkuniversity.student.student_syllabus.SyllabusListPojo;
 import com.infinity.infoway.rkuniversity.student.student_timetable.pojo.StudentTimeTablePojo;
 
@@ -975,5 +977,16 @@ public interface IApiInterface {
             @Query("stud_id") String stud_id,
             @Query("stud_year_id") String stud_year_id,
             @Query("stud_school_id") String stud_school_id);
+
+    @GET("GetPendingFeeHead")
+    Call<ArrayList<GetFeeTypePojo>> getFeeTypeNew(
+            @Query("StudId") String StudId,
+            @Query("InstId") String InstId);
+
+    @GET("GetPendingFeeForHeadWise")
+    Call<ArrayList<GetPendingFeeListFromFeeTypePojo>> getPendingFeeListFromFeeTypeNew(
+            @Query("StudId") String StudId,
+            @Query("HeadId") String HeadId,
+            @Query("Skey") String Skey);
 
 }

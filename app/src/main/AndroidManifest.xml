@@ -35,7 +35,17 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:icon">
-        <activity android:name=".student.contact_us.ContactUsActivity"></activity>
+        <activity
+            android:name=".student.student_pay_fee_new.activity.StudentPendingFeeWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.student_pay_fee_new.activity.StudentPayFeeNewActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".student.contact_us.ContactUsActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".faculty.faculty_student_messages.StudentMessagesActivity"
             android:screenOrientation="portrait" />
@@ -235,6 +245,7 @@
                 <action android:name="Leave Activity For Student" />
                 <action android:name="E-Learning Management For Student" />
                 <action android:name="Holiday Activity For Student" />
+
 
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.DEFAULT" />

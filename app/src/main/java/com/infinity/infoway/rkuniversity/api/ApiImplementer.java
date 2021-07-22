@@ -108,6 +108,8 @@ import com.infinity.infoway.rkuniversity.student.student_activity.StudentActivit
 import com.infinity.infoway.rkuniversity.student.student_dashboard.pojo.UpdateStudentFCMTokenPojo;
 import com.infinity.infoway.rkuniversity.student.student_msg_to_teacher.pojo.GetPersonPojo;
 import com.infinity.infoway.rkuniversity.student.student_msg_to_teacher.pojo.InsertMsgPojo;
+import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.pojo.GetFeeTypePojo;
+import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.pojo.GetPendingFeeListFromFeeTypePojo;
 import com.infinity.infoway.rkuniversity.student.student_syllabus.SyllabusListPojo;
 import com.infinity.infoway.rkuniversity.student.student_timetable.pojo.StudentTimeTablePojo;
 
@@ -1179,28 +1181,39 @@ public class ApiImplementer {
         call.enqueue(cb);
     }
 
-    public static void getPersonApiImplementer(String stud_id,String institute_id, Callback<ArrayList<GetPersonPojo>> cb) {
+    public static void getPersonApiImplementer(String stud_id, String institute_id, Callback<ArrayList<GetPersonPojo>> cb) {
         final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
-        Call<ArrayList<GetPersonPojo>> call = apiInterface.getPerson(stud_id,institute_id);
+        Call<ArrayList<GetPersonPojo>> call = apiInterface.getPerson(stud_id, institute_id);
         call.enqueue(cb);
     }
 
-    public static void insertMsgApiImplementer(String stud_id,String institute_id,String person_id,String title,String message, Callback<InsertMsgPojo> cb) {
+    public static void insertMsgApiImplementer(String stud_id, String institute_id, String person_id, String title, String message, Callback<InsertMsgPojo> cb) {
         final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
         Call<InsertMsgPojo> call = apiInterface.insertMsg(stud_id, institute_id, person_id, title, message);
         call.enqueue(cb);
     }
 
-    public static void getStudentMessagesApiImplementer(String emp_id,String institute_id, Callback<ArrayList<StudentMsgListPojo>> cb) {
+    public static void getStudentMessagesApiImplementer(String emp_id, String institute_id, Callback<ArrayList<StudentMsgListPojo>> cb) {
         final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
-        Call<ArrayList<StudentMsgListPojo>> call = apiInterface.getStudentMsgList(emp_id,institute_id);
+        Call<ArrayList<StudentMsgListPojo>> call = apiInterface.getStudentMsgList(emp_id, institute_id);
         call.enqueue(cb);
     }
 
-    public static void getContactUsDetailsApiImplementer(String stud_id,String stud_year_id,String stud_school_id, Callback<ArrayList<ContactUsPojo>> cb) {
+    public static void getContactUsDetailsApiImplementer(String stud_id, String stud_year_id, String stud_school_id, Callback<ArrayList<ContactUsPojo>> cb) {
         final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
-        Call<ArrayList<ContactUsPojo>> call = apiInterface.getContactUsDetails(stud_id,stud_year_id,stud_school_id);
+        Call<ArrayList<ContactUsPojo>> call = apiInterface.getContactUsDetails(stud_id, stud_year_id, stud_school_id);
         call.enqueue(cb);
     }
 
+    public static void getFeeTypeNewApiImplementer(String StudId, String InstId, Callback<ArrayList<GetFeeTypePojo>> cb) {
+        final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
+        Call<ArrayList<GetFeeTypePojo>> call = apiInterface.getFeeTypeNew(StudId, InstId);
+        call.enqueue(cb);
+    }
+
+    public static void getPendingFeeListFromFeeTypeNewImplementer(String StudId, String HeadId, String Skey, Callback<ArrayList<GetPendingFeeListFromFeeTypePojo>> cb) {
+        final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
+        Call<ArrayList<GetPendingFeeListFromFeeTypePojo>> call = apiInterface.getPendingFeeListFromFeeTypeNew(StudId, HeadId, Skey);
+        call.enqueue(cb);
+    }
 }

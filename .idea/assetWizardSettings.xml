@@ -300,7 +300,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$PROJECT_DIR$/../../Android_Sdk/icons/material/materialicons/send/baseline_send_24.xml" />
+                                      <entry key="url" value="file:/$PROJECT_DIR$/../../Android_Sdk/icons/material/materialicons/error/baseline_error_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -311,7 +311,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="df2227" />
-                            <entry key="outputName" value="send_msg" />
+                            <entry key="outputName" value="ic_baseline_error_24" />
                             <entry key="sourceFile" value="C:\Users\iipl\Downloads\RK\ic_message_history.svg" />
                           </map>
                         </option>
