@@ -83,7 +83,7 @@ public class StudentPayFeeHeadListAdapter extends RecyclerView.Adapter<StudentPa
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(context, StudentPendingFeeWebViewActivity.class);
-                    intent.putExtra(IntentConstants.STUDENT_PENDING_FEE_URL, "https://www.google.com");
+                    intent.putExtra(IntentConstants.STUDENT_PENDING_FEE_URL, "https://www.google.com");//TODO need to change When ravibhai give api for pay fee
                     context.startActivity(intent);
                 }
             });
