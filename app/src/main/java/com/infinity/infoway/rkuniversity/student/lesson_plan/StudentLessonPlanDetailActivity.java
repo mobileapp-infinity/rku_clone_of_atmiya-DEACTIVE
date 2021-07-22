@@ -118,13 +118,10 @@ public class StudentLessonPlanDetailActivity extends AppCompatActivity implement
     private void setLectureDetailsExpandableList(StudentLessonPlanListPojo studentLessonPlanListPojo) {
         ArrayList<String> lectureDetailsHeaderArrayList = new ArrayList<>();
         HashMap<String, ArrayList<StudentLessonPlanListPojo.LpSubTopic>> lectureDetailsChildHashMap = new HashMap<>();
-
-        ArrayList<StudentLessonPlanListPojo.LpSubTopic> lpSubTopicArrayList = new ArrayList<>();
-
         for (int i = 0; i < studentLessonPlanListPojo.getLpDetails().size(); i++) {
             if (!CommonUtil.checkIsEmptyOrNullCommon(studentLessonPlanListPojo.getLpDetails().get(i).getTopicName())) {
                 lectureDetailsHeaderArrayList.add(studentLessonPlanListPojo.getLpDetails().get(i).getTopicName() + "");
-
+                ArrayList<StudentLessonPlanListPojo.LpSubTopic> lpSubTopicArrayList = new ArrayList<>();
                 for (int k = 0; k < studentLessonPlanListPojo.getLpDetails().get(i).getLpSubTopic().size(); k++) {
                     StudentLessonPlanListPojo.LpSubTopic lpSubTopic =
                             studentLessonPlanListPojo.getLpDetails().get(i).getLpSubTopic().get(k);
