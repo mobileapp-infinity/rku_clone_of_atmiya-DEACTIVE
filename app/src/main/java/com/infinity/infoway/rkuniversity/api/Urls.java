@@ -7,7 +7,8 @@ public class Urls {
 //    public static String DOMAIN_NAME = "http://rku.icampus.biz";//For Testing
     public static String DOMAIN_NAME = "http://rkulive.icampus.biz";//For Live
 //    public static String BASE_URL_FOR_FACULTY_PENDING_ATTENDANCE = "http://rku.icampus.biz/API_Student_Panel_JSON_ICAMPUS.asmx/";//For Testing
-    public static String BASE_URL_FOR_FACULTY_PENDING_ATTENDANCE = "http://rkulive.icampus.biz/API_Student_Panel_JSON_ICAMPUS.asmx/";//For Live
+//    public static String BASE_URL_FOR_FACULTY_PENDING_ATTENDANCE = "http://rkulive.icampus.biz/API_Student_Panel_JSON_ICAMPUS.asmx/";//For Live
+    public static String BASE_URL_FOR_FACULTY_PENDING_ATTENDANCE = "http://192.168.30.3/CMS_Student_Fee_API.asmx/";//For Live
 //    public static final String DOMAIN_NAME_URL_FOR_FORGOT_PASSWORD = "http://rku.icampus.biz";//For Testing
     public static final String DOMAIN_NAME_URL_FOR_FORGOT_PASSWORD = "http://rkulive.icampus.biz";//For Live
 //    public static String BASE_URL_FOR_STUDENT_AND_EMPLOYEE_SIDE_FCM_API = "http://rku.icampus.biz/API_Firebase_Notification.asmx/";//For Testing

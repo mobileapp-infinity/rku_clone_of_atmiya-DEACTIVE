@@ -74,7 +74,7 @@
 
                     <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="0.9"
                         android:gravity="center"
                         android:text="Min. Fee"
@@ -83,7 +83,7 @@
 
                     <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1.1"
                         android:gravity="center"
                         android:text="Partial Payment Amount"
@@ -92,7 +92,7 @@
 
                     <com.infinity.infoway.rkuniversity.custom_class.TextViewMediumFont
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="Total Pending Amount"

@@ -17,12 +17,25 @@ public class GetPendingFeeListFromFeeTypePojo {
         isExpanded = expanded;
     }
 
+    double partialAmountForTotal;
+
+    public double getPartialAmountForTotal() {
+        return partialAmountForTotal;
+    }
+
+    public void setPartialAmountForTotal(double partialAmountForTotal) {
+        this.partialAmountForTotal = partialAmountForTotal;
+    }
+
     @SerializedName("StudId")
     @Expose
     private String studId;
     @SerializedName("SemId")
     @Expose
     private String semId;
+    @SerializedName("YearId")
+    @Expose
+    private String yearId;
     @SerializedName("SemNo")
     @Expose
     private String semNo;
@@ -53,6 +66,14 @@ public class GetPendingFeeListFromFeeTypePojo {
 
     public void setSemId(String semId) {
         this.semId = semId;
+    }
+
+    public String getYearId() {
+        return yearId;
+    }
+
+    public void setYearId(String yearId) {
+        this.yearId = yearId;
     }
 
     public String getSemNo() {
@@ -97,16 +118,8 @@ public class GetPendingFeeListFromFeeTypePojo {
 
     public static class Fee {
 
-        double partialAmountForTotal = 0.0;
-        boolean isPartialAmountIsCorrect = true;
-
-        public boolean isPartialAmountIsCorrect() {
-            return isPartialAmountIsCorrect;
-        }
-
-        public void setPartialAmountIsCorrect(boolean partialAmountIsCorrect) {
-            isPartialAmountIsCorrect = partialAmountIsCorrect;
-        }
+        boolean isPartialAmountIsCorrect = false;
+        double partialAmountForTotal;
 
         public double getPartialAmountForTotal() {
             return partialAmountForTotal;
@@ -114,6 +127,14 @@ public class GetPendingFeeListFromFeeTypePojo {
 
         public void setPartialAmountForTotal(double partialAmountForTotal) {
             this.partialAmountForTotal = partialAmountForTotal;
+        }
+
+        public boolean isPartialAmountIsCorrect() {
+            return isPartialAmountIsCorrect;
+        }
+
+        public void setPartialAmountIsCorrect(boolean partialAmountIsCorrect) {
+            isPartialAmountIsCorrect = partialAmountIsCorrect;
         }
 
         @SerializedName("FeeId")
@@ -184,5 +205,6 @@ public class GetPendingFeeListFromFeeTypePojo {
         }
 
     }
+
 
 }

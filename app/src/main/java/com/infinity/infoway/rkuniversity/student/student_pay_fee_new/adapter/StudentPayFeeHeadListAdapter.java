@@ -14,16 +14,27 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.button.MaterialButton;
 import com.infinity.infoway.rkuniversity.R;
+import com.infinity.infoway.rkuniversity.api.ApiImplementer;
 import com.infinity.infoway.rkuniversity.custom_class.CustomAnimationForDefaultExpandableCard;
 import com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont;
+import com.infinity.infoway.rkuniversity.rku_old_app.CommonCls.DialogUtils;
 import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.activity.StudentPendingFeeWebViewActivity;
+import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.pojo.GetOnlineFeePaymentURLPojo;
 import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.pojo.GetPendingFeeListFromFeeTypePojo;
 import com.infinity.infoway.rkuniversity.utils.CommonUtil;
+import com.infinity.infoway.rkuniversity.utils.DialogUtil;
 import com.infinity.infoway.rkuniversity.utils.IntentConstants;
 import com.infinity.infoway.rkuniversity.utils.MySharedPreferences;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class StudentPayFeeHeadListAdapter extends RecyclerView.Adapter<StudentPayFeeHeadListAdapter.MyViewHolder> {
 
@@ -70,7 +81,6 @@ public class StudentPayFeeHeadListAdapter extends RecyclerView.Adapter<StudentPa
                 holder.tvCourseAndSem.setText(getPendingFeeListFromFeeTypePojo.getSemName());
             }
 
-
             holder.llExpandedHeader.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -82,9 +92,15 @@ public class StudentPayFeeHeadListAdapter extends RecyclerView.Adapter<StudentPa
             holder.btnPayNow.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(context, StudentPendingFeeWebViewActivity.class);
-                    intent.putExtra(IntentConstants.STUDENT_PENDING_FEE_URL, "https://www.google.com");//TODO need to change When ravibhai give api for pay fee
-                    context.startActivity(intent);
+                    double totalPartialPayment = Double.parseDouble(holder.tvTotalPartialAmount.getText().toString().trim());
+                    double totalTotalPayment = Double.parseDouble(holder.tvTotalPendingAmount.getText().toString().trim());
+                    if (totalPartialPayment <= totalTotalPayment) {
+                        payNowApiCall(getPendingFeeListFromFeeTypePojo,
+                                (ArrayList<GetPendingFeeListFromFeeTypePojo.Fee>) getPendingFeeListFromFeeTypePojo.getFees(),
+                                holder.tvTotalPendingAmount.getText().toString().trim());
+                    } else {
+                        Toast.makeText(context, "Partial amount cant not be greater then total amount!", Toast.LENGTH_SHORT).show();
+                    }
                 }
             });
 
@@ -197,4 +213,110 @@ public class StudentPayFeeHeadListAdapter extends RecyclerView.Adapter<StudentPa
         }
         return isExpanded;
     }
+
+
+    private void payNowApiCall(GetPendingFeeListFromFeeTypePojo getPendingFeeListFromFeeTypePojo, ArrayList<GetPendingFeeListFromFeeTypePojo.Fee> feeArrayList,
+                               String totalPendingAmount) {
+        try {
+            String StudId = mySharedPreferences.getStudentId();
+            String HeadId = getPendingFeeListFromFeeTypePojo.getHeadId();
+            String SemId = getPendingFeeListFromFeeTypePojo.getSemId();
+            String InstId = mySharedPreferences.getInstituteId();
+            String YearId = getPendingFeeListFromFeeTypePojo.getYearId();
+            String TotalPendingAmt = totalPendingAmount;
+            String Response;
+            JSONArray itemDetailsJsonArray = new JSONArray();
+            JSONObject itemJson;
+
+            for (int i = 0; i < feeArrayList.size(); i++) {
+                GetPendingFeeListFromFeeTypePojo.Fee fee = feeArrayList.get(i);
+                {
+                    itemJson = new JSONObject();
+
+                    String partialPayment = "";
+                    String feeId = "";
+                    String isRebate = "";
+                    String minimumFee = "";
+                    String pendingFee = "";
+
+                    if (!CommonUtil.checkIsEmptyOrNullCommon(fee.getFeeId())) {
+                        feeId = fee.getFeeId();
+                    }
+
+                    if (!CommonUtil.checkIsEmptyOrNullCommon(fee.getIsRebate())) {
+                        isRebate = fee.getIsRebate();
+                    }
+
+                    if (!CommonUtil.checkIsEmptyOrNullCommon(fee.getMinimumFee())) {
+                        minimumFee = fee.getMinimumFee();
+                    }
+
+                    if (!CommonUtil.checkIsEmptyOrNullCommon(fee.getMinimumFee())) {
+                        int minFee = (int) Double.parseDouble(fee.getMinimumFee());
+                        if (minFee <= 0) {
+                            partialPayment = fee.getPendingFee();
+                        } else {
+                            partialPayment = fee.getPartialAmountForTotal() + "";
+                        }
+                    } else {
+                        partialPayment = fee.getPendingFee();
+                    }
+
+                    if (CommonUtil.checkIsEmptyOrNullCommon(partialPayment) || Double.valueOf(partialPayment) <= 0) {
+                        Toast.makeText(context, "Please enter " + fee.getFeeName() + " Fee Partial Amount!", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    if (!CommonUtil.checkIsEmptyOrNullCommon(fee.getPendingFee())) {
+                        pendingFee = fee.getPendingFee();
+                    }
+
+                    itemJson.put("FTypeId", feeId);
+                    itemJson.put("IsRebate", isRebate);
+                    itemJson.put("MinimumFee", minimumFee);
+                    itemJson.put("PartialPayment", partialPayment);
+                    itemJson.put("PendingFee", pendingFee);
+
+                    itemDetailsJsonArray.put(itemJson);
+                }
+            }
+
+            Response = itemDetailsJsonArray.toString();
+            DialogUtil.showProgressDialogNotCancelable(context, "");
+            ApiImplementer.getOnlineFeePaymentUrlApiImplementer(StudId, HeadId, SemId, InstId, YearId, TotalPendingAmt, Response, new Callback<GetOnlineFeePaymentURLPojo>() {
+                @Override
+                public void onResponse(Call<GetOnlineFeePaymentURLPojo> call, Response<GetOnlineFeePaymentURLPojo> response) {
+                    DialogUtil.hideProgressDialog();
+                    if (response.isSuccessful() && response.body() != null) {
+                        if (!CommonUtil.checkIsEmptyOrNullCommon(response.body().getStatusMsg())) {
+                            if (response.body().getStatusCode().equalsIgnoreCase("1")) {
+                                Toast.makeText(context, "" + response.body().getStatusMsg(), Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(context, StudentPendingFeeWebViewActivity.class);
+                                intent.putExtra(IntentConstants.STUDENT_PENDING_FEE_URL, "www.google.com");
+                                context.startActivity(intent);
+                            } else {
+                                Toast.makeText(context, "" + response.body().getStatusMsg(), Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(context, "Something went wrong,Please try again later!", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(context, "Something went wrong,Please try again later!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<GetOnlineFeePaymentURLPojo> call, Throwable t) {
+                    DialogUtil.hideProgressDialog();
+                    Toast.makeText(context, "Failed to pay!", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+
+        } catch (Exception exception) {
+            DialogUtils.hideProgressDialog();
+            Toast.makeText(context, "Exception to pay fee!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }

@@ -9,7 +9,7 @@ import android.os.Build;
 public class AppController extends Application {
 
     private static Context context;
-    public static final String NOTIFICATION_CHANNEL_NAME = "atmiya_push_notification";
+    public static final String NOTIFICATION_CHANNEL_NAME = "rku_push_notification";
     public static final String NOTIFICATION_CHANNEL_ID = "com.infinity.infoway.rku";
 
     @Override

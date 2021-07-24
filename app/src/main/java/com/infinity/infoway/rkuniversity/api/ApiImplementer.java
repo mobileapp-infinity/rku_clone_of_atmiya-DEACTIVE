@@ -62,6 +62,7 @@ import com.infinity.infoway.rkuniversity.student.assignment.StudentAssignmentLis
 import com.infinity.infoway.rkuniversity.student.attendance.pojo.StudentLectureWiseAttendancePojo;
 import com.infinity.infoway.rkuniversity.student.attendance.pojo.StudentSubjectWiseAttendancePojo;
 import com.infinity.infoway.rkuniversity.student.contact_us.ContactUsPojo;
+import com.infinity.infoway.rkuniversity.student.distribution_details.pojo.GetDistributionDetailListPojo;
 import com.infinity.infoway.rkuniversity.student.e_learning.pojo.CheckIsELearningManagementGroupIsCompulsoryOrNot;
 import com.infinity.infoway.rkuniversity.student.e_learning.pojo.CheckIsLearningManagementGroupIsExistOrNotPojo;
 import com.infinity.infoway.rkuniversity.student.e_learning.pojo.ELearningYearListPojo;
@@ -109,6 +110,7 @@ import com.infinity.infoway.rkuniversity.student.student_dashboard.pojo.UpdateSt
 import com.infinity.infoway.rkuniversity.student.student_msg_to_teacher.pojo.GetPersonPojo;
 import com.infinity.infoway.rkuniversity.student.student_msg_to_teacher.pojo.InsertMsgPojo;
 import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.pojo.GetFeeTypePojo;
+import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.pojo.GetOnlineFeePaymentURLPojo;
 import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.pojo.GetPendingFeeListFromFeeTypePojo;
 import com.infinity.infoway.rkuniversity.student.student_syllabus.SyllabusListPojo;
 import com.infinity.infoway.rkuniversity.student.student_timetable.pojo.StudentTimeTablePojo;
@@ -1205,15 +1207,31 @@ public class ApiImplementer {
         call.enqueue(cb);
     }
 
-    public static void getFeeTypeNewApiImplementer(String StudId, String InstId, Callback<ArrayList<GetFeeTypePojo>> cb) {
+    //For Distribution Detail List
+    public static void getStudentWiseItemDistributionApiImplementer(String INST_ID, String school_id,
+                                                                    String stud_id, Callback<ArrayList<GetDistributionDetailListPojo>> cb) {
         final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
-        Call<ArrayList<GetFeeTypePojo>> call = apiInterface.getFeeTypeNew(StudId, InstId);
+        Call<ArrayList<GetDistributionDetailListPojo>> call = apiInterface.getStudentWiseItemDistribution(INST_ID, school_id, stud_id);
         call.enqueue(cb);
     }
 
-    public static void getPendingFeeListFromFeeTypeNewImplementer(String StudId, String HeadId, String Skey, Callback<ArrayList<GetPendingFeeListFromFeeTypePojo>> cb) {
+    public static void getFeeTypeNewApiImplementer(String StudId, String InstId, Callback<ArrayList<GetFeeTypePojo>> cb) {
         final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
-        Call<ArrayList<GetPendingFeeListFromFeeTypePojo>> call = apiInterface.getPendingFeeListFromFeeTypeNew(StudId, HeadId, Skey);
+        Call<ArrayList<GetFeeTypePojo>> call = apiInterface.getFeeTypeNew(StudId, InstId, Urls.S_KEY_FOR_STUDENT_PAY_FEE);
+        call.enqueue(cb);
+    }
+
+    public static void getPendingFeeListFromFeeTypeNewImplementer(String StudId, String HeadId, String InstId, Callback<ArrayList<GetPendingFeeListFromFeeTypePojo>> cb) {
+        final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
+        Call<ArrayList<GetPendingFeeListFromFeeTypePojo>> call = apiInterface.getPendingFeeList(StudId, HeadId, InstId, Urls.S_KEY_FOR_STUDENT_PAY_FEE);
+        call.enqueue(cb);
+    }
+
+    public static void getOnlineFeePaymentUrlApiImplementer(String StudId, String HeadId, String SemId, String InstId,
+                                                            String YearId, String TotalPendingAmt, String Response,
+                                                            Callback<GetOnlineFeePaymentURLPojo> cb) {
+        final IApiInterface apiInterface = ApiClientForFacultyPendingAttendance.getClient().create(IApiInterface.class);
+        Call<GetOnlineFeePaymentURLPojo> call = apiInterface.getOnlineFeePaymentUrl(StudId, HeadId, SemId, InstId, YearId, TotalPendingAmt, Response);
         call.enqueue(cb);
     }
 }

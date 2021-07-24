@@ -10,8 +10,10 @@ android {
         targetSdkVersion 30
         multiDexEnabled true
         //version code and version name copied from rku app
-        versionCode 16
-        versionName "1.6.0"
+//        versionCode 16
+//        versionName "1.6.0"
+        versionCode 17
+        versionName "1.6.1"
 
         renderscriptTargetApi 25
         vectorDrawables.useSupportLibrary = true

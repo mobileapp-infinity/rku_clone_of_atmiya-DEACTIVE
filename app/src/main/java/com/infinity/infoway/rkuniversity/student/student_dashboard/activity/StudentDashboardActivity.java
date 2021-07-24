@@ -31,12 +31,12 @@ import com.infinity.infoway.rkuniversity.login.pojo.LogOutPojo;
 import com.infinity.infoway.rkuniversity.student.assignment.AssignmentActivity;
 import com.infinity.infoway.rkuniversity.student.attendance.activity.StudentAttendanceActivity;
 import com.infinity.infoway.rkuniversity.student.contact_us.ContactUsActivity;
+import com.infinity.infoway.rkuniversity.student.distribution_details.DistributionDetailsActivity;
 import com.infinity.infoway.rkuniversity.student.e_learning.activity.ELearningActivity;
 import com.infinity.infoway.rkuniversity.student.exam.activity.ExamActivity;
 import com.infinity.infoway.rkuniversity.student.fee_details.activity.FeeDetailsActivity;
 import com.infinity.infoway.rkuniversity.student.holiday.HolidayActivity;
 import com.infinity.infoway.rkuniversity.student.home_work.activity.StudentHomeWorkActivity;
-import com.infinity.infoway.rkuniversity.student.leave_application.activity.LeaveApplicationActivity;
 import com.infinity.infoway.rkuniversity.student.lesson_plan.StudentLessonPlanActivity;
 import com.infinity.infoway.rkuniversity.student.message_history.MessageHistoryActivity;
 import com.infinity.infoway.rkuniversity.student.news_or_notification.FacultyOrStudentNewsOrNotificationsPojo;
@@ -78,7 +78,7 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
     RecyclerViewPager recyclerViewPagerStudentSideBanner;
 
     LinearLayout llTimeTableStudentSide;
-//    LinearLayout llLeaveApplicationStudentSide;
+    //    LinearLayout llLeaveApplicationStudentSide;
     LinearLayout llELearningStudentSide;
     LinearLayout llAssignmentStudentSide;
     LinearLayout llExamStudentSide;
@@ -90,6 +90,7 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
     LinearLayout llActivityStudentSide;
     LinearLayout llMessageHistoryStudentSide;
     LinearLayout llSendStudentMsgToTeacher;
+    LinearLayout llDistributionList;
 
     LinearLayout llAttendanceStudentSide;
     ProgressBar cpCurrentMonthStudentSide;
@@ -176,6 +177,8 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
         tvPercentageAvgStudentSide = findViewById(R.id.tvPercentageAvgStudentSide);
         llSendStudentMsgToTeacher = findViewById(R.id.llSendStudentMsgToTeacher);
         llSendStudentMsgToTeacher.setOnClickListener(this);
+        llDistributionList = findViewById(R.id.llDistributionList);
+        llDistributionList.setOnClickListener(this);
 //        imgNotificationBell = findViewById(R.id.imgNotificationBell);
 //        imgNotificationBell.setOnClickListener(this);
         llContactUs = findViewById(R.id.llContactUs);
@@ -276,8 +279,11 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
         } else if (v.getId() == R.id.llSendStudentMsgToTeacher) {
             Intent intent = new Intent(StudentDashboardActivity.this, StudentMsgToTeacherActivity.class);
             startActivity(intent);
-        }else if(v.getId() == R.id.llContactUs){
+        } else if (v.getId() == R.id.llContactUs) {
             Intent intent = new Intent(StudentDashboardActivity.this, ContactUsActivity.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.llDistributionList) {
+            Intent intent = new Intent(StudentDashboardActivity.this, DistributionDetailsActivity.class);
             startActivity(intent);
         }
 

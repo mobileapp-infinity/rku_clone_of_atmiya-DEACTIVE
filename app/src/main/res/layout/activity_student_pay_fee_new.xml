@@ -38,14 +38,14 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cvError"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:elevation="3dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/lightgrey"
         app:cardCornerRadius="6dp"
-        app:contentPadding="8dp"
-        app:cardBackgroundColor="@color/lightgrey">
+        app:contentPadding="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,10 +61,10 @@
             <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
                 android:id="@+id/tvErrorTxt"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:text="Tution Fee Can not be grater then 1000 and less then 3000"/>
+                android:layout_weight="1"
+                android:text="Tution Fee Can not be grater then 1000 and less then 3000"
+                android:textSize="13sp" />
 
         </LinearLayout>
 

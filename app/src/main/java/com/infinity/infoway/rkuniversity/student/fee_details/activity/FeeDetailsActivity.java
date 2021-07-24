@@ -63,8 +63,8 @@ public class FeeDetailsActivity extends AppCompatActivity implements View.OnClic
             Intent intent = new Intent(FeeDetailsActivity.this, FeeReciptActivity.class);
             startActivity(intent);
         }else if (v.getId() == R.id.llPayFee) {
-            Intent intent = new Intent(FeeDetailsActivity.this, StudentPayFeeNewActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(FeeDetailsActivity.this, StudentPayFeeNewActivity.class);
+//            startActivity(intent);
         }
 //        else if (v.getId() == R.id.llPaySlipOfAxisFeeDetails) {
 //            Intent intent = new Intent(FeeDetailsActivity.this, PaySlipOfAxisDetailActivity.class);

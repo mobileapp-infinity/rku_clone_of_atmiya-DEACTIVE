@@ -24,7 +24,7 @@ public class MySharedPreferences {
     private SharedPreferences sharedPreferencesForFirebaseFcmToken;
     private SharedPreferences.Editor editorForFirebaseFcmToken;
     Context context;
-    private static final String PREFERENCES_ATMIYA_STUDENT_OR_FACULTY_LOGIN_DETAILS = "atmiya_student_or_faculty_login_details";
+    private static final String PREFERENCES_ATMIYA_STUDENT_OR_FACULTY_LOGIN_DETAILS = "rku_student_or_faculty_login_details";
 
     private static final String FIREBASE_FCM_TOKEN = "fcm_token_details";//please do not use this file name in other places
 

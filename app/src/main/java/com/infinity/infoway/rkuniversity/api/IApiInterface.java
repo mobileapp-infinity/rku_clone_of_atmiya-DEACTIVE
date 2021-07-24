@@ -70,6 +70,7 @@ import com.infinity.infoway.rkuniversity.student.assignment.StudentAssignmentLis
 import com.infinity.infoway.rkuniversity.student.attendance.pojo.StudentLectureWiseAttendancePojo;
 import com.infinity.infoway.rkuniversity.student.attendance.pojo.StudentSubjectWiseAttendancePojo;
 import com.infinity.infoway.rkuniversity.student.contact_us.ContactUsPojo;
+import com.infinity.infoway.rkuniversity.student.distribution_details.pojo.GetDistributionDetailListPojo;
 import com.infinity.infoway.rkuniversity.student.e_learning.pojo.CheckIsELearningManagementGroupIsCompulsoryOrNot;
 import com.infinity.infoway.rkuniversity.student.e_learning.pojo.CheckIsLearningManagementGroupIsExistOrNotPojo;
 import com.infinity.infoway.rkuniversity.student.e_learning.pojo.ELearningYearListPojo;
@@ -119,6 +120,7 @@ import com.infinity.infoway.rkuniversity.student.student_dashboard.pojo.UpdateSt
 import com.infinity.infoway.rkuniversity.student.student_msg_to_teacher.pojo.GetPersonPojo;
 import com.infinity.infoway.rkuniversity.student.student_msg_to_teacher.pojo.InsertMsgPojo;
 import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.pojo.GetFeeTypePojo;
+import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.pojo.GetOnlineFeePaymentURLPojo;
 import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.pojo.GetPendingFeeListFromFeeTypePojo;
 import com.infinity.infoway.rkuniversity.student.student_syllabus.SyllabusListPojo;
 import com.infinity.infoway.rkuniversity.student.student_timetable.pojo.StudentTimeTablePojo;
@@ -978,15 +980,36 @@ public interface IApiInterface {
             @Query("stud_year_id") String stud_year_id,
             @Query("stud_school_id") String stud_school_id);
 
+    @GET("Get_Student_Wise_Item_Distribution")
+    Call<ArrayList<GetDistributionDetailListPojo>> getStudentWiseItemDistribution(
+            @Query("INST_ID") String INST_ID,
+            @Query("school_id") String school_id,
+            @Query("stud_id") String stud_id);
+
+
+    //below api for pay fee
     @GET("GetPendingFeeHead")
     Call<ArrayList<GetFeeTypePojo>> getFeeTypeNew(
             @Query("StudId") String StudId,
-            @Query("InstId") String InstId);
+            @Query("InstId") String InstId,
+            @Query("Skey") String Skey);
 
     @GET("GetPendingFeeForHeadWise")
-    Call<ArrayList<GetPendingFeeListFromFeeTypePojo>> getPendingFeeListFromFeeTypeNew(
+    Call<ArrayList<GetPendingFeeListFromFeeTypePojo>> getPendingFeeList(
             @Query("StudId") String StudId,
             @Query("HeadId") String HeadId,
+            @Query("InstId") String InstId,
             @Query("Skey") String Skey);
+
+    @FormUrlEncoded
+    @POST("GetOnlineFeePaymentURL")
+    Call<GetOnlineFeePaymentURLPojo> getOnlineFeePaymentUrl(
+            @Field("StudId") String StudId,
+            @Field("HeadId") String HeadId,
+            @Field("SemId") String SemId,
+            @Field("InstId") String InstId,
+            @Field("YearId") String YearId,
+            @Field("TotalPendingAmt") String TotalPendingAmt,
+            @Field("Response") String Response);
 
 }

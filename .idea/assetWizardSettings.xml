@@ -79,7 +79,9 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\iipl\Desktop\launcher.png" />
+                                                <entry key="imagePath" value="C:\Users\iipl\Desktop\rku_new_logo.jpg" />
+                                                <entry key="scalingPercent" value="86" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -107,6 +109,12 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="ffffff" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -300,7 +308,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$PROJECT_DIR$/../../Android_Sdk/icons/material/materialicons/error/baseline_error_24.xml" />
+                                      <entry key="url" value="file:/$PROJECT_DIR$/../../Android_Sdk/icons/material/materialicons/featured_play_list/baseline_featured_play_list_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -311,7 +319,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="df2227" />
-                            <entry key="outputName" value="ic_baseline_error_24" />
+                            <entry key="outputName" value="distribution_list" />
                             <entry key="sourceFile" value="C:\Users\iipl\Downloads\RK\ic_message_history.svg" />
                           </map>
                         </option>

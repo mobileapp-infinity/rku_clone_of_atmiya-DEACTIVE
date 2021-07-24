@@ -23,7 +23,7 @@
             <com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Welcome to Atmiya"
+                android:text="Welcome to Rku"
                 android:textColor="@color/colorPrimary"
                 android:textSize="22sp" />
 
@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:gravity="center"
-                android:text="Manage and track your employee's and students time efficiently using Atmiya."
+                android:text="Manage and track your employee's and students time efficiently using Rku."
                 android:textColor="@color/color_primary_with_90_opacity" />
 
         </LinearLayout>

@@ -29,6 +29,7 @@
     <string name="faculty_adviser_remarks">Faculty Adviser Remarks</string>
     <string name="time_table">Time Table</string>
     <string name="e_learning">E-Learning</string>
+    <string name="distribution_details">Distribution Details</string>
     <string name="exam">Exam</string>
     <string name="leave_application">Leave Application</string>
     <string name="assignment">Assignment</string>

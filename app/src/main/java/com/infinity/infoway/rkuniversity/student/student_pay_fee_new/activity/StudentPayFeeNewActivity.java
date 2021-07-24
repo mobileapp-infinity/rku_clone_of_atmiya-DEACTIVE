@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.card.MaterialCardView;
 import com.infinity.infoway.rkuniversity.R;
 import com.infinity.infoway.rkuniversity.api.ApiImplementer;
-import com.infinity.infoway.rkuniversity.api.Urls;
 import com.infinity.infoway.rkuniversity.custom_class.TextViewRegularFont;
 import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.adapter.StudentPayFeeChildListAdapter;
 import com.infinity.infoway.rkuniversity.student.student_pay_fee_new.adapter.StudentPayFeeHeadListAdapter;
@@ -73,18 +72,6 @@ public class StudentPayFeeNewActivity extends AppCompatActivity implements View.
         llPayFeeProgressbar = findViewById(R.id.llPayFeeProgressbar);
         llNoDataFoundStudentPayFee = findViewById(R.id.llNoDataFoundStudentPayFee);
 
-//        ArrayList<String> testingArrayList = new ArrayList<>();
-//        testingArrayList.add("testing1");
-//        testingArrayList.add("testing2");
-//        testingArrayList.add("testing3");
-//        testingArrayList.add("testing4");
-//
-//        ArrayAdapter<String> feeTypeAdapter = new ArrayAdapter<String>
-//                (StudentPayFeeNewActivity.this, R.layout.layout_for_pay_fee_new_drop_down,
-//                        testingArrayList);
-//        feeTypeAdapter.setDropDownViewResource(R.layout.layout_dropdown_row);
-//        spFeeType.setTitle("Select Fee Type");
-//        spFeeType.setAdapter(feeTypeAdapter);
         spFeeType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -99,53 +86,6 @@ public class StudentPayFeeNewActivity extends AppCompatActivity implements View.
             }
         });
     }
-
-    //this is for static data settings
-//    private void setStaticData() {
-//
-//        ArrayList<GetPendingFeeListFromFeeTypePojo> pendingFeeArrayList = new ArrayList<>();
-//
-//        ArrayList<GetPendingFeeListFromFeeTypePojo.Fee> feeList = new ArrayList<>();
-//        GetPendingFeeListFromFeeTypePojo.Fee fee = new GetPendingFeeListFromFeeTypePojo.Fee();
-//        fee.setFeeId("1");
-//        fee.setHeadName("Tution Fee");
-//        fee.setFeeName("Testing Fee");
-//        fee.setPendingFee("3000.0");
-//        fee.setIsRebate("0");
-//        fee.setMinimumFee("1000");
-//        feeList.add(fee);
-//
-//        GetPendingFeeListFromFeeTypePojo.Fee fee1 = new GetPendingFeeListFromFeeTypePojo.Fee();
-//        fee1.setFeeId("2");
-//        fee1.setHeadName("School Fee");
-//        fee1.setFeeName("School Fee");
-//        fee1.setPendingFee("5000.56");
-//        fee1.setIsRebate("0");
-//        fee1.setMinimumFee("0.0");
-//        feeList.add(fee1);
-//
-//        GetPendingFeeListFromFeeTypePojo.Fee fee3 = new GetPendingFeeListFromFeeTypePojo.Fee();
-//        fee3.setFeeId("4");
-//        fee3.setHeadName("Sem Fee");
-//        fee3.setFeeName("Sem Fee");
-//        fee3.setPendingFee("1000.0");
-//        fee3.setIsRebate("1");
-//        fee3.setMinimumFee("0.0");
-//        feeList.add(fee3);
-//
-//        for (int i = 0; i < 1; i++) {
-//            GetPendingFeeListFromFeeTypePojo getPendingFeeListFromFeeTypePojo = new GetPendingFeeListFromFeeTypePojo();
-//            getPendingFeeListFromFeeTypePojo.setStudId(i + "123");
-//            getPendingFeeListFromFeeTypePojo.setSemId(i + "566");
-//            getPendingFeeListFromFeeTypePojo.setSemNo(i + "");
-//            getPendingFeeListFromFeeTypePojo.setHeadId("Course head");
-//            getPendingFeeListFromFeeTypePojo.setTotalPeningFee("6542");
-//            getPendingFeeListFromFeeTypePojo.setSemName("Semester" + i + "123");
-//            getPendingFeeListFromFeeTypePojo.setFees(feeList);
-//            pendingFeeArrayList.add(getPendingFeeListFromFeeTypePojo);
-//        }
-//        rvStudentFee.setAdapter(new StudentPayFeeHeadListAdapter(StudentPayFeeNewActivity.this, pendingFeeArrayList));
-//    }
 
     @Override
     public void onClick(View v) {
@@ -166,7 +106,8 @@ public class StudentPayFeeNewActivity extends AppCompatActivity implements View.
             public void onResponse(Call<ArrayList<GetFeeTypePojo>> call, Response<ArrayList<GetFeeTypePojo>> response) {
                 DialogUtil.hideProgressDialog();
                 try {
-                    if (response.isSuccessful() && response.body() != null && response.body().size() > 0) {
+                    if (response.isSuccessful() && response.body() != null && response.body().size() > 0 &&
+                            response.body().get(0).getStatusCode().equalsIgnoreCase("1")) {
                         feeTypeNameArrayList = new ArrayList<>();
                         feeTypeNameArrayList.add(SELECT_PAY_FEE);
                         feeTypeNameAndIdHashMap = new HashMap<>();
@@ -180,9 +121,9 @@ public class StudentPayFeeNewActivity extends AppCompatActivity implements View.
                             }
                         }
                         ArrayAdapter<String> feeTypeAdapter = new ArrayAdapter<String>
-                                (StudentPayFeeNewActivity.this, R.layout.layout_dropdown_row,
+                                (StudentPayFeeNewActivity.this, R.layout.layout_for_pay_fee_new_drop_down,
                                         feeTypeNameArrayList);
-                        feeTypeAdapter.setDropDownViewResource(R.layout.layout_dropdown_row);
+                        feeTypeAdapter.setDropDownViewResource(R.layout.layout_for_pay_fee_new_drop_down);
                         spFeeType.setTitle("Select Fee Type");
                         spFeeType.setAdapter(feeTypeAdapter);
                     } else {
@@ -190,6 +131,7 @@ public class StudentPayFeeNewActivity extends AppCompatActivity implements View.
                         finish();
                     }
                 } catch (Exception ex) {
+                    Toast.makeText(StudentPayFeeNewActivity.this, "Exception:- " + ex.getMessage(), Toast.LENGTH_SHORT).show();
                     ex.printStackTrace();
                 }
             }
@@ -206,7 +148,7 @@ public class StudentPayFeeNewActivity extends AppCompatActivity implements View.
         llStudentFeeList.setVisibility(View.GONE);
         llPayFeeProgressbar.setVisibility(View.VISIBLE);
         llNoDataFoundStudentPayFee.setVisibility(View.GONE);
-        ApiImplementer.getPendingFeeListFromFeeTypeNewImplementer(mySharedPreferences.getStudentId(), headId, Urls.S_KEY_FOR_STUDENT_PAY_FEE, new Callback<ArrayList<GetPendingFeeListFromFeeTypePojo>>() {
+        ApiImplementer.getPendingFeeListFromFeeTypeNewImplementer(mySharedPreferences.getStudentId(), headId, mySharedPreferences.getInstituteId(), new Callback<ArrayList<GetPendingFeeListFromFeeTypePojo>>() {
             @Override
             public void onResponse(Call<ArrayList<GetPendingFeeListFromFeeTypePojo>> call, Response<ArrayList<GetPendingFeeListFromFeeTypePojo>> response) {
                 try {
